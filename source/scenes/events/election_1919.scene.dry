@@ -854,7 +854,7 @@ go-to: coalition_menu
 
 [? if pll_formed and not anti_fas_pll : {!<tr><td>!} -PLL {!</td></tr>!} ?]
 
-[? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td><div class="box" style='background-color:#FFC0CB'> </div>!} <span style="color: [+ psri_colour +];">Reformist Socialist</span List: {!</td><td>!} [+ psri_r_disp +]% {!</td><td>!} [+ str_change_psri +]% {!</td><td>!} [+ psri_seating +] {!</td><td>!} [+ psri_seating_disp +]% {!</td></tr>!} ?]
+[? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td><div class="box" style='background-color:#FFC0CB'> </div>!} <span style="color: [+ psri_colour +];">Reformists Socialists</span List: {!</td><td>!} [+ psri_r_disp +]% {!</td><td>!} [+ str_change_psri +]% {!</td><td>!} [+ psri_seating +] {!</td><td>!} [+ psri_seating_disp +]% {!</td></tr>!} ?]
 
 [? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td>!} -PSRI {!</td></tr>!} ?]
 
@@ -866,7 +866,7 @@ go-to: coalition_menu
 
 [? if (ds_list and not view_full) or ((ds_party and ds_leader = "Colonna") or (ds_leader = "Carnazza" and ds_party and (pnf_r < 5)) or (ds_party and ds_leader = "Giuffrida" and not ds_joint)) and not anti_fas_ds or pnf_in_government : {!<tr><td><div class="box" style='background-color:#1E99C5'> </div>!} <span style="color: [+ ds_colour +];">Democratic</span> List: {!</td><td>!} [+ ds_r_disp +]% {!</td><td>!} [+ str_change_ds +]% {!</td><td>!} [+ ds_seating +] {!</td><td>!} [+ ds_seating_disp +]% {!</td></tr>!} ?]
 
-[? if (ds_list and not view_full) or ((ds_party and ds_leader = "Colonna") or (ds_leader = "Carnazza" and ds_party and (pnf_r < 5)) or (ds_party and ds_leader = "Giuffrida" and not ds_joint)) and not anti_fas_ds or pnf_in_government : {!<tr><td>!} -PSDI {!</td></tr>!} ?]
+[? if (ds_list and not view_full) or ((ds_party and ds_leader = "Colonna") or (ds_leader = "Carnazza" and ds_party and (pnf_r < 5)) or (ds_party and ds_leader = "Giuffrida" and not ds_joint)) and not anti_fas_ds or pnf_in_government : {!<tr><td>!} -[+ ds_name +] {!</td></tr>!} ?]
 
 [? if not pnf_in_power and (not anti_fas_ppi or not acerbo_law_passed) : {!<tr><td><div class="box" style='background-color:#87CEFA'> </div>!} <span style="color: [+ ppi_colour +];">Catholic</span> List: {!</td><td>!} [+ ppi_r_disp +]% {!</td><td>!} [+ str_change_ppi +]% {!</td><td>!} [+ ppi_seating +] {!</td><td>!} [+ ppi_seating_disp +]% {!</td></tr>!} ?]
 
