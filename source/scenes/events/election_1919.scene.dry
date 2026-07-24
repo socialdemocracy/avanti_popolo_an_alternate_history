@@ -874,7 +874,7 @@ go-to: coalition_menu
 
 [? if (ldr_party or ldr_list) and not pnf_in_power and not anti_fas_ldr : {!<tr><td><div class="box" style='background-color:#FFD700'> </div>!} <span style="color: [+ ldr_colour +];">Liberal, Democrats, and Radicals</span>: {!</td><td>!} [+ ldr_r +]% {!</td><td>!} [+ str_change_ldr +]% {!</td><td>!} [+ ldr_seating +] {!</td><td>!} [+ ldr_seating_disp +]% {!</td></tr>!} ?]
 
-[? if ldr_party or (ldr_list and not view_full) and not pnf_in_power and not anti_fas_ldr : {!<tr><td>!} -PDLI {!</td></tr>!} ?]
+[? if ldr_party or (ldr_list and not view_full) and not pnf_in_power and not anti_fas_ldr : {!<tr><td>!} -PLDI {!</td></tr>!} ?]
 
 [? if not ul_in_bn and not pnf_in_power and not anti_fas_ul : {!<tr><td><div class="box" style='background-color:#0047AB'> </div>!} <span style="color: [+ ul_colour +];">Liberal</span> List: {!</td><td>!} [+ ul_r +]% {!</td><td>!} [+ str_change_ul +]% {!</td><td>!} [+ ul_seating +] {!</td><td>!} [+ ul_seating_disp +]% {!</td></tr>!} ?]
 
@@ -896,7 +896,7 @@ go-to: coalition_menu
 
 [? if not pnf_in_bn and (pnf_r >= 5) and not pnf_banned: {!<tr><td>!} -[+ pnf_name +] {!</td></tr>!} ?]
 
-[? if ds_leader = "Carnazza" and ds_party and (pnf_r >= 5) : {!<tr><td>!} -PSDI {!</td></tr>!} ?]
+[? if ds_leader = "Carnazza" and ds_party and (pnf_r >= 5) : {!<tr><td>!} -PDSI {!</td></tr>!} ?]
 
 [? if pcs_formed and (pnf_r >= 5) : {!<tr><td>!} -PCS {!</td></tr>!} ?]
 
