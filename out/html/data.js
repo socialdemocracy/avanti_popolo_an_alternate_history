@@ -15,6 +15,34 @@ const colourList = [{
         style: "color: #c00000; font-weight: bold;"
    },
     {
+        word: "Left-Maximalist",
+        style: "color: #99112d; font-weight: bold;"
+   },
+    {
+        word: "Moderate-Maximalist",
+        style: "color: #bf2645; font-weight: bold;"
+   },
+    {
+        word: "Right-Maximalist",
+        style: "color: #d47789; font-weight: bold;"
+   },
+    {
+        word: "Comintern",
+        style: "color: #D50000; font-weight: bold;"
+   },
+    {
+        word: "Labour and Socialist International",
+        style: "color: #D50032; font-weight: bold;"
+   },
+    {
+        word: "Berne International",
+        style: "color: #D50032; font-weight: bold;"
+   },
+    {
+        word: "International Working Union of Socialist Parties",
+        style: "color: #D50032; font-weight: bold;"
+   },
+    {
         word: "SPD",
         style: "color: #c00000; font-weight: bold;"
    },
@@ -383,6 +411,34 @@ const tooltipList = [{
     explanationText: "<img src=img/zhytomyr.jpeg> The de-facto capital of Ukraine."
     },
     {
+    searchString: "Left-Maximalist",
+    explanationText: "<img src=img/portraits/NicolaBombacci.jpg> Left-wing members of the Maximalist faction, usually aligning more with the Communists than the Reformists."
+    },
+    {
+    searchString: "Moderate-Maximalist",
+    explanationText: "<img src=img/portraits/EnricoFerri.jpg> Moderate members of the Maximalist faction, usually attempt to find compromise between the other factions."
+    },
+    {
+    searchString: "Right-Maximalist",
+    explanationText: "<img src=img/portraits/CostantinoLazzari.jpg> Right-wing members of the Maximalist faction, usually aligning more with the Reformists than the Communists."
+    },
+    {
+    searchString: "Comintern",
+    explanationText: "<img src=img/comintern.webp> Communist International   Third International"
+    },
+    {
+    searchString: "Labour and Socialist International",
+    explanationText: "<img src=img/lsi.png> Labour and Socialist International"
+    },
+    {
+    searchString: "Berne International",
+    explanationText: "<img src=img/berne.jpeg> Berne International"
+    },
+    {
+    searchString: "International Working Union of Socialist Parties",
+    explanationText: "<img src=img/vienna.webp> International Working Union of Socialist Parties"
+    },
+    {
     searchString: "Red Army",
     explanationText: "<img src=img/red.army.webp> The Soviet Army."
     },
@@ -408,7 +464,7 @@ const tooltipList = [{
     },
     {
     searchString: "Philipp Scheidemann",
-    explanationText: "<img src=img/portraits/scheidemann.jpeg> Philipp Scheidemann   The  man who declared the Weimar Republic."
+    explanationText: "<img src=img/portraits/scheidemann.jpeg> Philipp Scheidemann    The  man who declared the Weimar Republic."
     },
     {
     searchString: "Arthur Graf von Posadowsky-Wehner",
