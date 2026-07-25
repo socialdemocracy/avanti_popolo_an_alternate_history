@@ -40,7 +40,7 @@ const colourList = [{
    },
     {
         word: "Karl Liebknecht",
-        style: "color: #700000; font-weight: bold;"
+        style: "color: #9c2f2f; font-weight: bold;"
    },
     {
         word: "Rosa Luxemburg",
