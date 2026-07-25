@@ -1,20 +1,27 @@
-title: 1919 Congress of the Partito Popolare Italiano
+title: 1919 Congress of the PPI
 subtitle: The PPI elects its Secretary General.
 new-page: true
 view-if: year = 1919 and month = 6 and week = 3 and not ppi_banned
 max-visits: 1
 tags: event
 
-= 1919 Partito Popolare Italiano Congress
+= 1919 PPI Party Congress
 
-The *Partito Popolare Italiano*, known also as the PPI or the Italian People's Party was formed in January and are having their first congress to decide the leader of the party. It seems all but confirmed that Luigi Sturzo will come out on top to lead the party in its next elections.
+The PPI was formed in January and are having their first congress to decide the leader of the party. Due to his influence in the PPI, it seems all but confirmed that Luigi Sturzo will be victorious in this party congress.
 
-Whatever the case, the PPI represents a shift in the Holy See's stance on Italian politics from non-intervention and will be pivotal to the nation's future outlook.
+The history of the PPI, though, as late as November 1918, where 41 representatives from all <span style="color: #008C45;">**Ita**</span><span style="color: #E5E4E2;">**li**</span><span style="color: #CD212A;">**an**</span> regions came to a convocation from Luigi Sturzo at the headquarters of the Roman Union at Via dell'Umiltà 36, creating a constituent assembly of party members in December, and crafting the constitution of the PPI, although not officially founded until January 1919.
+
+There have been a few clashes between the conservative and "popolarist" sides of the party, mostly between Luigi Sturzo and Fathers Agostino Gemelli and Francesco Olgiati, with both having written a pamphlet criticizing Sturzo's "popolarists", and the PPI as a whole, of having "put Christ in the attic." Sturzo replied with a speech for party unity, saying ".. Could agree on a program and a political thought, not of simple defense, but of construction, not only negative but positive, not religious but social.."
+
+Whatever the case, the PPI represents a shift in the <span style="color: #FFF200;">**Holy**</span> <span style="color: #dddddd;">**See**</span>'<span style="color: #dddddd;">**s**</span> stance on <span style="color: #008C45;">**Ita**</span><span style="color: #E5E4E2;">**li**</span><span style="color: #CD212A;">**an**</span> politics from non-intervention and will be pivotal to the nation's future outlook.
 
 - @sturzo_1919: The party votes...
 
 @sturzo_1919
 face-image: img/portraits/LuigiSturzo.jpg
-on-arrival: ppi_left += 2;
+on-arrival: ppi_left += 2; ppi_relation += 3
 
-As expected, Luigi Sturzo has been elected as the first Secretary General of the Italian People's Party. He represents the more progressive faction of the party, willing to cooperate with us, and we are optimistic we will be able to cooperate.
+As expected, Luigi Sturzo has been elected as the first Secretary General of the PPI. He represents the more "popolarist" faction of the party, and most of our party is optimistic, except the most secularist parts of it.
+
+"Populism has its theoretical basis in the field of economics in the Christian-social school, as a school opposed to liberal atomism and socialist collectivism, specifying that «the representative constitutional regime, civil and political liberties enter […] into the system of “popolarism” as necessary elements."
+-Luigi Sturzo
