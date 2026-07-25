@@ -74,6 +74,7 @@ Q.syndicalist_break = 0;
 Q.reformists_expelled = 0;
 Q.joined_comintern = 0;
 Q.joined_lsi = 0;
+Q.lsi_founded = 0;
 
 
 // fasci_urgency indicates how seriously the [+ psi_name +] takes the fasci - scale from 0 to 10.
