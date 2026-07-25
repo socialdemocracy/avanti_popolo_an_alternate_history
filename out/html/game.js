@@ -220,6 +220,18 @@
             return baseTooltip.explanationText 
         }
             
+       if (searchString === 'Left-Maximalist' ) {
+            return baseTooltip.explanationText 
+        }
+                  
+       if (searchString === 'Moderate-Maximalist' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+       if (searchString === 'Right-Maximalist' ) {
+            return baseTooltip.explanationText 
+        }
+            
        if (searchString === 'SPD' ) {
             return baseTooltip.explanationText 
         }
