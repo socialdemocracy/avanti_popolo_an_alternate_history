@@ -1,4 +1,4 @@
-title: XVI Congress of the [+ psi_full_name +]
+title: XVI Congress of the PSI
 new-page: true
 subtitle: It is time to decide our path for the future.
 view-if: year = 1919 and month = 10
@@ -6,7 +6,7 @@ max-visits: 1
 face-image: img/portraits/NicolaBombacci.jpg
 tags: event
 
-= XVI Congress of the [+ psi_full_name +]
+= XVI Congress of the PSI
 
 The XVI Congress in Bologna has officially begun. Though the Congress wil be have many debates and discussions on the future of the party, there are two main things to be discussed: deciding on an approach to advance the proletarian revolution and participation in the new November elections. Nicola Bombacci has, at least temporarily, been elected and appointed General-Secretary of the Party.
 
@@ -14,12 +14,12 @@ The XVI Congress in Bologna has officially begun. Though the Congress wil be hav
 
 The first thing on the agenda is to decide between a Reformist or a more Communist approach. The right-wing of the party, the Reformist faction, are staunch advocates of parliamentary action to achieve a <span style="color: #9B0000;">socialist</span> state, while the Communist faction and a majority of the Maximalist faction advocate for revolutionary action to achieve a <span style="color: #9B0000;">Socialist Republic</span>.
 
--@revolutionary_approach: The revolutionary Communist and Maximalist factions sway enough of the party in their favour.
--@maximalist_approach: The Maximalist are able to establish a compromise that forms a majority.
--@reformist_approach: The Reformists are able to sway enough of the Right-Maximalists to achieve a plurality.
+-@revolutionary_approach: The Communist and Left-Maximalist factions sway enough of the party in their favour.
+-@maximalist_approach: The Moderate-Maximalist faction is able to establish a compromise that forms a majority.
+-@reformist_approach: The Reformist faction sways the Right-Maximalist faction to achieve a plurality.
 
 @revolutionary_approach
-subtitle: The party will fully abandon parliamentary means and pursue a policy of violent revolution.
+subtitle: The party will fully abandon parliamentary means and pursue a policy of violent <span style="color: #9B0000;">revolution</span>.
 choose-if: communist_strength > reformist_strength
 unavailable-subtitle: The bulk of the party is opposed to this.
 on-arrival: reformist_dissent *= 1.5; reformist_strength *= 0.5; communist_strength *= 1.5; maximalist_strength *= 1.25; communist_dissent *= 0.5; maximalist_dissent *= 0.75; not_participating = 1; revolutionary_fervour += 5; king_relation -= 7*radicalisation; preparing_rev_active = 1
@@ -32,7 +32,7 @@ subtitle: The party will stay the course of revolution via extraparliamentary wa
 on-arrival: reformist_dissent += 10; reformist_strength -= 5; communist_strength -= 5; maximalist_strength += 5; communist_dissent += 10; maximalist_dissent -= 10; preparing_rev_active = 1
 go-to: @election_agenda
 
-The less radical members of the Communists and Reformists accept the compromise, whilst the more radical members criticise this as effective 'appeasement' to keep the party together.
+The less radical members of the Communists and Reformist factions accept the compromise, whilst the more radical members criticise this as effective 'appeasement' to keep the party together.
 
 @reformist_approach
 choose-if: communist_strength < reformist_strength
@@ -41,37 +41,64 @@ subtitle: The party will fully abandon extraparliamentary means and pursue a pol
 on-arrival: reformist_dissent *= 0.5; reformist_strength *= 1.5; communist_strength *= 0.5; maximalist_strength *= 0.75; communist_dissent *= 1.5; maximalist_dissent *= 1.25; participating = 1; revolutionary_fervour -= 7; king_relation += 7*(1-(radicalisation/10));
 go-to: @election_agenda
 
-The Reformists, having lost leadership in 1912, are able to achieve a plurality through the vote, stunning many who saw them as having lost most of its support within the party. Already, as the vote is announced, many Communist and Maximalist members storm out of the Congress in protest, leaving the remaining members to continue the Congress.
+The Reformist faction, having lost leadership in 1912, are able to achieve a plurality through the vote, stunning many who saw them as having lost most of its support within the party. Already, as the vote is announced, many Communist and Maximalist members storm out of the Congress in protest, leaving the remaining members to continue the Congress.
 
 @election_agenda
 new-page: false
 
-The second and final thing on the agenda is whether or not the [+ psi_name +] should participate in the November elections. The Reformists advocate for full participation, the Maximists token participation and the Communists full abstention.
+The second thing on the agenda is whether or not the [+ psi_name +] should participate in the November elections. The Reformist faction advocates for full participation, the Maximalist faction token participation and the Communist faction full abstention.
 
-- @communist_arguments: The Communists are able to convince the rest of the party against the bourgeois elections.
-- @maximalist_arguments: The Maximalists utilise their majority to convince the rest of the party to compromise.
-- @reformist_arguments: The Reformists are able to eek through with support from the sympathetic Maximalist members.
+- @communist_arguments: The Communist faction is able to convince the rest of the party against the bourgeois elections.
+- @maximalist_arguments: The Maximalist faction utilises its majority to convince the rest of the party to compromise.
+- @reformist_arguments: The Reformist faction is able to eek through with support from the sympathetic Maximalist members.
 
 @communist_arguments
 subtitle: The party will fully refuse to participate in the upcoming election.
 choose-if: participating = 0
-unavailable-subtitle: [? if participating = 1 : We have already chosen to achieve socialism via parliamentary means. ?]
+unavailable-subtitle: [? if participating = 1 : We have already chosen to achieve <span style="color: #9B0000;">socialism</span> via parliamentary means. ?]
 on-arrival: reformist_dissent += 7; reformist_strength -= 7; communist_strength += 7; communist_dissent -= 7; not_participating = 1; abstentionist_psi = 1;
+go-to: @international_agenda
 
-The Communists are able to convince the Maximalists that wasting time on participating is a futile use of time, as the party votes for full abstention in the upcoming elections.
+The Communist and Left-Maximalist factions sway the Moderate-Maximalist faction, as the party votes for full abstention in the upcoming elections.
 
 @maximalist_arguments
 subtitle: The party will participate, but not form coalitions with the bourgeois parties.
 choose-if: not_participating = 0
-unavailable-subtitle: [? if not_participating = 1: We have already chosen to abandon the reformist approach. ?]
+unavailable-subtitle: [? if not_participating = 1: We have already chosen to abandon the Reformist approach. ?]
 on-arrival: maximalist_strength += 10; maximalist_dissent -= 10; maximalist_participating = 1;
+go-to: @international_agenda
 
 The Maximalist majority secures a compromise solution, agreeing to participate in the upcoming elections but refusing any sort of coalition with the bourgeois parties. 
 
 @reformist_arguments
 choose-if: not_participating = 0
-unavailable-subtitle: [? if not_participating = 1 : We have already chosen to achieve socialism via extraparliamentary ways. ?]
+unavailable-subtitle: [? if not_participating = 1 : We have already chosen to achieve <span style="color: #9B0000;">socialism</span> via extraparliamentary ways. ?]
 subtitle: The party will fully participate in the upcoming election.
 on-arrival: reformist_dissent -= 7; reformist_strength += 7; communist_strength -= 7; communist_dissent += 7; participating = 1; election_participation = 1;
+go-to: @international_agenda
 
-The Reformists are able to convince sympathetic Maximalist members to support their endeavour to participate in the November elections and form a coalition with the bourgeois parties. The Communists and remaining Maximalists are unsurprisingly, outraged.
+The Reformists are able to convince sympathetic Maximalist members to support their endeavour to participate in the November elections and form a coalition with the bourgeois parties. The Communist and Left-Maximalist factions, though, are unsurprisingly, outraged.
+
+@international_agenda
+new-page: false
+
+The third and final thing on the agenda is more minor than the others, but still influential, whether we will adhere to the Comintern or not. The Reformist faction advocates for the party to try to search for more moderate alternatives, such as the Berne International or the International Working Union Of Socialist Parties. Meanwhile, most Maximalist faction members excluding some Right-Maximalist members are in favour, along with the Communist Faction.
+
+- @comintern_join: The Communist and Maximalist factions manage to convince the party to join the Comintern.
+- @moderate_join: The Reformist and Moderate-Maximalist factions convince the party to seek more moderate alternatives.
+
+@comintern_join
+choose-if: reformist_strength < communist_strength
+unavailable-subtitle: The bulk of the party is opposed to this.
+subtitle: The party will fully adhere to the Comintern.
+on-arrival: reformist_dissent *= 1.5; reformist_strength *= 0.5; communist_strength *= 1.5; maximalist_strength *= 1.25; communist_dissent *= 0.5; maximalist_dissent *= 0.75; joined_comintern = 1; revolutionary_fervour += 2; king_relation -= 7*radicalisation;
+
+As expected, we shall join the Comintern. General dissent in the Reformist faction has risen due to what they think is the deliberate marginalization of the faction.
+
+@moderate_join
+choose-if: communist_strength < reformist_strength
+unavailable-subtitle: The bulk of the party is opposed to this.
+subtitle: The party will start seeking more moderate  alternatives.
+on-arrival: reformist_dissent -= 7; reformist_strength += 7; communist_strength -= 7; communist_dissent += 7; joined_lsi = 1;
+
+Somehow, the Reformist faction along with some members of the Right-Maximalist faction has convinced enough Moderate-Maximalist members to get a close plurality, and the PSI will not adhere to the Comintern. General dissent aross the Communist faction has risen.
