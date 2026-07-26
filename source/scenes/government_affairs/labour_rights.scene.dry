@@ -1,4 +1,4 @@
-title: Labour Rights
+title: Labor Rights
 new-page: true
 is-card: true
 view-if: psi_in_government and labour_minister_party = psi_name and labour_rights_timer <= 0 
