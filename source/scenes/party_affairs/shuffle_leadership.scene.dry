@@ -164,7 +164,7 @@ tags: remove_advisor
 on-arrival: tasca_advisor = 0; communist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Tasca has been removed as an advisor. The Leftist faction disapproves.
+Tasca has been removed as an advisor. The Communist faction disapproves.
 
 @remove_terracini
 title: Remove Terracini
@@ -173,7 +173,7 @@ tags: remove_advisor
 on-arrival: terracini_advisor = 0; communist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Terracini has been removed as an advisor. The Leftist faction disapproves.
+Terracini has been removed as an advisor. The Communist faction disapproves.
 
 @remove_togliatti
 title: Remove Togliatti
@@ -182,7 +182,7 @@ tags: remove_advisor
 on-arrival: togliatti_advisor = 0; communist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Togliatti has been removed as an advisor. The Leftist faction disapproves.
+Togliatti has been removed as an advisor. The Communist faction disapproves.
 
 @remove_gramsci
 title: Remove Gramsci
@@ -191,7 +191,7 @@ tags: remove_advisor
 on-arrival: gramsci_advisor = 0; communist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Gramsci has been removed as an advisor. The Leftist faction disapproves.
+Gramsci has been removed as an advisor. The Communist faction disapproves.
 
 @remove_bordiga
 title: Remove Bordiga
@@ -200,7 +200,7 @@ tags: remove_advisor
 on-arrival: bordiga_advisor = 0; communist_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Bordiga has been removed as an advisor. The Leftist faction disapproves.
+Bordiga has been removed as an advisor. The Communist faction disapproves.
 
 # syndicalists
 
@@ -247,12 +247,12 @@ tags: maximalist_advisor, communist_advisor, reformist_advisor, labour_advisor, 
 frequency: 1
 
 
-- @centrist: Add Maximalists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labour: Add Labour
-- @syndicalist: Add Syndicalists 
-- @nonfactional: Add Non-factional advisors
+- @centrist: Add Maximalist Advisors
+- @left: Add Communist Advisors
+- @reformist: Add Reformist Advisors
+- @labour: Add Labour Advisors
+- @syndicalist: Add Syndicalists  Advisors
+- @nonfactional: Add Non-factional Advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -288,7 +288,7 @@ view-if: n_advisors < 3
 
 @add_serrati
 title: Giacinto Menotti Serrati
-subtitle: Giacinto Menotti Serrati leads the Maximalist faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Revolution or Reformist, Party Discipline, Implementing our Program ?]
+subtitle: Giacinto Menotti Serrati leads the Maximalist faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Revolution or Reform, Party Discipline, Implementing our Program ?]
 is-card: true
 card-image: img/portraits/GiacintoMenottiSerrati.png
 tags: maximalist_advisor
@@ -338,7 +338,7 @@ Nicola Bombacci is now an advisor.
 
 @add_kuliscioff
 title: Anna Kuliscioff
-subtitle: Anna Kuliscioff is a Russian-born feminist, intellectual, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Veteran's Welfare, Labour Rights ?]
+subtitle: Anna Kuliscioff is a Russian-born feminist, intellectual, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Veteran's Welfare, <span>Labour<span> Rights ?]
 is-card: true
 card-image: img/portraits/AnnaKuliscioff.jpg
 tags: reformist_advisor
@@ -350,7 +350,7 @@ Anna Kuliscioff is now an advisor.
 
 @add_turati
 title: Filippo Turati
-subtitle: Filippo Turati leads the reformist faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Interior Policy, Snap Election ?]
+subtitle: Filippo Turati leads the Reformist faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Interior Policy, Snap Election ?]
 is-card: true
 card-image: img/portraits/FilippoTurati.jpg
 tags: reformist_advisor
@@ -362,7 +362,7 @@ Filippo Turati is now an advisor.
 
 @add_salvemini
 title: Gaetano Salvemini
-subtitle: Gaetano Salvemini is a reformist member who advocates for Southern Italy. {!<br><br>!}[? if difficulty < 0 : Actions - Southern Question, Public Education, Comintern Relations ?]
+subtitle: Gaetano Salvemini is a Reformist member, being the primary advocate for reform in Southern Italy. {!<br><br>!}[? if difficulty < 0 : Actions - Southern Question, Public Education, International Relations ?]
 is-card: true
 card-image: img/portraits/GaetanoSalvemini.jpg
 tags: reformist_advisor
@@ -374,7 +374,7 @@ Gaetano Salvemini is now an advisor.
 
 @add_altobelli
 title: Argentina Altobelli
-subtitle: Argentina Altobelli is a trade unionist, leader of the *National Federation of Agricultural Workers*, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Party Disunity, Agricultural Policy ?]
+subtitle: Argentina Altobelli is a trade unionist, leader of the National Federation of Agricultural Workers, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Party Disunity, Agricultural Policy ?]
 is-card: true
 card-image: img/portraits/ArgentinaAltobelli.png
 tags: reformist_advisor
@@ -386,7 +386,7 @@ Argentina Altobelli is now an advisor.
 
 @add_buozzi
 title: Bruno Buozzi
-subtitle: Buozzi is an outspoken member of the reformist faction of the [+ psi_name +], as well as the leader of the *Italian Federation of Metallurgical Workers*. {!<br><br>!}[? if difficulty < 0 : Actions - Child Labour, Economic Democracy, Minimum Program Implementation ?]
+subtitle: Buozzi is an outspoken member of the Reformist faction of the [+ psi_name +], as well as the leader of the Italian Federation of Metallurgical Workers. {!<br><br>!}[? if difficulty < 0 : Actions - Child <span>Labour<span>, Economic Democracy, Minimum Program Implementation ?]
 is-card: true
 card-image: img/portraits/BrunoBuozzi.jpg
 tags: reformist_advisor
@@ -398,7 +398,7 @@ Bruno Buozzi is now an advisor.
 
 @add_matteotti
 title: Giacomo Matteotti
-subtitle: Matteotti is a long-time deputy of the [+ psi_name +] in the Chamber of Deputies, as well as a member of the reformist faction under Turati. {!<br><br>!}[? if difficulty < 0 : Actions - Constitutional Reform, Foreign Policy, Fasci Urgency ?]
+subtitle: Matteotti is a long-time deputy of the [+ psi_name +] in the Chamber of Deputies, as well as a member of the Reformist faction under Turati. {!<br><br>!}[? if difficulty < 0 : Actions - Constitutional Reform, Foreign Policy, <span>Fasci<span> Urgency ?]
 is-card: true
 card-image: img/portraits/GiacomoMatteotti.jpg
 tags: reformist_advisor
@@ -412,7 +412,7 @@ Giacomo Matteotti is now an advisor.
 
 @add_tasca
 title: Angelo Tasca
-subtitle: Angelo Tasca is a member of the Left-wing of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Implementing the Maximum Plan, Paramilitary Funding ?]
+subtitle: Angelo Tasca is a member of the Communist faction of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Implementing the Maximum Plan, Paramilitary Funding ?]
 is-card: true
 card-image: img/portraits/AngeloTasca.jpg
 view-if: tasca_advisor = 0 and n_advisors < 3 and communist_split = 0
@@ -424,7 +424,7 @@ Angelo Tasca is now an advisor.
 
 @add_terracini
 title: Umberto Terracini
-subtitle: Umberto Terracini is a member of the Left-wing of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - Comintern Relations, Constitutional Reform, Fasci Urgency ?]
+subtitle: Umberto Terracini is a member of the Communist faction of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Constitutional Reform, <span>Fasci<span> Urgency ?]
 is-card: true
 card-image: img/portraits/UmbertoTerracini.jpg
 view-if: terracini_advisor = 0 and n_advisors < 3 and communist_split = 0 and advisor_arrested != 1
@@ -436,7 +436,7 @@ Umberto Terracini is now an advisor.
 
 @add_togliatti
 title: Palmiro Togliatti
-subtitle: Palmiro Togliatti is affiliated with the Left-wing of the party, advocating for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Public Education, Shuffle Cabinet ?]
+subtitle: Palmiro Togliatti is affiliated with the Communist faction of the party, advocating for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Public Education, Shuffle Cabinet ?]
 is-card: true
 card-image: img/portraits/PalmiroTogliatti.jpg
 view-if: togliatti_advisor = 0 and n_advisors < 3 and communist_split = 0
@@ -460,7 +460,7 @@ Antonio Gramsci is now an advisor.
 
 @add_bordiga
 title: Amadeo Bordiga
-subtitle: Amadeo Bordiga leads the Left-wing faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Armed Uprising, Revolutionary Planning, Rural Campaign ?]
+subtitle: Amadeo Bordiga leads the Communist faction of the party. {!<br><br>!}[? if difficulty < 0 : Actions - Armed Uprising, Revolutionary Planning, Rural Campaign ?]
 is-card: true
 card-image: img/portraits/AmadeoBordiga.png
 view-if: bordiga_advisor = 0 and n_advisors < 3 and communist_split = 0
@@ -475,7 +475,7 @@ Amadeo Bordiga is now an advisor.
 
 @add_treves
 title: Claudio Treves
-subtitle: Claudio Treves is a socialist journalist, affiliated with the Trade Unions. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, Labour Rights ?]
+subtitle: Claudio Treves is a <span style="color: #c00000;">socialist</span> journalist, affiliated with Labour. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, <span>Labour<span> Rights ?]
 is-card: true
 card-image: img/portraits/ClaudioTreves.jpg
 tags: labour_advisor
@@ -487,7 +487,7 @@ Claudio Treves is now an advisor.
 
 @add_rigola
 title: Rinaldo Rigola
-subtitle: Rinaldo Rigola was the former Secretary of the Italian CGdL, *General Confederation of Labour*. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Implementing the Minimum Plan, Veterans Welfare ?]
+subtitle: Rinaldo Rigola was the former Secretary of the <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**ali**</span><span style="color: #CD212A;">**an**</span> CGdL. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Implementing the Minimum Plan, Veterans Welfare ?]
 is-card: true
 card-image: img/portraits/RinaldoRigola.png
 tags: labour_advisor
@@ -499,7 +499,7 @@ Rinaldo Rigola is now an advisor.
 
 @add_daragona
 title: Ludovico D'Aragona
-subtitle: Ludovico D'Aragona is the current Secretary of the Italian CGdL, *General Confederation of Labour*. {!<br><br>!}[? if difficulty < 0 : Actions - Labour Rights, Emergency Fundraising ?]
+subtitle: Ludovico D'Aragona is the current Secretary of the Italian CGdL. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Labour<span> Rights, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/LudovicoDAragona.jpg
 tags: labour_advisor
@@ -513,7 +513,7 @@ Ludovico D'Aragona is now an advisor.
 
 @add_deambris
 title: Alceste De Ambris
-subtitle: De Ambris is a prominent revolutionary syndicalist and a defector from [+ pnf_leader +]'s *Fasces of Combat*. {!<br><br>!}[? if difficulty < 0 : Actions - Fasci Urgency, Red Guard Ordering, Arditi del Popolo ?]
+subtitle: De Ambris is a prominent revolutionary syndicalist and a defector from [+ pnf_leader +]'s FdC. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Fasci<span> Urgency, <span>Red Guard<span> Ordering, <span>Arditi del Popolo<span> ?]
 is-card: true
 card-image: img/portraits/AlcesteDeAmbris.jpg
 tags: syndicalist_advisor
@@ -525,7 +525,7 @@ Alceste De Ambris is now an advisor.
 
 @add_divittorio
 title: Giuseppe Di Vittorio
-subtitle: DDi Vittorio is a syndicalist leader of the *Italian Syndicalist Union*. {!<br><br>!}[? if difficulty < 0 : Actions - Southern Question, Party Organisations, Revolutionary Preparations ?]
+subtitle: DDi Vittorio is a syndicalist leader of the Italian Syndicalist Union. {!<br><br>!}[? if difficulty < 0 : Actions - Southern Question, Party Organisations, Revolutionary Preparations ?]
 is-card: true
 card-image: img/portraits/GiuseppeDiVittorio.jpg
 tags: syndicalist_advisor
@@ -539,7 +539,7 @@ Giuseppe Di Vittorio is now an advisor.
 
 @add_picelli
 title: Guido Picelli
-subtitle: Picelli is a non-factional founding member of the Red Guards and a fierce anti-fascist. {!<br><br>!}[? if difficulty < 0 : Actions - Fasci Urgency, Red Guards, Arditi del Popolo ?]
+subtitle: Picelli is a non-factional founding member of the Red Guard and a fierce anti-fascist. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Fasci Urgency<span>, <span>Red Guards<span>, <span>Arditi del Popolo<span> ?]
 is-card: true
 card-image: img/portraits/GuidoPicelli.jpg
 tags: nonfactional_advisor
