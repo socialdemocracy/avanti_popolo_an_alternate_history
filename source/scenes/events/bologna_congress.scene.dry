@@ -103,3 +103,6 @@ subtitle: The party will start seeking more moderate  alternatives.
 on-arrival: reformist_dissent -= 3; reformist_strength += 3; communist_strength -= 1; communist_dissent += 1; joined_lsi = 1;
 
 Somehow, the Reformist faction along with some members of the Right-Maximalist faction has convinced enough Moderate-Maximalist members to get a close plurality, and the PSI will not adhere to the Comintern.
+
+@we_are_going_to_moscow
+go-to: root
