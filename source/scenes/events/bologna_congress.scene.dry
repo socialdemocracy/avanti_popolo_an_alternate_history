@@ -82,10 +82,11 @@ The Reformists are able to convince sympathetic Maximalist members to support th
 @international_agenda
 new-page: false
 
-The third and final thing on the agenda is more minor than the others, but still influential, whether we will adhere to the Comintern or not. The Reformist faction advocates for the party to try to search for more moderate alternatives, such as the Berne International or the International Working Union Of Socialist Parties. Meanwhile, most Maximalist faction members excluding some Right-Maximalist members are in favour, along with the Communist Faction.
+The third and final thing on the agenda is more minor than the others, but still influential, whether we will adhere to the Comintern or not. The Reformist faction advocates for the party to try to search for more moderate alternatives, such as the Berne International or the International Working Union of Socialist Parties. Meanwhile, most Maximalist faction members excluding some Right-Maximalist members are in favour, along with the Communist Faction.
 
 - @comintern_join: The Communist and Maximalist factions manage to convince the party to join the Comintern.
-- @moderate_join: The Reformist and Moderate-Maximalist factions convince the party to seek more moderate alternatives.
+- @moderate_join: The Reformist and Right-Maximalist factions convince the party to seek more moderate alternatives.
+- @we_are_going_to_moscow: Perhaps we should wait for when we are at Moscow, at the Comintern Second World Congress.
 
 @comintern_join
 choose-if: reformist_strength < communist_strength
@@ -93,12 +94,12 @@ unavailable-subtitle: The bulk of the party is opposed to this.
 subtitle: The party will fully adhere to the Comintern.
 on-arrival: reformist_dissent *= 1.5; reformist_strength *= 0.5; communist_strength *= 1.5; maximalist_strength *= 1.25; communist_dissent *= 0.5; maximalist_dissent *= 0.75; joined_comintern = 1; revolutionary_fervour += 2; king_relation -= 7*radicalisation;
 
-As expected, we shall join the Comintern. General dissent in the Reformist faction has risen due to what they think is the deliberate marginalization of the faction.
+As expected, we shall join the Comintern.
 
 @moderate_join
 choose-if: communist_strength < reformist_strength
 unavailable-subtitle: The bulk of the party is opposed to this.
 subtitle: The party will start seeking more moderate  alternatives.
-on-arrival: reformist_dissent -= 7; reformist_strength += 7; communist_strength -= 7; communist_dissent += 7; joined_lsi = 1;
+on-arrival: reformist_dissent -= 3; reformist_strength += 3; communist_strength -= 1; communist_dissent += 1; joined_lsi = 1;
 
-Somehow, the Reformist faction along with some members of the Right-Maximalist faction has convinced enough Moderate-Maximalist members to get a close plurality, and the PSI will not adhere to the Comintern. General dissent aross the Communist faction has risen.
+Somehow, the Reformist faction along with some members of the Right-Maximalist faction has convinced enough Moderate-Maximalist members to get a close plurality, and the PSI will not adhere to the Comintern.
