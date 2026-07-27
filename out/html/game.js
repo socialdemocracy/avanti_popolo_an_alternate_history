@@ -215,6 +215,14 @@
         if (searchString === 'PE' ) {
             return baseTooltip.explanationText 
         }
+                  
+        if (searchString === 'PA' ) {
+            return baseTooltip.explanationText 
+        }
+                  
+        if (searchString === 'LI' ) {
+            return baseTooltip.explanationText 
+        }
       
         if (searchString === 'Other' ) {
             return baseTooltip.explanationText 
