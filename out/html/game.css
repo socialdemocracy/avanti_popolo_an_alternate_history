@@ -455,19 +455,19 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 .face-figure {
   /*vertical-align: top;*/
   display: inline-block;
-  border: 2.5px solid var(--face-figure-border-color);
+  border: 2.5px solid var(--card-border-color);
   float: left;
   max-width: 35%;
   /*max-height: 180px;*/
   margin-right: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   overflow: hidden;
 }
 
 .face-figure2 {
   /*vertical-align: top;*/
   display: inline-block;
-  border: 3.5px solid #28282B;
+  border: 3.5px solid #ccc;
   float: left;
   /*max-height: 180px;*/
   margin-right: 1em;
@@ -611,7 +611,7 @@ table {
 .seat.psi {
     fill: #ED2855;
     stroke: var(--border-color);
-    stroke-width: 1.5px;
+    stroke-width: 1px;
 }
 .seat.psri {
     fill: #FFC0CB;
