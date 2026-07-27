@@ -423,35 +423,8 @@ div.blank-card {
 
 .card-caption {
   text-align: center;
-  font-size: 14px !important;
-  line-height: 1.5em !important;
-  font-weight: 500 !important;
   display: block;
-  border-radius: 8px;
-  border: 1px solid #2235b2;
-  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-  opacity: 0;
   font-size: 1em;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transform: translateY(5px);
-  background: #d8ddef;
-  color: #3b1f0a;
-  text-align: left;
-  bottom: auto;
-  top: calc(var(--mouse-y, 0px) - 20px);
-  left: calc(var(--mouse-x, 0px));
-  transform: translate(-50%, -100%);
-}
-
-body.dark-mode .card-caption:hover {
-    background-color: rgb(60, 90, 160);
-}
-
-body.dark-mode .card-caption  {
-    background: #1a1a2e;
-    color: #e0e0e0;
-    border: 1px solid #8093ff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .card-tooltip {
@@ -490,6 +463,18 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   margin-bottom: 0.5em;
   overflow: hidden;
 }
+
+.face-figure2 {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 3.5px solid #28282B;
+  float: left;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
 .face-img {
   /*max-width: 150px;*/
   vertical-align: bottom;
