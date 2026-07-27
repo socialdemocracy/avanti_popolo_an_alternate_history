@@ -611,7 +611,7 @@ table {
 .seat.psi {
     fill: #ED2855;
     stroke: var(--border-color);
-    stroke-width: 1px;
+    stroke-width: 1.5px;
 }
 .seat.psri {
     fill: #FFC0CB;
