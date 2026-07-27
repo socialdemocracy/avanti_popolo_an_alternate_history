@@ -11,6 +11,10 @@ const colourList = [{
         style: "color: #808080; font-weight: bold;"
    },
     {
+        word: "PE",
+        style: "color: #90EE90; font-weight: bold;"
+   },
+    {
         word: "Emil Eichhorn",
         style: "color: #c00000; font-weight: bold;"
    },
@@ -333,6 +337,10 @@ const tooltipList = [{
     {
     searchString: "LDR",
     explanationText: "<img src=img/ldr2.webp> Liberals, Democrats and Radicals"
+    },
+    {
+    searchString: "PE",
+    explanationText: "<img src=img/pe-removebg-preview.png> Economic Party"
     },
     {
     searchString: "PLDI",
