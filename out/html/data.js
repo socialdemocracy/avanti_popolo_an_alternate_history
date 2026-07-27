@@ -284,7 +284,7 @@ const tooltipList = [{
     },
     {
     searchString: "PSI",
-    explanationText: "<img src=img/psi2-Photoroom.png> Italian Socialist Party"
+    explanationText: "<img src=img/psi-Photoroom-removebg-preview.png> Italian Socialist Party"
     },
     {
     searchString: "SPD",
