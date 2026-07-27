@@ -10,7 +10,8 @@ body {
   --tab-bg-color: #dedede;
   --tab-color: #ddd;
   --tab-hover-color: #ececec;
-  --card-border-color: #ccc; 
+  --card-border-color: #ccc;
+  --face-figure-border-color: #28282B;
   --card-bg-color: #ddd; 
   font-family: "Minion Pro", Georgia, serif;
   /*font-size: 1.125em;*/
@@ -31,6 +32,7 @@ body.dark-mode {
   --tab-color: #505050;
   --tab-hover-color: #242424;
   --card-border-color: #4c4c4c;
+  --face-figure-border-color: #28282B;
   --card-bg-color: #3f3f3f;
 }
 body.dark-mode #content {
@@ -453,7 +455,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 .face-figure {
   /*vertical-align: top;*/
   display: inline-block;
-  border: 2px solid var(--card-border-color);
+  border: 3.5px solid var(--face-figure-border-color);
   float: left;
   max-width: 35%;
   /*max-height: 180px;*/
