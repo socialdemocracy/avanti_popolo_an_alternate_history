@@ -338,7 +338,7 @@ Nicola Bombacci is now an advisor.
 
 @add_kuliscioff
 title: Anna Kuliscioff
-subtitle: Anna Kuliscioff is a Russian-born feminist, intellectual, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Veteran's Welfare, <span>Labour<span> Rights ?]
+subtitle: Anna Kuliscioff is a Russian-born feminist, intellectual, and member of the Reformist faction. {!<br><br>!}[? if difficulty < 0 : Actions - Women's Rights, Veteran's Welfare, <span;">Labour</span> Rights ?]
 is-card: true
 card-image: img/portraits/AnnaKuliscioff.jpg
 tags: reformist_advisor
@@ -386,7 +386,7 @@ Argentina Altobelli is now an advisor.
 
 @add_buozzi
 title: Bruno Buozzi
-subtitle: Buozzi is an outspoken member of the Reformist faction of the [+ psi_name +], as well as the leader of the Italian Federation of Metallurgical Workers. {!<br><br>!}[? if difficulty < 0 : Actions - Child <span>Labour<span>, Economic Democracy, Minimum Program Implementation ?]
+subtitle: Buozzi is an outspoken member of the Reformist faction of the [+ psi_name +], as well as the leader of the Italian Federation of Metallurgical Workers. {!<br><br>!}[? if difficulty < 0 : Actions - Child <span;">Labour</span>, Economic Democracy, Minimum Program Implementation ?]
 is-card: true
 card-image: img/portraits/BrunoBuozzi.jpg
 tags: reformist_advisor
@@ -398,7 +398,7 @@ Bruno Buozzi is now an advisor.
 
 @add_matteotti
 title: Giacomo Matteotti
-subtitle: Matteotti is a long-time deputy of the [+ psi_name +] in the Chamber of Deputies, as well as a member of the Reformist faction under Turati. {!<br><br>!}[? if difficulty < 0 : Actions - Constitutional Reform, Foreign Policy, <span>Fasci<span> Urgency ?]
+subtitle: Matteotti is a long-time deputy of the [+ psi_name +] in the Chamber of Deputies, as well as a member of the Reformist faction under Turati. {!<br><br>!}[? if difficulty < 0 : Actions - Constitutional Reform, Foreign Policy, <span;">Fasci</span> Urgency ?]
 is-card: true
 card-image: img/portraits/GiacomoMatteotti.jpg
 tags: reformist_advisor
@@ -424,7 +424,7 @@ Angelo Tasca is now an advisor.
 
 @add_terracini
 title: Umberto Terracini
-subtitle: Umberto Terracini is a member of the Communist faction of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Constitutional Reform, <span>Fasci<span> Urgency ?]
+subtitle: Umberto Terracini is a member of the Communist faction of the party, affiliated with Grasmci and his *L'Ordine Nuovo*. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Constitutional Reform, <span;">Fasci</span> Urgency ?]
 is-card: true
 card-image: img/portraits/UmbertoTerracini.jpg
 view-if: terracini_advisor = 0 and n_advisors < 3 and communist_split = 0 and advisor_arrested != 1
@@ -475,7 +475,7 @@ Amadeo Bordiga is now an advisor.
 
 @add_treves
 title: Claudio Treves
-subtitle: Claudio Treves is a <span style="color: #c00000;">socialist</span> journalist, affiliated with Labour. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, <span>Labour<span> Rights ?]
+subtitle: Claudio Treves is a <span style="color: #c00000;">socialist</span> journalist, affiliated with Labour. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Media, <span;">Labour</span> Rights ?]
 is-card: true
 card-image: img/portraits/ClaudioTreves.jpg
 tags: labour_advisor
@@ -499,7 +499,7 @@ Rinaldo Rigola is now an advisor.
 
 @add_daragona
 title: Ludovico D'Aragona
-subtitle: Ludovico D'Aragona is the current Secretary of the Italian CGdL. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Labour<span> Rights, Emergency Fundraising ?]
+subtitle: Ludovico D'Aragona is the current Secretary of the Italian CGdL. {!<br><br>!}[? if difficulty < 0 : Actions - <span;">Labour</span> Rights, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/LudovicoDAragona.jpg
 tags: labour_advisor
@@ -513,7 +513,7 @@ Ludovico D'Aragona is now an advisor.
 
 @add_deambris
 title: Alceste De Ambris
-subtitle: De Ambris is a prominent revolutionary syndicalist and a defector from [+ pnf_leader +]'s FdC. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Fasci<span> Urgency, <span>Red Guard<span> Ordering, <span>Arditi del Popolo<span> ?]
+subtitle: De Ambris is a prominent revolutionary syndicalist and a defector from [+ pnf_leader +]'s FdC. {!<br><br>!}[? if difficulty < 0 : Actions - <span;">Fasci</span> Urgency, <span;">Red Guard</span> Ordering, <span;">Arditi Del Popolo</span>?]
 is-card: true
 card-image: img/portraits/AlcesteDeAmbris.jpg
 tags: syndicalist_advisor
@@ -539,7 +539,7 @@ Giuseppe Di Vittorio is now an advisor.
 
 @add_picelli
 title: Guido Picelli
-subtitle: Picelli is a non-factional founding member of the Red Guard and a fierce anti-fascist. {!<br><br>!}[? if difficulty < 0 : Actions - <span>Fasci Urgency<span>, <span>Red Guard<span>, <span>Arditi del Popolo<span> ?]
+subtitle: Picelli is a non-factional founding member of the Red Guard and a fierce anti-fascist. {!<br><br>!}[? if difficulty < 0 : Actions - <span;">Fasci</span> Urgency, <span;">Red Guard</span> Ordering, <span;">Arditi Del Popolo</span> ?]
 is-card: true
 card-image: img/portraits/GuidoPicelli.jpg
 tags: nonfactional_advisor
