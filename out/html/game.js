@@ -211,6 +211,10 @@
         if (searchString === 'Others' ) {
             return baseTooltip.explanationText 
         }
+            
+        if (searchString === 'PE' ) {
+            return baseTooltip.explanationText 
+        }
       
         if (searchString === 'Other' ) {
             return baseTooltip.explanationText 
