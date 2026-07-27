@@ -15,6 +15,18 @@ const colourList = [{
         style: "color: #90EE90; font-weight: bold;"
    },
     {
+        word: "PA",
+        style: "color: #006600; font-weight: bold;"
+   },
+    {
+        word: "ANI",
+        style: "color: #00008B; font-weight: bold;"
+   },
+    {
+        word: "LI",
+        style: "color: #5d849e; font-weight: bold;"
+   },
+    {
         word: "Emil Eichhorn",
         style: "color: #c00000; font-weight: bold;"
    },
@@ -341,6 +353,18 @@ const tooltipList = [{
     {
     searchString: "PE",
     explanationText: "<img src=img/pe-removebg-preview.png> Economic Party"
+    },
+    {
+    searchString: "PA",
+    explanationText: "<img src=img/PA-Photoroom.png> Agrarian Party"
+    },
+    {
+    searchString: "ANI",
+    explanationText: "<img src=img/ani.webp> Italian Nationalist Association"
+    },
+    {
+    searchString: "LI",
+    explanationText: "<img src=img/ind_liv-Photoroom-removebg-preview.pngp> Independent Liberals"
     },
     {
     searchString: "PLDI",
