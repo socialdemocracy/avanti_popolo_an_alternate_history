@@ -223,6 +223,10 @@
         if (searchString === 'LI' ) {
             return baseTooltip.explanationText 
         }
+                        
+        if (searchString === 'ANI' ) {
+            return baseTooltip.explanationText 
+        }
       
         if (searchString === 'Other' ) {
             return baseTooltip.explanationText 
