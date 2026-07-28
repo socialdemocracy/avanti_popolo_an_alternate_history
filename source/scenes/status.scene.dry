@@ -51,7 +51,7 @@ Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?
 
 Chamber of Deputies composition:
 
-<div>{!<svg id="parliament_status" style="width: 500px; height: 250px;"> </svg>!}
+<div>{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
 [+ psi_name +]: [+ psi_seating_disp +]% 
 [? if not psri_collapse : PSRI: [+ psri_seating_disp +]% ?]
