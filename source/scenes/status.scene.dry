@@ -18,6 +18,8 @@ var _newData = [];
     }
     _addP('psi', 'PSI', Q.psi_seating);
     _addP('psri', 'PSRI', Q.psri_seating);
+    _addP('psu', 'PSU', Q.psu_seating);
+    _addP('pcdi', "PCd'I", Q.pcdi_seating);
     _addP('pll', 'PLL', Q.pll_seating);
     _addP('pri',  'PRI',  Q.pri_seating);
     _addP('ds', 'DS', Q.ds_seating);
@@ -97,8 +99,11 @@ Chamber of Deputies composition:
     d3.select('#status_parliament').datum(window._parliData).call(parl);
 })();
 </script>!}
-[+ psi_name +]: [+ psi_seating_disp +]% 
-[? if not psri_collapse : PSRI: [+ psri_seating_disp +]% ?]
+
+<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ psi_seating_disp +]% 
+[? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ pcdi_seating_disp +]% ?]
+[? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_seating_disp +]% ?]
+[? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_seating_disp +]% ?]
 [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ pll_seating_disp +]% ?]
 [? if pri_prominent : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ pri_seating_disp +]% ?]
 [? if not pdsi_formed : <span style="color: [+ ds_colour +];">**DS**</span>: [+ ds_seating_disp +]% ?]
