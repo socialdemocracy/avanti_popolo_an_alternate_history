@@ -16,21 +16,21 @@ var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    _addP('psi', 'PSI', Q.psi_seating_disp);
-    _addP('psri', 'PSRI', Q.psri_seating_disp);
-    _addP('pll', 'PLL', Q.pll_seating_disp);
-    _addP('pri',  'PRI',  Q.pri_seating_disp);
-    _addP('ds', 'DS', Q.ds_seating_disp);
-    _addP('ds', 'PDSI', Q.ds_seating_disp);
-    _addP('ppi', 'PPI', Q.ppi_seating_disp);
-    _addP('ldr', 'LDR', Q.ldr_seating_disp);
-    _addP('ldr', 'PLDI', Q.ldr_seating_disp);
-    _addP('ul','UL',Q.ul_seating_disp);
-    _addP('ul', 'PLI', Q.ul_seating_disp);
-    _addP('pcs','PCS',Q.pcs_seating_disp);
-    _addP('pnf',  'FdC',  Q.pnf_seating_disp);
-    _addP('pnf',  'PNF',  Q.pnf_seating_disp);
-    _addP('other', 'Others', Q.other_seating_disp);
+    _addP('psi', 'PSI', Q.psi_seating);
+    _addP('psri', 'PSRI', Q.psri_seating);
+    _addP('pll', 'PLL', Q.pll_seating);
+    _addP('pri',  'PRI',  Q.pri_seating);
+    _addP('ds', 'DS', Q.ds_seating);
+    _addP('ds', 'PDSI', Q.ds_seating);
+    _addP('ppi', 'PPI', Q.ppi_seating);
+    _addP('ldr', 'LDR', Q.ldr_seating);
+    _addP('ldr', 'PLDI', Q.ldr_seating);
+    _addP('ul','UL',Q.ul_seating);
+    _addP('ul', 'PLI', Q.ul_seating);
+    _addP('pcs','PCS',Q.pcs_seating);
+    _addP('pnf',  'FdC',  Q.pnf_seating);
+    _addP('pnf',  'PNF',  Q.pnf_seating);
+    _addP('other', 'Others', Q.other_seating);
 
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
@@ -80,13 +80,13 @@ Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?
 
 Chamber of Deputies composition:
 
-{!<svg id="status_parliament" style="width: 100%; height: 220px; display: block;"></svg>
+{!<svg id="status_parliament" style="width: 100%; height: 200px; display: block;"></svg>
 <script>
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_parliament');
     if (!el) return;
-    var w = el.parentElement.offsetWidth || 508;
+    var w = el.parentElement.offsetWidth || 220;
     el.setAttribute('width', w);
     el.setAttribute('height', Math.round(w * 0.55));
     var parl = d3.parliament();
