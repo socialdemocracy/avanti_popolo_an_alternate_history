@@ -312,15 +312,15 @@ const tooltipList = [{
     },
     {
     searchString: "PCd'I",
-    explanationText: "<img src=img/redguarddeck.jpg> Italian Communist Party"
+    explanationText: "<img src=img/pcdi.webp> Italian Communist Party"
     },
     {
     searchString: "pcdi",
-    explanationText: "<img src=img/redguarddeck.jpg> Italian Communist Party"
+    explanationText: "<img src=img/pcdi.webp> Italian Communist Party"
     },
     {
     searchString: "PSU",
-    explanationText: "<img src=img/UnemploymentGov.jpg> Unitary Socialist Party"
+    explanationText: "<img src=img/psu.webp> Unitary Socialist Party"
     },
     {
     searchString: "Others",
@@ -348,11 +348,11 @@ const tooltipList = [{
     },
     {
     searchString: "PPI",
-    explanationText: "<img src=img/libertas2.png> Italian People's Party"
+    explanationText: "<img src=img/ppinewer.webp> Italian People's Party"
     },
     {
     searchString: "LDR",
-    explanationText: "<img src=img/ldr2.webp> Liberals, Democrats and Radicals"
+    explanationText: "<img src=img/ldr5-Photoroom-removebg-preview.png> Liberals, Democrats and Radicals"
     },
     {
     searchString: "PE",
@@ -368,7 +368,7 @@ const tooltipList = [{
     },
     {
     searchString: "LI",
-    explanationText: "<img src=img/ind_liv-Photoroom-removebg-preview.pngp> Independent Liberals"
+    explanationText: "<img src=img/il2.webp> Independent Liberals"
     },
     {
     searchString: "PLDI",
