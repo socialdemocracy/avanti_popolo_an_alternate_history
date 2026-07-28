@@ -454,7 +454,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 /* Unlike cards, face images can have different sizes. */
 .face-figure {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 3.5px solid var(--face-figure-border-color);
   float: left;
   max-width: 35%;
@@ -466,7 +466,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 
 .face-figure2 {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 3.5px solid #ccc;
   float: left;
   /*max-height: 180px;*/
