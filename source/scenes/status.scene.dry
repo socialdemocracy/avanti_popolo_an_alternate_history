@@ -16,10 +16,10 @@ var _newData = [];
     function _addP(id, legend, seats) {
         if (seats && seats > 0) _newData.push({ id: id, legend: legend, name: legend, seats: seats });
     }
-    _addP('psi', 'PSI', Q.psi_seating);
-    _addP('psri', 'PSRI', Q.psri_seating);
-    _addP('psu', 'PSU', Q.psu_seating);
     _addP('pcdi', "PCd'I", Q.pcdi_seating);
+    _addP('psi', 'PSI', Q.psi_seating);
+    _addP('psu', 'PSU', Q.psu_seating);
+    _addP('psri', 'PSRI', Q.psri_seating);
     _addP('pll', 'PLL', Q.pll_seating);
     _addP('pri',  'PRI',  Q.pri_seating);
     _addP('ds', 'DS', Q.ds_seating);
@@ -30,9 +30,9 @@ var _newData = [];
     _addP('ul','UL',Q.ul_seating);
     _addP('ul', 'PLI', Q.ul_seating);
     _addP('pcs','PCS',Q.pcs_seating);
+    _addP('other', 'Others', Q.other_seating);
     _addP('pnf',  'FdC',  Q.pnf_seating);
     _addP('pnf',  'PNF',  Q.pnf_seating);
-    _addP('other', 'Others', Q.other_seating);
 
     var _newSig = JSON.stringify(_newData.map(function(p){ return p.id + p.seats; }));
     var _changed = (_newSig !== window._parliSig);
