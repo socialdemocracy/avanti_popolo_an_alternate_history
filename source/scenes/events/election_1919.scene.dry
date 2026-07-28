@@ -840,7 +840,7 @@ go-to: coalition_menu
 
 [? if not acerbo_law_passed : {!<tr><td>!} **-[+ psi_name +]** {!</td></tr>!} ?]
 
-[? if pcdi_formed : {!<tr><td><div class="box" style='background-color:#C72F35'> </div>!} <span style="color: [+ pcdi_colour +];">Communist</span> List: {!</td><td>!} [+ pcdi_r_disp +]% {!</td><td>!} [+ str_change_pcdi +]% {!</td><td>!} [+ pcdi_seating +] {!</td><td>!} [+ pcdi_seating_disp +]% {!</td></tr>!} ?]
+[? if pcdi_formed : {!<tr><td><div class="box" style='background-color:#C72F35'> </div>!} <span style="color: [+ pcdi_colour +];">Left</span> List: {!</td><td>!} [+ pcdi_r_disp +]% {!</td><td>!} [+ str_change_pcdi +]% {!</td><td>!} [+ pcdi_seating +] {!</td><td>!} [+ pcdi_seating_disp +]% {!</td></tr>!} ?]
 
 [? if pcdi_formed : {!<tr><td>!} -PCd'I {!</td></tr>!} ?]
 
@@ -854,7 +854,7 @@ go-to: coalition_menu
 
 [? if pll_formed and not anti_fas_pll : {!<tr><td>!} -PLL {!</td></tr>!} ?]
 
-[? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td><div class="box" style='background-color:#FFC0CB'> </div>!} <span style="color: [+ psri_colour +];">Reformists Socialists</span List: {!</td><td>!} [+ psri_r_disp +]% {!</td><td>!} [+ str_change_psri +]% {!</td><td>!} [+ psri_seating +] {!</td><td>!} [+ psri_seating_disp +]% {!</td></tr>!} ?]
+[? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td><div class="box" style='background-color:#FFC0CB'> </div>!} <span style="color: [+ psri_colour +];">Moderate Socialist</span> List: {!</td><td>!} [+ psri_r_disp +]% {!</td><td>!} [+ str_change_psri +]% {!</td><td>!} [+ psri_seating +] {!</td><td>!} [+ psri_seating_disp +]% {!</td></tr>!} ?]
 
 [? if (psri_stable or (psri_solo and psri_r >= 5)) and not anti_fas_psri : {!<tr><td>!} -PSRI {!</td></tr>!} ?]
 
