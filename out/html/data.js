@@ -315,6 +315,10 @@ const tooltipList = [{
     explanationText: "<img src=img/redguarddeck.jpg> Italian Communist Party"
     },
     {
+    searchString: "pcdi",
+    explanationText: "<img src=img/redguarddeck.jpg> Italian Communist Party"
+    },
+    {
     searchString: "PSU",
     explanationText: "<img src=img/UnemploymentGov.jpg> Unitary Socialist Party"
     },
