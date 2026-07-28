@@ -1,21 +1,25 @@
 title: Food Riots!
 new-page: true
-subtitle: Riots have broken out across Italy!
+subtitle: Riots have broken out across <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span>!
 view-if: year = 1919 and month = 7
 max-visits: 1
 tags: event
+face-image: img/avanti_poster.jpeg
 
-= Food riots break out across Italy!
+= Food Riots!
 
-The end of the war resulted in a sharp increase of prices across the country as inflation skyrocketed, including food, which led to obvious discontent amongst the masses. Today, seemingly, that discontent has exploded, as riots have broken out across Italy, starting with the northern regions as the other regions followed suit shortly after.
+The end of the war resulted in a sharp increase of prices across the country as inflation skyrocketed, including food, which led to obvious discontent amongst the masses. Today, seemingly, that discontent has exploded, as riots have broken out across <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span>, starting with the northern regions as the other regions followed suit shortly after.
 
-Food and clothing stores have been raided, as shopkeepers have been forced to lower back their prices to acceptable levels. Some have been killed in the midst of the results, though none have taken responsibility.
+Local civilians have taken matters into their own hands and started ransacking shops, with some shopkeepers being injured or shot dead, with the red flag being hoisted in many places including Tuscany and Romagna, by what are supposed to be local <span style="color: #9B0000;">Soviets</span>, imposing rules  for gathering and selling food.
+
+Cavalry and infantry detachments reinforced carabineers on guard  in some cities, as the government frantically has attempted to stop the masses from ransacking stores. Striking workmen ransacked drygoods stores. Some of the trade unions have taken initiative and established so called "Chambers Of <span;">Labour</span>", with them distributing food, recommending places to buy food, among other things.
 
 What should we do?
 
 - @expand_aid: Expand our welfare & food programs to aid the rioters.
 - @solidarity_protest: Protest in solidarity with the rioters.
 - @condemn_protest: Condemn the violent protestors.
+- @no_opinion: We have no reason to  react to these riots.
 
 @expand_aid 
 subtitle: -1 Party Resource - We can take the opportunity to grow our popularity.
@@ -30,6 +34,11 @@ subtitle: Our actions will only exacerbate the situation.
 on-arrival: workers_psi += 2*(1-dissent); rural_psi += 3*(1-dissent); middle_class_psi -= 2*(1-dissent); ldr_relation -= 3; ul_relation -= 5; radicalisation += 0.2;
 
 We protest alongside the protestors and defending the common worker in the face of bourgeois greed, though our actions are seen less fondly by the governing coalition, seeing it as only exacerbating the situation further.
+
+@no_opinion
+subtitle: Many feel we would lose a opportunity here.
+go-to: root
+
 
 @condemn_protest
 subtitle: Our voting base won't be happy about this.
