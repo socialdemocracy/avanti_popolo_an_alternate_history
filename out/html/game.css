@@ -455,12 +455,10 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 .face-figure {
   /*vertical-align: top;*/
   display: inline-block;
-  border: 2.5px solid var(--card-border-color);
+  border: 3.5px solid var(--face-figure-border-color);
   float: left;
   max-width: 35%;
   /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
   overflow: hidden;
 }
 
@@ -470,8 +468,6 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   border: 3.5px solid #ccc;
   float: left;
   /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
   overflow: hidden;
 }
 
