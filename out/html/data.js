@@ -352,7 +352,7 @@ const tooltipList = [{
     },
     {
     searchString: "LDR",
-    explanationText: "<img src=img/ldr5-Photoroom-removebg-preview.png> Liberals, Democrats and Radicals"
+    explanationText: "<img src=img/ldr5.webp> Liberals, Democrats and Radicals"
     },
     {
     searchString: "PE",
