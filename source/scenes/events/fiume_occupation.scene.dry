@@ -22,13 +22,13 @@ Regardless, this has caused quite a stir internationally, and will certainly del
 - @condemn_fiume: Condemn D'Annunzio and his <span style="color: [+ pnf_colour +];">nationalist</span> march! 
 
 @condemn_fiume 
-subtitle: D'Annunzio is popular among our veterans, who see him as regaining Italy's pride.
+subtitle: D'Annunzio is popular among our veterans, who see him as regaining <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span>'s pride.
 on-arrival: veterans_psi -= 3; nationalist_sentiment -= 3; communist_dissent -= 5; labour_dissent += 5; reformist_dissent -= 5; syndicalist_strength -= 7; syndicalist_dissent += 7 if syndicalist_active;
 
 We issue a letter of condemnation of D'Annunzio, even as not much of the party agrees.
 
 @support_fiume
-subtitle: De Ambris' participation certainly makes this move popular among the syndicalists.
+subtitle: De Ambris' participation certainly makes this move popular among the <span style="color: [+ syndicalist_colour +];">syndicalists</span>.
 on-arrival: workers_psi += 3; nationalist_sentiment += 3; communist_dissent -= 5; labour_dissent -= 5; reformist_dissent += 5; syndicalist_strength += 7; syndicalist_dissent -= 7 if syndicalist_active;
 
 We issue a letter of support for D'Annunzio, even as not much of the party agrees.
