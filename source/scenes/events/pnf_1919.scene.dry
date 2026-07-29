@@ -4,6 +4,7 @@ new-page: true
 view-if: year = 1919 and month = 10 and week = 1 and not pnf_banned
 max-visits: 1
 tags: event
+face-image: img/fdccongress3.webp
 
 = 1919 FdC Congress
 
