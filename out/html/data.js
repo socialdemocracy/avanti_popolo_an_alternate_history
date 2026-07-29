@@ -276,7 +276,7 @@ const tooltipList = [{
     },
     {
     searchString: "SPD",
-    explanationText: "<img src=img/spd-Photoroom.png> Sozialdemokratische Partei Deutschlands   Social Democratic Party Of Germany"
+    explanationText: "<img src=img/spd-Photoroom.png> Sozialdemokratische Partei Deutschlands </br> Social Democratic Party Of Germany"
     },
     {
     searchString: "Communist",
@@ -464,11 +464,11 @@ const tooltipList = [{
     },
     {
     searchString: "Reichspräsident",
-    explanationText: "<img src=img/reichpresident.webp> Reich-president   President of the Reich"
+    explanationText: "<img src=img/reichpresident.webp> Reich-president </br> President of the Reich"
     },
     {
     searchString: "Ukrainian People's Army",
-    explanationText: "<img src=img/ukr_army.webp> Armiia Ukrainskoi Narodnoi Respubliky   Ukrainian People's Army"
+    explanationText: "<img src=img/ukr_army.webp> Armiia Ukrainskoi Narodnoi Respubliky </br> Ukrainian People's Army"
     },
     {
     searchString: "Matthias Erzberger",
@@ -476,7 +476,7 @@ const tooltipList = [{
     },
     {
     searchString: "Philipp Scheidemann",
-    explanationText: "<img src=img/portraits/scheidemann.jpeg> Philipp Scheidemann    The  man who declared the Weimar Republic."
+    explanationText: "<img src=img/portraits/scheidemann.jpeg> Philipp Scheidemann </br> The  man who declared the Weimar Republic."
     },
     {
     searchString: "Arthur Graf von Posadowsky-Wehner",
