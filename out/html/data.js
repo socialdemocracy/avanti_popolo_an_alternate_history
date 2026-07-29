@@ -95,11 +95,11 @@ const colourList = [{
         style: "color: #808080; font-weight: bold;"
    },
     {
-        word: "Weimar Republic",
+        word: "Kiev",
         style: "font-weight: bold;"
    },
     {
-        word: "Kiev",
+        word: "Landwehr River",
         style: "font-weight: bold;"
    },
     {
@@ -108,14 +108,6 @@ const colourList = [{
    },
     {
         word: "Reichspräsident",
-        style: "font-weight: bold;"
-   },
-    {
-        word: "Ukraine",
-        style: "font-weight: bold;"
-   },
-    {
-        word: "Ukrainian People's Republic",
         style: "font-weight: bold;"
    },
     {
