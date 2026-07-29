@@ -267,14 +267,6 @@
        if (searchString === 'Arthur Graf von Posadowsky-Wehner' ) {
             return baseTooltip.explanationText 
         }
-                                
-       if (searchString === 'Ukraine' ) {
-            return baseTooltip.explanationText 
-        }
-                                      
-       if (searchString === "Ukrainian People's Republic" ) {
-            return baseTooltip.explanationText 
-        }
                                             
        if (searchString === "Ukrainian People's Army" ) {
             return baseTooltip.explanationText 
@@ -291,11 +283,7 @@
        if (searchString === 'Freikorps' ) {
             return baseTooltip.explanationText 
         }
-              
-       if (searchString === 'Weimar Republic' ) {
-            return baseTooltip.explanationText 
-        }
-              
+
        if (searchString === 'Karl Liebknecht' ) {
             return baseTooltip.explanationText 
         }
