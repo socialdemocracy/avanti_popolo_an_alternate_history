@@ -6,13 +6,13 @@ tags: event
 
 = Military Demobilisation
 
-The Military is to continue its demobilisation of its forces back to post-war levels. It does so in waves, and this month seems to be the latest one. Though a strain on already high unemployment, this is sure to relieve the budget by a substantial amount.
+The Regio Esercito is to continue its demobilisation of its forces back to post-war levels. It does so in waves, and this month seems to be the latest one. Unfortunately, this brings hundreds or thousands of veterans to become unemployed, due to them having no real employment other than being in the Regio Esercito, also indirectly causing many to radicalize and join into organizations such as the Fasci, Arditismo, or even our own Red Guard. The only  real upside to this is that the government gets more budget to spend on their policies.
 
 [? if psi_in_government : Should we do something about this? ?][? if demobilised_delay and psi_in_government : We are already off schedule. ?]
 
 - @delay_demobilise: Influence the army to delay the orders.
 - @stop_demobilise: Influence the army to end demobilisation.
-- @sway_demobilise: Recruit the newly discharged soldiers to the Red Guards.
+- @sway_demobilise: Do a recruitment drive for the Red Guard among the recently discharged veterans.
 - @allow_demobilise
 
 @delay_demobilise 
@@ -22,7 +22,7 @@ choose-if: army_loyalty > 0.53
 unavailable-subtitle: Our influence within the army is too low.
 on-arrival: demobilise_timer += 6; demobilised_delay = 1; budget -= 1
 
-We successfully persuade the army to delay the mobilisation by another 6 months, letting us continue our policies without the extra burden of more unemployed soldiers. Keeping the army that big isn't cheap, either.
+We successfully persuade the army to delay the mobilisation by another 6 months, letting us continue our policies without the extra burden of more unemployed soldiers. Keeping the Regio Esercito that big isn't cheap, either.
 
 @stop_demobilise 
 subtitle: [? if army_strength > 3000 : -7 Budget ?][? if army_strength > 2000 and army_strength < 3000 : -5 Budget ?][? if army_strength < 2000 and army_strength > 1000: -3 Budget ?] We have done enough; end the demobilisation.
@@ -39,11 +39,11 @@ choose-if: para_resources > 0
 unavailable-subtitle: Not enough paramilitary resources. (Need 1).
 on-arrival: para_resources -= 1; rg_strength += 15*revolutionary_exhaustion; rg_militancy += 0.02; army_strength -= 692; unemployment += 1.9; budget += 1; demobilise_timer += 6; fdc_strength += 15; ard_strength += 10; abl_strength += 5; veterans += 2;
 
-We are able to utilise our resources to recruit and bolster our own forces, as the fascists do the same.
+We are able to utilise our resources to recruit and bolster our own forces, as the <span style="color: [+ pnf_colour +];">fascists</span> do the same.
 
 @allow_demobilise
 title: Let them demobilise.
 subtitle: +1 Budget
 on-arrival: army_strength -= 692; unemployment += 1.9; budget += 1; demobilise_timer += 6; fdc_strength += 15; ard_strength += 10; abl_strength += 5; veterans += 2;
 
-The Regio Esercito continues its post-war demobilisation, as the fascists utilise the opportunity to bolster their ranks.
+The Regio Esercito continues its post-war demobilisation, as the <span style="color: [+ pnf_colour +];">fascists</span> utilise the opportunity to bolster their ranks.
