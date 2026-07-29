@@ -974,7 +974,6 @@ Q.catholic_women_accepted = 0;
 !}
 
 - @pnf_majority
-- @ppi_majority
 - @psi_majority
 - @left_wing_coalition
 - @centre_left_coalition
@@ -1063,39 +1062,6 @@ achievement: governo_monocolore
 Finally, the [+ psi_name +] can govern alone! Our long campaign of electioneering has paid off. We do not need to worry about coalition government; anything is possible. 
 
 [+ prime_minister +] is elected within the party to become Prime Minister.
-
-@ppi_majority
-title: PPI majority alone
-subtitle: PPI: [+ ppi_seating_disp +]%
-view-if: ppi_seating_disp >= 50
-on-arrival: {!
-Q.prime_minister = "De Gasperi"
-Q.prime_minister_party = "PPI"
-Q.ppi_in_government = 1; 
-
-Q.foreign_minister_party = Q.i_name; 
-Q.foreign_minister = "Scialoja";
-Q.interior_minister_party = Q.ppi_name;
-Q.interior_minister = "Gronchi"; 
-Q.justice_minister_party = Q.ppi_name;
-Q.justice_minister = "Rodinò";
-Q.labour_minister_party = Q.ppi_name; 
-Q.labour_minister = "Cavazzoni";
-Q.finance_minister_party = Q.ppi_name;
-Q.finance_minister = "Meda";
-Q.treasury_minister_party = Q.ppi_name;
-Q.treasury_minister = "Bertini";
-Q.agriculture_minister_party = Q.ppi_name;
-Q.agriculture_minister = "Mauri"; 
-Q.public_education_minister_party = Q.ppi_name; 
-Q.public_education_minister = "Anile";
-Q.public_works_minister_party = Q.ppi_name;
-Q.public_works_minister = "Micheli";
-!}
-
-Somehow, the PPI has achieved a majority in these elections.
-
-De Gasperi has been elected by the PPI to be the majority prime minister.
 
 @left_wing_coalition
 title: Can we form a Left-Wing Coalition?
