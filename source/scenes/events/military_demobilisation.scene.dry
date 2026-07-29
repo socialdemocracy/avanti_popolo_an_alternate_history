@@ -1,10 +1,10 @@
-title: Further Military demobilisation set to occur
-subtitle: The Military will continue its post-war demobilisation.
+title: Military Demobilisation
+subtitle: The Regio Esercito continues its post war demobilisation..
 new-page: true
 view-if: demobilise_timer = 0 and army_strength > 692 and stopped_mobilisation == 0 and not violent_revolution
 tags: event
 
-= Military Demobilisation to Continue
+= Military Demobilisation
 
 The Military is to continue its demobilisation of its forces back to post-war levels. It does so in waves, and this month seems to be the latest one. Though a strain on already high unemployment, this is sure to relieve the budget by a substantial amount.
 
