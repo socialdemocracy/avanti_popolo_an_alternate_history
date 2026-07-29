@@ -95,10 +95,6 @@ const colourList = [{
         style: "color: #808080; font-weight: bold;"
    },
     {
-        word: "Landwehr River",
-        style: "font-weight: bold;"
-   },
-    {
         word: "Weimar Republic",
         style: "font-weight: bold;"
    },
@@ -431,10 +427,6 @@ const tooltipList = [{
     explanationText: "<img src=img/landwehr_river.jpeg> A river running parallel to the Spree River in Berlin, Germany."
     },
     {
-    searchString: "Weimar Republic",
-    explanationText: "<img src=img/ger_weim_rep.png> Deutsches Reich   German Republic"
-    },
-    {
     searchString: "Freikorps",
     explanationText: "<img src=img/freikorps.webp> A paramilitary made from conversative-nationalists in Germany."
     },
@@ -481,14 +473,6 @@ const tooltipList = [{
     {
     searchString: "Reichspräsident",
     explanationText: "<img src=img/reichpresident.webp> Reich-president   President of the Reich"
-    },
-    {
-    searchString: "Ukraine",
-    explanationText: "<img src=img/ukraine2.webp> Ukrayins'ka Narodna Respublika   Ukrainian People's Republic"
-    },
-    {
-    searchString: "Ukrainian People's Republic",
-    explanationText: "<img src=img/ukraine2.webp> Ukrayins'ka Narodna Respublika   Ukrainian People's Republic"
     },
     {
     searchString: "Ukrainian People's Army",
