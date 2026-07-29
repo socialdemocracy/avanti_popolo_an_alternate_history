@@ -82,7 +82,7 @@ Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?
 
 Chamber of Deputies composition:
 
-{!<svg id="status_parliament" style="width: 500%; display: block;"></svg>
+{!<svg id="status_parliament" style="width: 100%; display: block;"></svg>
 <script>
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
