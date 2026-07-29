@@ -12,7 +12,7 @@ The FdC, formed back in March, is a relatively young party, with its Sepolcro ma
 
 During his time speaking, Benito Mussolini gave a relatively vague speech, claiming he was "neither <span style="color: #008C45;">rep</span><span style="color: #E5E4E2;">ubli</span><span style="color: #CD212A;">can</span> nor <span style="color: [+ i_colour +];">monarchist</span>", before then moving on to the agenda.  Mussolini would propose 4 agenda items, and all would be approved. Among these agenda items, some notable ones would be a order for "adherence to the movement for the economic liberation and autonomy of the working class", supporting trade unions such as the <span style="color: [+ syndicalist_colour +];">national syndicalist</span> <span style="color: [+ syndicalist_colour +];">**UIL**</span>, support for the abolition of press censorship, and support for D'Annunzio.
 
-Most importantly, though, the last order, talking about electoral alliances is particularly interesting, as the FdC declared its support for a government of "left-wing interventionists". Some in our party view this as an opportunity to collaborate, though many are still wary of this new party, especially due to its more anti-<span style="color: [+ psi_colour +];">socialist</span> and <span style="color: [+ pnf_colour +];">conservative</span> parts.
+Most importantly, though, the last order, talking about electoral alliances is particularly interesting, as the FdC declared its support for a government of "left-wing interventionists". Some in our party view this as an opportunity to collaborate, primary those in the Syndicalist wing, though many are still very wary of this new party, especially due to its more anti-<span style="color: [+ psi_colour +];">socialist</span> and <span style="color: [+ pnf_colour +];">conservative</span> parts, and many of its points in its program being anti-democratic, upsetting the Labour and Reformist factions and some members of the Right-Maximalist faction.
 
 Any way, the election of Benito Mussolini as leader of the FdC seems guaranteed by now.
 
@@ -20,5 +20,6 @@ Any way, the election of Benito Mussolini as leader of the FdC seems guaranteed 
 
 @mussolini_1919
 face-image: img/portraits/BenitoMussolini.jpg
+on-arrival: pnf_relation += 3;
 
 As expected, Benito Mussolini will continue to lead the Fasci. Surprisingly, they have also decided to participate in the latest elections, perhaps signaling a change in rhetoric.
