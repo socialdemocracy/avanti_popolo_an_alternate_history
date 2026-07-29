@@ -25,7 +25,7 @@ max-cards: 3
 
 [? if year = 1919 and month = 2 and week = 1: In a vote held by the National Assembly, Friedrich Ebert becomes Reichspräsident with 277 votes for him, 1 vote for Philipp Scheidemann, 1 vote for  Matthias Erzberger, and 49 votes for Arthur Graf von Posadowsky-Wehner, due to the constitution of the Weimar Republic having no section about a popular vote for the election of the Reichspräsident yet. ?]
 
-[? if year = 1919 and month = 2 and week = 1: After a 1 day siege of Kiev, Red Army forces capture the city and the government of Ukraine flees to the city of Zhytomyr, along with some troops from the Ukrainian People's Army. ?]
+[? if year = 1919 and month = 2 and week = 1: After a 1 day siege of Kiev, Red Army forces capture the city and the government of the <span style="color: #5BCEFA;">Ukrainian Peop</span><span style="color: #FFD700;">le's Republic</span> flees to the city of Zhytomyr, along with some troops from the Ukrainian People's Army. ?]
 
 [? if year = 1919 and month = 2 and week = 3: A state of war starts between the <span style="color: #940000;">**Union of Soviet Socialist Republics**</span> and <span style="color: #dddddd;">**Pol**</span><span style="color: #DC143C;">**and**</span>, beginning with a skirmish at the Battle of Bereza Kartuska, with the <span style="color: #dddddd;">**Pol**</span><span style="color: #DC143C;">**ish**</span> Sejm declaring the need to liberate the northern provinces of <span style="color: #dddddd;">**Pol**</span><span style="color: #DC143C;">**and**</span>, including Vilnius, which is controlled by the <span style="color: #940000;">Red Army</span>. ?]
 
