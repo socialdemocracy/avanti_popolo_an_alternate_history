@@ -78,21 +78,21 @@ for (var party of Q.parties){
 }
 
 //Creating a loop which hands out seats until it fills up all seats
-for (var seat = 0; seat < Q.allseats; seat++){ //Each turn one seat is given out to the best vote per seat case (BVPS)
-    var BVPS = 0; //Set every turns BVPS 0 as a baseline
-    var margin = null; //Set every turns winner as no one as a baseline
-    for (var party of Q.parties){ //Cycle through each party
-        var VPS = Q[party+"_votes"] / (Q.seats[party]+1) //Calculate every parties marginal vote per seat (VPS)
-        if (VPS > BVPS){ //If the current parties VPS is better than the BVPS it replaces it
-            BVPS = VPS //Register the new BVPS
-            margin = party //Register the BVPS party
+for (var seat = 0; seat < Q.allseats; seat++){ 
+    var BVPS = 0; 
+    var margin = null; 
+    for (var party of Q.parties){ 
+        var VPS = Q[party+"_votes"] / (Q.seats[party]+1) 
+        if (VPS > BVPS){ 
+            BVPS = VPS 
+            margin = party 
         }
     }
-    Q.seats[margin] += 1 //After the all parties been compared the BVPS possesing party is awarded one seat
+    Q.seats[margin] += 1 
 }
 
 for (var party of Q.parties){
-    Q.[party+"_r"] = Q.seats[party] / Q.allseats //Extra snippet for regularizing party seat counts into RedautumSPD style parlaiment proportions
+    Q.[party+"_r"] = Q.seats[party] / Q.allseats 
     }
 }
 
