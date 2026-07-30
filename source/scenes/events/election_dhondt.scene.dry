@@ -1,3 +1,4 @@
+
 title: Chamber of Deputies Elections
 new-page: true
 tags: event
@@ -63,10 +64,8 @@ on-arrival: {!
 // set old results
 // election threshold constitutional reform
 // banning parties
-//D'Hont calculation algorhytm for RedautumnSPD
 
-//Number of seats given out (for example 67)
-Q.allseats = 67;
+Q.allseats = 508;
 
 //Create an array for every party's seats
 Q.seats = {};
@@ -680,7 +679,6 @@ Q.election_records.push(election_result);
 !}
 on-departure: fasci_urgency += 1 if (fasci_urgency <= 2 and pnf_seating_disp >= 15)
 on-display: {!
-data = []
 
 if (Q.pcdi_formed && Q.pcdi_seating_disp) {
     data.push({
