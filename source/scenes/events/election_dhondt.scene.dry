@@ -676,9 +676,6 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: fasci_urgency += 1
-on-display: {!
-data: []
 
 if (Q.pcdi_formed && Q.pcdi_seating_disp) {
     data.push({
