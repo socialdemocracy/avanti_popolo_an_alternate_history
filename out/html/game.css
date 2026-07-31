@@ -454,7 +454,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 /* Unlike cards, face images can have different sizes. */
 .face-figure {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 2px solid var(--card-border-color);
   float: left;
   max-width: 35%;
@@ -466,7 +466,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 
 .face-figure2 {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 2px solid var(--card-border-color);
   float: left;
   /*max-height: 180px;*/
@@ -480,38 +480,34 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   vertical-align: bottom;
   object-fit: cover;
 }
+
 .face-figure-center {
-  /*vertical-align: top;*/
-  display: inline-block;
+  display: block; 
+  margin: 0 auto 0.5em auto;
   border: 2px solid var(--card-border-color);
-  float: center;
   max-width: 35%;
-  /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
   overflow: hidden;
 }
 
 .face-figure2-center {
-  /*vertical-align: top;*/
-  display: inline-block;
+  display: block; 
+  margin: 0 auto 0.5em auto; 
   border: 2px solid var(--card-border-color);
-  float: center;
-  /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
+  max-width: 35%; 
   overflow: hidden;
 }
 
 .face-img-center {
-  /*max-width: 150px;*/
+  display: block; 
+  width: 100%;
+  height: auto;
   vertical-align: bottom;
   object-fit: cover;
 }
 
 .face-figure-right {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 2px solid var(--card-border-color);
   float: right;
   max-width: 35%;
@@ -523,7 +519,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 
 .face-figure2-right {
   /*vertical-align: top;*/
-  display: inline-block;
+  display: block;
   border: 2px solid var(--card-border-color);
   float: right;
   /*max-height: 180px;*/
