@@ -1,7 +1,6 @@
 title: Streetfighting
 new-page: true
 is-card: true
-subtitle: Our forces engage with the <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span>.
 tags: party_affairs
 view-if: not return_to_normalcy and streetfighting_timer <= 0 and not national_congress_seen and not pacification_pact
 card-image: img/streetfighting.jpeg
@@ -153,7 +152,7 @@ on-arrival: rg_militancy += 0.05; rg_strength += 6;
 
 The loyal sections of the Carabinieri can help train the Red Guard.
 
-@pacifism
+@pacifist
 on-arrival: rg_militancy -= 0.02; rg_strength -= 20; pacifism += 1
 
 By not fighting, the strength of the Red Guard atrophies. Pacifists in the party are gaining the upper hand.
