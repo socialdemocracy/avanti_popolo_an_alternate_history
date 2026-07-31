@@ -480,6 +480,34 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   vertical-align: bottom;
   object-fit: cover;
 }
+.face-figure-center {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 2px solid var(--card-border-color);
+  float: center;
+  max-width: 35%;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.face-figure2-center {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 2px solid var(--card-border-color);
+  float: center;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.face-img-center {
+  /*max-width: 150px;*/
+  vertical-align: bottom;
+  object-fit: cover;
+}
 
 .face-figure-right {
   /*vertical-align: top;*/
