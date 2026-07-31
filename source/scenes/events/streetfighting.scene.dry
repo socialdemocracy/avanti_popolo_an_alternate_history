@@ -1,6 +1,6 @@
 title: Streetfighting
 new-page: true 
-subtitle: Our forces engage with the far-right.
+subtitle: Our forces engage with the <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span>.
 tags: event
 view-if: not return_to_normalcy and streetfighting_timer <= 0 and not national_congress_seen and not pacification_pact
 on-arrival: {!
@@ -19,7 +19,7 @@ Q.abl_streetfighting = Q.abl_strength * Q.abl_militancy
 
 = Streetfighting
 
-Frequently, and more often than not, our forces — whether that is the Red Guards or merely workers intending to defend themselves — face off against far-right paramilitaries. Whether that is the Anti-Bolshevik Leagues, funded by their elite backers, the Arditismo, former members of the *Arditi* special forces radicalised or even the Fasci themselves, determined to eliminate us. 
+Frequently, and more often than not, our forces — whether that is the Red Guard or merely workers intending to defend themselves — face off against <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span> paramilitaries. Whether that is the Anti-Bolshevik Leagues, funded by their elite backers, the Arditismo, former members of the Arditi special forces , radicalised, or even the Fasci themselves, determined to eliminate us. 
 
 - @engage_fdc: Engage our forces with the Fasci.
 - @engage_ard: Engage our forces with the Arditismo.
@@ -82,7 +82,7 @@ if (Q.abl_fought == 1) {
 !}
 on-departure: fdc_fought = 0; ard_fought = 0; abl_fought = 0
 
-Our forces are, thankfully, able to come out victorious against our opponents. Our forces have been damaged, but the forces of the far-right are hurt significantly more.
+Our forces are, thankfully, able to come out victorious against our opponents. Our forces have been damaged, but the forces of the <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span> are hurt significantly more.
 
 @engage_failure
 on-arrival: {!
