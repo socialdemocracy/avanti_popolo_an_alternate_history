@@ -454,7 +454,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 /* Unlike cards, face images can have different sizes. */
 .face-figure {
   /*vertical-align: top;*/
-  display: block;
+  display: inline-block;
   border: 2px solid var(--card-border-color);
   float: left;
   max-width: 35%;
@@ -466,7 +466,7 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 
 .face-figure2 {
   /*vertical-align: top;*/
-  display: block;
+  display: inline-block;
   border: 2px solid var(--card-border-color);
   float: left;
   /*max-height: 180px;*/
@@ -476,6 +476,35 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
 }
 
 .face-img {
+  /*max-width: 150px;*/
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+.face-figure-right {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 2px solid var(--card-border-color);
+  float: right;
+  max-width: 35%;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.face-figure2-right {
+  /*vertical-align: top;*/
+  display: inline-block;
+  border: 2px solid var(--card-border-color);
+  float: right;
+  /*max-height: 180px;*/
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+.face-img-right {
   /*max-width: 150px;*/
   vertical-align: bottom;
   object-fit: cover;
