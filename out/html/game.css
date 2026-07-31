@@ -481,59 +481,6 @@ a.card:focus .card-tooltip, a.card:hover .card-tooltip {
   object-fit: cover;
 }
 
-.face-figure-center {
-  display: block; 
-  margin: 0 auto 0.5em auto;
-  border: 2px solid var(--card-border-color);
-  max-width: 35%;
-  overflow: hidden;
-}
-
-.face-figure2-center {
-  display: block; 
-  margin: 0 auto 0.5em auto; 
-  border: 2px solid var(--card-border-color);
-  max-width: 35%; 
-  overflow: hidden;
-}
-
-.face-img-center {
-  display: block; 
-  width: 100%;
-  height: auto;
-  vertical-align: bottom;
-  object-fit: cover;
-}
-
-.face-figure-right {
-  /*vertical-align: top;*/
-  display: block;
-  border: 2px solid var(--card-border-color);
-  float: right;
-  max-width: 35%;
-  /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
-  overflow: hidden;
-}
-
-.face-figure2-right {
-  /*vertical-align: top;*/
-  display: block;
-  border: 2px solid var(--card-border-color);
-  float: right;
-  /*max-height: 180px;*/
-  margin-right: 1em;
-  margin-bottom: 0.5em;
-  overflow: hidden;
-}
-
-.face-img-right {
-  /*max-width: 150px;*/
-  vertical-align: bottom;
-  object-fit: cover;
-}
-
 /*
  * sprite stuff- feel free to comment out/remove if not using
  */
