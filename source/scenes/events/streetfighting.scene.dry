@@ -1,8 +1,10 @@
 title: Streetfighting
-new-page: true 
+new-page: true
+is-card: true
 subtitle: Our forces engage with the <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span>.
-tags: event
+tags: party_affairs
 view-if: not return_to_normalcy and streetfighting_timer <= 0 and not national_congress_seen and not pacification_pact
+card-image: img/streetfighting.jpeg
 on-arrival: {!
 Q.rg_streetfighting = Q.rg_strength * Q.rg_militancy;
 Q.streetfighting_timer = 6;
@@ -19,11 +21,17 @@ Q.abl_streetfighting = Q.abl_strength * Q.abl_militancy
 
 = Streetfighting
 
-Frequently, and more often than not, our forces — whether that is the Red Guard or merely workers intending to defend themselves — face off against <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span> paramilitaries. Whether that is the Anti-Bolshevik Leagues, funded by their elite backers, the Arditismo, former members of the Arditi special forces , radicalised, or even the Fasci themselves, determined to eliminate us. 
+Battles rage on the streets between the Arditismo, Fasci, Anti-Bolshevik Leagues, and the Red Guard, mostly being agaisnt the latter, that being, the Red Guard. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
+
+We must do something to protect the workers against these predations.
 
 - @engage_fdc: Engage our forces with the Fasci.
 - @engage_ard: Engage our forces with the Arditismo.
 - @engage_abl: Engage our forces with the Anti-Bolshevik Leagues.
+- @militarize: Fund more military-style training and equipment for the Red Guard.
+- @interior_police_training: Use the loyal parts of the Carabinieri to help train the Red Guard.
+- @pacifist: Try to avoid all militant confrontations, as much as possible.
+- @easy_discard
 
 @engage_fdc
 on-arrival: fdc_fought = 1;
@@ -130,3 +138,22 @@ if (Q.abl_fought == 1) {
 on-departure: fdc_fought = 0; ard_fought = 0; abl_fought = 0
 
 Our forces are, unfortunately, unable to come out victorious, forced to retreat. Our forces have been significantly damaged, though so have theirs at a lesser capacity.
+
+@militarize
+choose-if: para_resources >= rg_militarisation_cost
+unavailable-subtitle: Not enough paramilitary resources ([+ rg_militarisation_cost +] needed).
+subtitle: -[+ rg_militarisation_cost +] paramilitary resources
+on-arrival: para_resources -= rg_militarisation_cost; rg_investment += 1; rg_strength += 15*revolutionary_exhaustion; rg_militancy += 0.04*revolutionary_exhaustion; communist_strength += 2; communist_dissent -= 2; reformist_dissent += 5; radicalisation += 0.1; workers_psi += 2*(1-dissent); veterans_psi += 2*(1-dissent); middle_class_psi -= 5*(1-dissent); rg_militancy += 0.02 if veterans_psi_normalised >= 40; rg_strength += 5 if veterans_psi_normalised >= 40
+
+We continue funding the Red Guard, who begin recruitment of more members and are able to acquire more effective weaponry, however some in our party believe that the Red Guard should stop being militarized or atleast scale back how much funds are going to it.
+
+@interior_police_training
+view-if: interior_police_loyalty > 0.5
+on-arrival: rg_militancy += 0.05; rg_strength += 6;
+
+The loyal sections of the Carabinieri can help train the Red Guard.
+
+@pacifism
+on-arrival: rg_militancy -= 0.02; rg_strength -= 20; pacifism += 1
+
+By not fighting, the strength of the Red Guard atrophies. Pacifists in the party are gaining the upper hand.
