@@ -19,6 +19,10 @@ const colourList = [{
         style: "color: #ff0000; font-weight: bold;"
    },
     {
+        word: "MKP",
+        style: "color: #871923; font-weight: bold;"
+   },
+    {
         word: "Labour Party",
         style: "color: #f0456a; font-weight: bold;"
    },
@@ -149,10 +153,6 @@ const colourList = [{
     {
         word: "League Of Nations",
         style: "color: #0C418C; font-weight: bold;"
-   },
-    {
-        word: "Other",
-        style: "color: #808080; font-weight: bold;"
    },
     {
         word: "Partito Socialista Riformista Italiano",
@@ -347,16 +347,16 @@ const tooltipList = [{
     explanationText: "<img src=img/partismaller-Photoroom.png> Several smaller parties in the Italian political landscape."
     },
     {
-    searchString: "Other",
-    explanationText: "<img src=img/partismaller-Photoroom.png> Several smaller parties in the Italian political landscape."
-    },
-    {
     searchString: "PLL",
     explanationText: "<img src=img/Rally.jpg> Liberal Worker's Party"
     },
     {
     searchString: "PRI",
     explanationText: "<img src=img/pribetter.webp> Italian Republican Party"
+    },
+    {
+    searchString: "MKP",
+    explanationText: "<img src=img/mkp.webp> Party Of Communists in Hungary"
     },
     {
     searchString: "DS",
