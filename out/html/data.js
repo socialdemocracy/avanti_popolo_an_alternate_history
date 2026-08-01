@@ -15,6 +15,38 @@ const colourList = [{
         style: "color: #90EE90; font-weight: bold;"
    },
     {
+        word: "SFIO",
+        style: "color: #ff0000; font-weight: bold;"
+   },
+    {
+        word: "Labour Party",
+        style: "color: #f0456a; font-weight: bold;"
+   },
+    {
+        word: "Martin Segitz",
+        style: "color: #c00000; font-weight: bold;"
+   },
+    {
+        word: "Kurt Eisner",
+        style: "color: #D47B9B; font-weight: bold;"
+   },
+    {
+        word: "Anton Graf von Arco auf Valley",
+        style: "color: #7A3C00; font-weight: bold;"
+   },
+    {
+        word: "Vilnius",
+        style: "font-weight: bold;"
+   },
+    {
+        word: "Sejm",
+        style: "font-weight: bold;"
+   },
+    {
+        word: "Battle of Bereza Kartuska",
+        style: "font-weight: bold;"
+   },
+    {
         word: "PA",
         style: "color: #006600; font-weight: bold;"
    },
@@ -424,11 +456,43 @@ const tooltipList = [{
     },
     {
     searchString: "Kiev",
-    explanationText: "<img src=img/kiev2.jpeg> The de-jure capital of Ukraine, currently occupied by Russia."
+    explanationText: "<img src=img/kiev2.jpeg> Kiev"
     },
     {
     searchString: "Zhytomyr",
-    explanationText: "<img src=img/zhytomyr.jpeg> The de-facto capital of Ukraine."
+    explanationText: "<img src=img/zhytomyr.jpeg> Zhytomyr"
+    },
+    {
+    searchString: "Vilnius",
+    explanationText: "<img src=img/vilnius.jpeg> Vilnius"
+    },
+    {
+    searchString: "Anton Graf von Arco auf Valley",
+    explanationText: "<img src=img/vallesycopath.jpeg> Anton Graf von Arco auf Valley"
+    },
+    {
+    searchString: "SFIO",
+    explanationText: "<img src=img/sfio.webp> Section française de l'Internationale ouvrière </br> French Section of the Workers' International"
+    },
+    {
+    searchString: "Sejm",
+    explanationText: "<img src=img/sejm.jpeg> The legislature of the Republic Of Poland."
+    },
+    {
+    searchString: "Battle of Bereza Kartuska",
+    explanationText: "<img src=img/bereza.webp> February 14, 1919"
+    },
+    {
+    searchString: "Martin Segitz",
+    explanationText: "<img src=img/segitz.jpeg> Martin Segitz"
+    },
+    {
+    searchString: "Labour Party",
+    explanationText: "<img src=img/labour.png> Labour"
+    },
+    {
+    searchString: "Kurt Eisner",
+    explanationText: "<img src=img/eisner.jpeg> Kurt Eisner"
     },
     {
     searchString: "Left-Maximalist",
@@ -444,7 +508,7 @@ const tooltipList = [{
     },
     {
     searchString: "Comintern",
-    explanationText: "<img src=img/comintern.webp> Communist International   Third International"
+    explanationText: "<img src=img/comintern.webp> Communist International </br> Third International"
     },
     {
     searchString: "Labour and Socialist International",
