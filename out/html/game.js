@@ -228,7 +228,7 @@
             return baseTooltip.explanationText 
         }
       
-        if (searchString === 'Other' ) {
+        if (searchString === 'MKP' ) {
             return baseTooltip.explanationText 
         }
             
