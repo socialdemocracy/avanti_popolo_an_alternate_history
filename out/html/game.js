@@ -231,6 +231,38 @@
         if (searchString === 'Other' ) {
             return baseTooltip.explanationText 
         }
+            
+        if (searchString === 'SFIO' ) {
+            return baseTooltip.explanationText 
+        }
+            
+        if (searchString === 'Labour Party' ) {
+            return baseTooltip.explanationText 
+        }
+            
+        if (searchString === 'Vilnius' ) {
+            return baseTooltip.explanationText 
+        }
+            
+        if (searchString === 'Anton Graf von Arco auf Valley' ) {
+            return baseTooltip.explanationText 
+        }
+                  
+        if (searchString === 'Martin Segitz' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+        if (searchString === 'Kurt Eisner' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+        if (searchString === 'Sejm' ) {
+            return baseTooltip.explanationText 
+        }
+                              
+        if (searchString === 'Battle of Bereza Kartuska' ) {
+            return baseTooltip.explanationText 
+        }
       
        if (searchString === 'Emil Eichhorn' ) {
             return baseTooltip.explanationText 
