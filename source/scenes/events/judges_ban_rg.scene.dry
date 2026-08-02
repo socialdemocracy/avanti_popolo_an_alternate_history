@@ -1,5 +1,7 @@
 title: The judiciary rules to ban the Red Guard.
 subtitle: The Red Guard is illegalized.
+new-page: true
+priority: 2
 view-if: not psi_in_government and (radicalisation > 8 or pnf_in_government) and not_participating = 1 and judicial_reform < 2 and rg_banned = 0
 on-arrival: rg_banned = 1; rg_strength *= 0.100; rg_militancy -= 0.06; socialist_sentiment -= 4; democratic_sentiment += 4;
 tags: event
