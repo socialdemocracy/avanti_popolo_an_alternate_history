@@ -1,9 +1,36 @@
-title: Government bans the Red Guards!
-subtitle: The reactionary judicial system has banned the Red Guards.
+title: The judiciary rules to ban the Red Guard.
+subtitle: The Red Guard is illegalized.
 view-if: not psi_in_government and (radicalisation > 8 or pnf_in_government) and not_participating = 1 and judicial_reform < 2 and rg_banned = 0
-on-arrival: rg_banned = 1; rg_strength *= 0.85; rg_militancy -= 0.04; socialist_sentiment -= 4;
+on-arrival: rg_banned = 1; rg_strength *= 0.100; rg_militancy -= 0.06; socialist_sentiment -= 4; democratic_sentiment += 4;
 tags: event
+go-to: rg_banned
 
-= Government crackdown on the Red Guard!
+= Red Guard Banned!
 
-Judges have decided to ban the Red Guards, as government forces crack down hard, limiting their abilities and growth.
+@rg_banned
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/supreme_cour.png";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+In a ruling made today, the judiciary has decided to ban the Red Guard due to its so called "radical" rhethoric, and the organization is now illegalized. The government has launched a crackdown upon Red Guard activities and even some PSI local organizations have been caught in the crossfire due to many members of the Red Guard also being members of the PSI.
+
+The official judicial explanation for the ruling is that due to the increasing radicalisation of the Red Guard, it had become dangerous to keep on the streets and it could not function as a legal organization anymore.
+
+Whatever the case, the Red Guard has been severely weakened, and our ability to fight agaisnt the <span style="color: [+ pnf_colour +];">far</span>-<span style="color: [+ pnf_colour +];">right</span>, such as the Arditismo and Fasci as well. 
+
+- @bad
+
+
+@bad
+title: This is absurd!
+subtitle: Unfortunately, there is nothing we can do.
+go-to: root
