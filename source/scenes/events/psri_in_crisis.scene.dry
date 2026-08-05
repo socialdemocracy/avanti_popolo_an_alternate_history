@@ -5,6 +5,8 @@ view-if: psri_stable and psri_r < 3 and psri_votes < 4 and year < 1924 and not n
 on-arrival: psri_stable = 0
 tags: event
 max-visits: 1
+face-image: img/bonomi.jpeg
+audio: clear music/main/psri_music.mp3.mp3
 
 = Crisis within the PSRI!
 
