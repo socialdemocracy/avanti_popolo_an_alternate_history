@@ -3,7 +3,7 @@ subtitle: Dissenting members attempt to shift the parties course.
 new-page: true
 view-if: psri_stable and psri_r < 3 and psri_votes < 4 and year < 1924 and not national_congress_seen and not left_wing_coalition
 on-arrival: psri_stable = 0
-audio: music/party_congresses/psri_music.mp3
+audio: music/party_congresses/psri_music_2.mp3
 tags: event
 max-visits: 1
 face-image: img/bonomi.jpeg
