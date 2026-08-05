@@ -1,6 +1,7 @@
 title: Banca d'Italia reports on our budget.
 on-departure: election_seen = 1;
 tags: event
+new-page: true
 view-if: election_seen == 1
 go-to: bank_deficit if budget < 0; bank_balanced if budget == 0; bank_surplus if budget > 0
 
