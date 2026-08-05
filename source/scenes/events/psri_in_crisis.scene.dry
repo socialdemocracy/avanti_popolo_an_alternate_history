@@ -6,7 +6,7 @@ on-arrival: psri_stable = 0
 tags: event
 max-visits: 1
 face-image: img/bonomi.jpeg
-audio: clear music/main/psri_music.mp3.mp3
+audio: music/main/psri_music.mp3.mp3
 
 = Crisis within the PSRI!
 
