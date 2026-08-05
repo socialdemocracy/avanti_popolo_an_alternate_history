@@ -1,4 +1,4 @@
-title: Banca d'Italia reports on our Finances.
+title: Banca d'Italia reports on our budget.
 on-departure: election_seen = 1;
 tags: event
 view-if: election_seen == 1
@@ -6,22 +6,25 @@ go-to: bank_deficit if budget < 0; bank_balanced if budget == 0; bank_surplus if
 
 @bank_deficit
 on-arrival: election_seen = 0;
+face-image: img/italianmoney.jpeg
 
 = Banca d'Italia warns of deficit
 
-It seems we have inherited a deficit from the previous government. We should be cautious not to continue borrowing significantly, else we end up in a fiscal crisis.
+It seems we have inherited a deficit from the previous government, either due to incompetence, reckless spending, or something else. We should be cautious not to continue borrowing significantly, else we end up in a fiscal crisis which would weaken our economy.
 
 @bank_balanced
 on-arrival: election_seen = 0;
+face-image: img/italianmoney.jpeg
 
 = Banca d'Italia reports on balanced budget
 
-It seems the previous government has managed to balance the budget, even in the current economic situation. Nevertheless, we inherit a stable budget, [? if inflation < 7 :though it might be encouraged to allow some deficit spending to resolve our economy. ?][? if inflation >= 7 :though it might be encouraged to continue austerity to keep inflation down. ?]
+It seems the previous government has managed to balance the budget, even in the current economic situation. It would be advised we handle our balances carefully, still, in order to maintain the budget balanced. Nevertheless, we inherit a stable budget, [? if inflation < 7 :though it might be encouraged to allow some deficit spending to resolve our economy. ?][? if inflation >= 7 :though it might be encouraged to continue austerity to keep inflation down. ?]
 
 @bank_surplus
 on-arrival: election_seen = 0;
+face-image: img/italianmoney.jpeg
 
 = Banca d'Italia informs of surplus
 
-It seems the previous government has somehow been able to resolve our debt issues[? if not national_economic_recovery : , even as the current economic crisis continues?]. Regardless, it seems we are allowed a great deal of room to act and spend.
+It seems the previous government has somehow been able to resolve our debt issues[? if not national_economic_recovery : , even as the current economic crisis continues?], and we seem to have a surplus to use. Regardless, it seems we are allowed a great deal of room to act and spend.
 
