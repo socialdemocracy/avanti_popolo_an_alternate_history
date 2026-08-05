@@ -20,6 +20,7 @@ Due to all of this, the more moderate parts of the PSRI have called an emergency
 - @psri_moderate: The PSRI begins a shift towards <span style="color: [+ psri_colour +];">social</span>-<span style="color: [+ ldr_colour +];">liberalism</span>.
 
 @psri_left
+audio: music/party_congresses/psri_music.mp3
 choose-if: (psu_formed and (psi_votes >= 37 or radicalisation >= 8)) or ((pri_prominent or pll_formed) and bissolati_dead != 1)
 unavailable-subtitle: Without a suitable <span style="color: [+ psri_colour +];">left</span>-<span style="color: [+ psri_colour +];">wing</span> partner, advocates argue a change in course is necessary.
 on-arrival: {!
@@ -60,6 +61,7 @@ The opposition is able to succeed, continuing the party's ideological commitment
 [? if psri_joint_pri : The PSRI have come to an agreement with the PRI, officially forming a joint-list with the them as a junior partner. and stemming the bleed of the party's support. ?]
 
 @psri_moderate
+audio: music/party_congresses/psri_music.mp3
 view-if: (not psu_formed or (psi_votes < 37 and radicalisation < 8 or (not not_participating or not maximalist_participating) or radicalisation < 7)) and ((not pri_prominent and not pll_formed) or bissolati_dead = 1)
 on-arrival: {!
 Q.psri_solo = 1;
