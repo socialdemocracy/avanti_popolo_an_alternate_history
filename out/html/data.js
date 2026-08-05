@@ -43,6 +43,22 @@ const colourList = [{
         style: "font-weight: bold;"
    },
     {
+        word: "Predappio",
+        style: "font-weight: bold;"
+   },
+    {
+        word: "Milan",
+        style: "font-weight: bold;"
+   },
+    {
+        word: "Romagna",
+        style: "font-weight: bold;"
+   },
+    {
+        word: "Tuscany",
+        style: "font-weight: bold;"
+   },
+    {
         word: "Sejm",
         style: "font-weight: bold;"
    },
@@ -425,6 +441,22 @@ const tooltipList = [{
     {
     searchString: "Emil Eichhorn",
     explanationText: "<img src=img/portraits/eichhorn.jpeg> Emil Eichhorn"
+    },
+    {
+    searchString: "Tuscany",
+    explanationText: "<img src=img/tuscany.jpeg> Toscana </br></br> Tuscany"
+    },
+    {
+    searchString: "Romagna",
+    explanationText: "<img src=img/romagna.webp> Rumâgna </br></br> Romagna"
+    },
+    {
+    searchString: "Milan",
+    explanationText: "<img src=img/milan.jpeg> Milano </br></br> Milan"
+    },
+    {
+    searchString: "Predappio",
+    explanationText: "<img src=img/predappio.jpeg> La Pré </br></br> Dviais </br></br> Predappio"
     },
     {
     searchString: "Friedrich Ebert",
