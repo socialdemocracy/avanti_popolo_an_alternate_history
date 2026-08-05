@@ -224,6 +224,22 @@
             return baseTooltip.explanationText 
         }
                         
+        if (searchString === 'Predappio' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+        if (searchString === 'Milan' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+        if (searchString === 'Tuscany' ) {
+            return baseTooltip.explanationText 
+        }
+                        
+        if (searchString === 'Romagna' ) {
+            return baseTooltip.explanationText 
+        }
+                        
         if (searchString === 'ANI' ) {
             return baseTooltip.explanationText 
         }
