@@ -2,7 +2,7 @@ title: The end of the transformation of the PSRI.
 subtitle: A new party emerges.
 new-page: true
 view-if: psri_solo and psri_time <= time and not national_congress_seen
-on-arrival: psri_soclib = 1
+on-arrival: psri_soclib = 1; psri_relation -= 2
 tags: event
 max-visits: 1
 
