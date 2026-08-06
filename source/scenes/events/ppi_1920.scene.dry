@@ -1,9 +1,24 @@
-title: 1920 Congress of the Partito Popolare Italiano
+title: 1920 Naples Congress Of The PPI
 subtitle: The PPI elects its Secretary General.
 new-page: true
 view-if: year = 1920 and month = 4 and week = 1 and not ppi_banned
 on-arrival: {!
 
+if (Q.socialist_catholic_coalition == 1) {
+    Q.ppi_extreme_left += 1;
+}
+if (Q.ppi_relation >= 70) {
+    Q.ppi_extreme_left += 1;
+}
+if (Q.roman_question_answered == 1) {
+    Q.ppi_extreme_left += 1;
+}
+if (Q.land_seizures == 1) {
+    Q.ppi_extreme_left += 1;
+}
+if (Q.land_seizures >= 1) {
+    Q.ppi_extreme_left += 2;
+}
 if (Q.socialist_catholic_coalition == 1) {
     Q.ppi_left += 1;
 }
@@ -35,9 +50,9 @@ if (Q.pope === "Del Val") {
 max-visits: 1
 tags: event
 
-= 1920 Partito Popolare Italiano Congress
+= 1920 Naples PPI Congress
 
-The *Partito Popolare Italiano*, known also as the PPI or the Italian People's Party have begun their second Congress. The party has developed significantly over the past year, and a new face has emerged within the party: Alcide De Gasperi.
+The PPI has begun their second Congress. The party has developed significantly over the past year, and a new face has emerged within the party: Alcide De Gasperi.
 
 While Sturzo commands the support of the Christian Democrats and the 'White' Peasant Leagues, De Gasperi is supported by Moderate Clericalists and the Clergy.
 
