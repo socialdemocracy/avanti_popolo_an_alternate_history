@@ -515,7 +515,7 @@ Q.land_seizures = 0;
 
 // party congresses'
 Q.ppi_left = 2;
-Q.ppi_extreme_left = 1;
+Q.ppi_extreme_left = 0;
 Q.ppi_moderates = 0;
 Q.ppi_right = 0;
 
