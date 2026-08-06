@@ -1,15 +1,17 @@
-title: The Social Liberalism of the PSRI
-subtitle: The PSRI completes its shift rightwards.
+title: The end of the transformation of the PSRI.
+subtitle: A new party emerges.
 new-page: true
 view-if: psri_solo and psri_time <= time and not national_congress_seen
 on-arrival: psri_soclib = 1
 tags: event
 max-visits: 1
 
-= Social Liberalism of the PSRI
+= The end of a transformation
 
-Following the PSRI's decision to move to the right and a reshuffling of its leadership, the PSRI has finally completed its shift to the right, opting instead to be elected on Liberal lists to its right rather than the socialist lists it has historically participated in. 
+Following the crisis in the PSRI and its decision to shift to the <span style="color: [+ ldr_colour +];">right</span>, the party's leadership has been shuffled to include right-wing figures within the party, such as Ivanoe Bonomi, and it has opted to be elected on the <span style="color: [+ ldr_colour +];">liberal</span> lists to its right rather than the <span style="color: [+ psri_colour +];">moderate</span>-<span style="color: [+ psri_colour +];">socialist</span> and <span style="color: [+ psri_colour +];">democratic</span>-<span style="color: [+ psri_colour +];">reformist</span> lists it has historically been in.
 
-Adding to such, our relations with the PSRI have deteriorated slightly as well, as we can no longer count on the party to join in any Leftist coalitions within the Chamber of Deputies.
+The PSRI used to be part of the PSI, but after the 1912 congress they were expelled for their pro-war position towards the war in Libya and their desire to join the bourgeois government of Giolitti.
+
+Other than that, our relations with the PSRI have deteriorated slightly as well, as we can no longer count on the party to join in any <span style="color: [+ psi_colour +];">left</span>-<span style="color: [+ psri_colour +];">wing</span> coalitions within the Chamber of Deputies.
 
 - @root: Expected, but a shame nevertheless.
