@@ -364,7 +364,7 @@ const tooltipList = [{
     },
     {
     searchString: "PLL",
-    explanationText: "<img src=img/Rally.jpg> Liberal Worker's Party"
+    explanationText: "<img src=img/pll_logo_2.png> Liberal Worker's Party"
     },
     {
     searchString: "PRI",
