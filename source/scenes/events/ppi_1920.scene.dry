@@ -52,14 +52,46 @@ tags: event
 
 = 1920 Naples PPI Congress
 
-The PPI has begun their second Congress. The party has developed significantly over the past year, and a new face has emerged within the party: Alcide De Gasperi.
+The PPI has begun their second congress, this time, hosted in Naples. The first item on the agenda is about peasant ownership of the land worked, land reform. The popolarists, led by Sturzo,  support the system of <span style="color: #B31942;">**Amer**</span><span style="color: #0A3161;">**ican**</span> "homesteads" based off the Homestead Act of Abraham Lincoln.  The right supports a policy agaisnt land reform and for close cooperation with the UL and LDR for the liberalization of the economy and privatisation, hoping to inspire investors to come into <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span>. Meanwhile, the extreme-left of the party, lead by Guido Miglioli, supports a policy of radical land reform, supporting the PSI in their goals, and the only realistic way the extreme-lefts proposal can pass is if defections from the left exist.
 
-While Sturzo commands the support of the Christian Democrats and the 'White' Peasant Leagues, De Gasperi is supported by Moderate Clericalists and the Clergy.
+Among other things, a resolution for party unity happened with all factions agreeing to unity except the extreme-left, including Miglioli.
+
+- @land_reform_policy: The party votes..
+
+@land_reform_policy
+go-to: left_policy if ppi_left >= ppi_moderates; right_policy if ppi_moderates > ppi_left; extreme_left_policy if ppi_extreme_left > ppi_left
+
+
+@left_policy
+face-image: img/farmers.jpeg
+on-arrival: ppi_left += 2;
+
+Unsurprisingly, the popolarist agenda has come out on top, and the PPI will be inspired by the homestead act and adopt a moderate land reform.
+
+@right_policy
+face-image: img/farmers.jpeg
+on-arrival: ppi_relation -= 4; ppi_moderates += 2;
+
+Surprisingly, the right-wing  proposal for land reform has come out on top, and it seems the PPI will be seeking more cooperation with  the <span style="color: [+ ldr_colour +];">liberal</span> parties, for better or worse.
+
+@extreme_left_policy
+face-image: img/farmers.jpeg
+on-arrival: ppi_extreme_left += 2; ppi_relation += 4; ppi_accept_land_reform = 1;
+
+Surprisingly, the PPI has accepted land reform! This was something many couldnt have seen before, but now it is a fact!
+
+
+@election_leader
+new-page: false
+
+Now, it is time for the election of the secretary general of the PPI, where a new face has shown up, Alcide De Gasperi, mostly supported by the right and moderates, meanwhile the <span style="color: #9B0000;">social</span>-agrarian populist Miglioli has also taken a bid to become the secretary general, with the PPI becoming more crowded by the day.
+
+Sturzo as current secretary general still is running, mostly as the common sense and populist option. Miglioli, however, will have to steal some members of the popolarist faction away from Sturzo if he is to hope to win the party congress.
 
 - @ppi_first: The party votes...
 
 @ppi_first
-go-to: sturzo_1920 if ppi_left >= ppi_moderates; gasperi_1920 if ppi_moderates > ppi_left
+go-to: sturzo_1920 if ppi_left >= ppi_moderates; gasperi_1920 if ppi_moderates > ppi_left; miglioli_1920 if ppi_extreme_left > ppi_left
 
 @sturzo_1920
 face-image: img/portraits/LuigiSturzo.jpg
@@ -72,3 +104,9 @@ face-image: img/portraits/DeGasperi.jpg
 on-arrival: ppi_relation -= 7; ppi_leader = "De Gasperi"; ppi_moderates += 2;
 
 Surprisingly, Alcide De Gasperi, with his support base, has been elected the second Secretary General of the Party. He represents a turn from the left, seeking further cooperation with the liberal parties.
+
+@miglioli_1920
+face-image: img/portraits/miglioli.jpeg
+on-arrival: ppi_extreme_left += 2; ppi_relation += 5; ppi_leader = "Miglioli";
+
+Surprisingly, Guido Miglioli has been elected! This has been due to our good relations with the PPI, and general friendliness due to our turn towards friendship with the PPI. Our relations have seemed to warm, although Guido Miglioli is still a wildcard due to his anti-<span style="color: #9B0000;">socialist</span> views he originally held, fluctuating views, and changing political opinions.
