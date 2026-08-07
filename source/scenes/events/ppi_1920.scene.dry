@@ -49,6 +49,7 @@ if (Q.pope === "Del Val") {
 !}
 max-visits: 1
 tags: event
+face-image: img/land_reform.jpeg
 
 = 1920 Naples PPI Congress
 
@@ -68,17 +69,23 @@ on-arrival: ppi_left += 2;
 
 Unsurprisingly, the popolarist agenda has come out on top, and the PPI will be inspired by the homestead act and adopt a moderate land reform.
 
+@election_leader: Next on the agenda..
+
 @right_policy
 face-image: img/farmers.jpeg
 on-arrival: ppi_relation -= 4; ppi_moderates += 2;
 
 Surprisingly, the right-wing  proposal for land reform has come out on top, and it seems the PPI will be seeking more cooperation with  the <span style="color: [+ ldr_colour +];">liberal</span> parties, for better or worse.
 
+@election_leader: Next on the agenda..
+
 @extreme_left_policy
 face-image: img/farmers.jpeg
 on-arrival: ppi_extreme_left += 2; ppi_relation += 4; ppi_accept_land_reform = 1;
 
 Surprisingly, the PPI has accepted land reform! This was something many couldnt have seen before, but now it is a fact!
+
+@election_leader: Next on the agenda..
 
 
 @election_leader
