@@ -396,7 +396,7 @@ const tooltipList = [{
     },
     {
     searchString: "PA",
-    explanationText: "<img src=img/PA-Photoroom.png> Agrarian Party"
+    explanationText: "<img src=img/pa_logo.svg> Agrarian Party"
     },
     {
     searchString: "ANI",
