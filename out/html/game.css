@@ -844,13 +844,3 @@ body.dark-mode .wide_tooltip-tip::after {
 body.dark-mode .wide_tooltip-tip::before {
   border-color: #1a1a2e transparent transparent transparent;
 }
-
-.flag-block {
-  flex: 1;
-  height: 100%;
-}
-
-.green { background-color: black; }
-.white { background-color: white; }
-.red { background-color: red; }
-
