@@ -75,6 +75,10 @@ const colourList = [{
         style: "color: #00008B; font-weight: bold;"
    },
     {
+        word: "CC",
+        style: "color: #203959; font-weight: bold;"
+   },
+    {
         word: "LI",
         style: "color: #5d849e; font-weight: bold;"
    },
@@ -316,11 +320,11 @@ const colourList = [{
 
 const tooltipList = [{
     searchString: "PSRI",
-    explanationText: "<img src=img/PLDI.png> Italian Reformist Socialist Party"
+    explanationText: "<img src=img/PLDI.png> Partito Socialista Riformista Italiano </br></br> Italian Reformist Socialist Party"
     },
     {
     searchString: "PSI",
-    explanationText: "<img src=img/psi-Photoroom-removebg-preview.png> Italian Socialist Party"
+    explanationText: "<img src=img/psi-Photoroom-removebg-preview.png> Partito Socialista Italiano </br></br> Italian Socialist Party"
     },
     {
     searchString: "SPD",
@@ -348,15 +352,15 @@ const tooltipList = [{
     },
     {
     searchString: "PCd'I",
-    explanationText: "<img src=img/pcdi.webp> Italian Communist Party"
+    explanationText: "<img src=img/pcdi.webp> Partito Comunista Italiano </br></br> Italian Communist Party"
     },
     {
     searchString: "pcdi",
-    explanationText: "<img src=img/pcdi.webp> Italian Communist Party"
+    explanationText: "<img src=img/pcdi.webp> Partito Comunista Italiano </br></br> Italian Communist Party"
     },
     {
     searchString: "PSU",
-    explanationText: "<img src=img/psu.webp> Unitary Socialist Party"
+    explanationText: "<img src=img/psu.webp> Partito Socialista Unitario </br></br> Unitary Socialist Party"
     },
     {
     searchString: "Others",
@@ -364,71 +368,75 @@ const tooltipList = [{
     },
     {
     searchString: "PLL",
-    explanationText: "<img src=img/pll_logo_2.png> Liberal Worker's Party"
+    explanationText: "<img src=img/pll_logo_2.png> Partito Liberale dei Lavoratori </br></br> Liberal Worker's Party"
     },
     {
     searchString: "PRI",
-    explanationText: "<img src=img/pribetter.webp> Italian Republican Party"
+    explanationText: "<img src=img/pribetter.webp>  Partito Republicano Italiano </br></br> Italian Republican Party"
     },
     {
     searchString: "MKP",
-    explanationText: "<img src=img/mkp.webp> Party Of Communists in Hungary"
+    explanationText: "<img src=img/mkp.webp> Kommunisták Magyarországi Pártja </br></br> Party Of Communists in Hungary"
     },
     {
     searchString: "DS",
-    explanationText: "<img src=img/DS.png> Social Democracy"
+    explanationText: "<img src=img/DS.png> Democrazia Sociale </br></br> Social Democracy"
     },
     {
     searchString: "PDSI",
-    explanationText: "<img src=img/DS.png> Italian Social Democratic Party"
+    explanationText: "<img src=img/DS.png> Partito Democratico Socialista Italiano </br></br> Italian Social Democratic Party"
     },
     {
     searchString: "PPI",
-    explanationText: "<img src=img/ppinewer.webp> Italian People's Party"
+    explanationText: "<img src=img/ppinewer.webp> Partito Popolare Italiano </br></br> Italian People's Party"
     },
     {
     searchString: "LDR",
-    explanationText: "<img src=img/ldr5.webp> Liberals, Democrats and Radicals"
+    explanationText: "<img src=img/ldr5.webp> Liberali, democratici e radicali </br></br> Liberals, Democrats and Radicals"
+    },
+    {
+    searchString: "CC",
+    explanationText: "<img src=img/placeholder.webp> Cattolici conservatori </br></br> Conservative Catholics"
     },
     {
     searchString: "PE",
-    explanationText: "<img src=img/pe-removebg-preview.png> Economic Party"
+    explanationText: "<img src=img/pe-removebg-preview.png> Partito Economico </br></br> Economic Party"
     },
     {
     searchString: "PA",
-    explanationText: "<img src=img/pa_logo.svg> Agrarian Party"
+    explanationText: "<img src=img/pa_logo.svg> Partito Agrario </br></br> Agrarian Party"
     },
     {
     searchString: "ANI",
-    explanationText: "<img src=img/ani.webp> Italian Nationalist Association"
+    explanationText: "<img src=img/ani.webp> Associazione Nazionalista Italiana </br></br> Italian Nationalist Association"
     },
     {
     searchString: "LI",
-    explanationText: "<img src=img/il2.webp> Independent Liberals"
+    explanationText: "<img src=img/il2.webp> Liberali  indipendenti </br></br> Independent Liberals"
     },
     {
     searchString: "PLDI",
-    explanationText: "<img src=img/PLDI.png> Italian Democratic Liberal Party"
+    explanationText: "<img src=img/PLDI.png> Partito Liberale Democratico Italiano </br></br> Italian Democratic Liberal Party"
     },
     {
     searchString: "PLI",
-    explanationText: "<img src=img/PLI.png> Italian Liberal Party"
+    explanationText: "<img src=img/PLI.png> Partito Liberale Italiano </br></br> Italian Liberal Party"
     },
     {
     searchString: "UL",
-    explanationText: "<img src=img/ul.webp> Liberal Union"
+    explanationText: "<img src=img/PLDI.png> Union Liberale </br></br> Liberal Union"
     },
     {
     searchString: "PCS",
-    explanationText: "<img src=img/libertas.jpg> Christian Social Party"
+    explanationText: "<img src=img/libertas.jpg> Partito Cristiano Sociale </br></br> Christian Social Party"
     },
     {
     searchString: "FdC",
-    explanationText: "<img src=img/fdc.webp> Italian Fasces of Combat"
+    explanationText: "<img src=img/fdc.webp> Fasci italiani di combattimento </br></br> Italian Fasces of Combat"
     },
     {
     searchString: "PNF",
-    explanationText: "<img src=img/pnf.webp> National Fascist Party"
+    explanationText: "<img src=img/pnf.webp> Partito Nazionale Fascista </br></br> National Fascist Party"
     },
     {
     searchString: "Vittorio Emanuele III",
