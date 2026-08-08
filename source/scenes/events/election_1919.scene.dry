@@ -774,6 +774,15 @@ if (Q.ul_in_bn != 1 && Q.ul_seating_disp) {
     });
 }
 
+if (Q.cc_formed && Q.cc_seating_disp) {
+    data.push({
+        "id": "cc",
+        "legend": "CC",
+        "name": "CC",
+        "seats": Math.round(Q.cc_seating),
+    });
+}
+
 if (Q.pcs_formed) {
     data.push({
         "id": "pcs",
