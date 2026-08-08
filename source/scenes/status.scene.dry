@@ -29,6 +29,7 @@ var _newData = [];
     _addP('ldr', 'PLDI', Q.ldr_seating);
     _addP('ul','UL',Q.ul_seating);
     _addP('ul', 'PLI', Q.ul_seating);
+    _addP('cc', 'CC', Q.cc_seating);
     _addP('pcs','PCS',Q.pcs_seating);
     _addP('other', 'Others', Q.other_seating);
     _addP('pnf',  'FdC',  Q.pnf_seating);
@@ -113,6 +114,7 @@ Chamber of Deputies composition:
 [? if pldi_formed : <span style="color: [+ ldr_colour +];">**PLDI**</span>: [+ ldr_seating_disp +]% ?]
 [? if not pli_formed : <span style="color: [+ ul_colour +];">**UL**</span>: [+ ul_seating_disp +]% ?]
 [? if pli_formed : <span style="color: [+ ul_colour +];">**PLI**</span>: [+ ul_seating_disp +]% ?]
+[? if cc_formed : CC: [+ cc_seating_disp +]% ?]
 [? if pcs_formed : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ pcs_seating_disp +]% ?]
 [? if not pnf_formed : <span style="color: [+ pnf_colour +];">**FdC**</span>: [+ pnf_seating_disp +]% ?]
 [? if pnf_formed : <span style="color: [+ pnf_colour +];">**PNF**</span>: [+ pnf_seating_disp +]% ?]
@@ -176,6 +178,8 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_relation : relationships +] ?]
 
+[? if pll_formed : PLL: [+ pll_relation : relationships +] ?]
+
 [? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_relation : relationships +] ?]
 
 [? if pll_formed : <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ pll_relation : relationships +] ?]
@@ -192,6 +196,10 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if not pli_formed : <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ ul_relation : relationships +] ?]
 [? if pli_formed : <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ ul_relation : relationships +] ?]
+
+[? if cc_formed : CC: [+ cc_relation : relationships +] ?]
+
+[? if pcs_formed : PCS: [+ pcs_relation : relationships +] ?]
 
 [? if not pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
 [? if pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
