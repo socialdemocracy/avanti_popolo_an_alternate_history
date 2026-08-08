@@ -658,6 +658,10 @@ table {
   fill: #656573;
 }
 
+.seat.cc {
+  fill: #203959;
+}
+
 .seat.pll {
   fill: #FFD1D9;
 }
