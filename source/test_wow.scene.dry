@@ -1,7 +1,7 @@
 @CADistrictTesting
 title: National Polling — District Test
 subtitle: Map
-view-if: year = 1928 and month >= 2
+view-if: year == 1928 and month == 2 and week == 1
 new-page: true
 max-visits: 1
 tags: event
