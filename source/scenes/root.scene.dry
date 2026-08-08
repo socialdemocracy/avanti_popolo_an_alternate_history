@@ -91,6 +91,7 @@ Q.ul_relation = 37;
 Q.ldr_relation = 37;
 Q.ds_relation = 37;
 Q.ppi_relation = 40;
+Q.cc_relation = 20;
 Q.psri_relation = 60;
 Q.pri_relation = 60;
 Q.pcs_relation = 10;
@@ -110,6 +111,7 @@ Q.pri_leader = "Chisea";
 Q.psu_leader = "Turati";
 Q.pcdi_leader = "Bordiga";
 Q.pll_leader = "Giuffrida";
+Q.cc_leader = "Cavazzoni";
 Q.pcs_leader = "Carnazza";
 
 Q.soviet_leader = "Lenin";
@@ -152,6 +154,9 @@ Q.pcs_formed = 0;
 
 // Liberal Workers Party - DS Splinter
 Q.pll_formed = 0;
+
+// Catholic Conservatives - PPI Splinter
+Q.cc_formed = 0;
 
 // relation with the king; for snap elections and march
 Q.king_relation = 20;
@@ -258,6 +263,7 @@ Q.workers_pnf = 2;
 Q.workers_psri = 6;
 Q.workers_other = 12;
 Q.workers_pll = 0;
+Q.workers_cc = 0;
 Q.workers_pcs = 0;
 
 Q.middle_class_pcdi = 0;
@@ -272,6 +278,7 @@ Q.middle_class_pnf = 2;
 Q.middle_class_psri = 2;
 Q.middle_class_other = 18;
 Q.middle_class_pll = 0;
+Q.middle_class_cc = 0;
 Q.middle_class_pcs = 0;
 
 Q.industrialists_pcdi = 0;
@@ -286,6 +293,7 @@ Q.industrialists_pnf = 1;
 Q.industrialists_psri = 0;
 Q.industrialists_other = 1;
 Q.industrialists_pll = 0;
+Q.industrialists_cc = 0;
 Q.industrialists_pcs = 0;
 
 Q.rural_pcdi = 0;
@@ -300,6 +308,7 @@ Q.rural_pnf = 0;
 Q.rural_psri = 0;
 Q.rural_other = 5;
 Q.rural_pll = 0;
+Q.rural_cc = 0;
 Q.rural_pcs = 0;
 
 Q.veterans_pcdi = 0;
@@ -314,6 +323,7 @@ Q.veterans_pnf = 2;
 Q.veterans_psri = 2;
 Q.veterans_other = 20;
 Q.veterans_pll = 3;
+Q.veterans_cc = 3;
 Q.veterans_pcs = 20;
 
 Q.catholic_pcdi = 0;
@@ -328,6 +338,7 @@ Q.catholic_pnf = 1;
 Q.catholic_psri = 1;
 Q.catholic_other = 13;
 Q.catholic_pll = 0;
+Q.catholic_cc = 0;
 Q.catholic_pcs = 0;
 
 Q.women_pcdi = 0;
@@ -342,6 +353,7 @@ Q.women_pnf = 6;
 Q.women_psri = 8;
 Q.women_other = 14;
 Q.women_pll = 0;
+Q.women_cc = 0;
 Q.women_pcs = 0;
 
 Q.workers_clc = 0;
@@ -376,6 +388,7 @@ Q.pnf_seating_disp = 0;
 Q.psri_seating_disp = 3.7;
 Q.other_seating_disp = 7.2;
 Q.pll_seating_disp = 0.0;
+Q.cc_seating_disp = 0.0;
 Q.pcs_seating_disp = 0.0;
 
 // ensures library graph works pre-first election
@@ -392,6 +405,7 @@ Q.pnf_seating = 0;
 Q.psri_seating = 19;
 Q.other_seating = 37;
 Q.pll_seating = 0;
+Q.cc_seating = 0;
 Q.pcs_seating = 0;
 
 Q.pcdi_r = 0;
@@ -408,6 +422,7 @@ Q.other_r = 6.3;
 
 Q.bn_r = 0;
 Q.pll_r = 0;
+Q.cc_r = 0;
 Q.pcs_r = 0;
 
 // diff from prev
@@ -425,6 +440,7 @@ Q.old_other_r = 2;
 
 Q.old_bn_r = 0;
 Q.old_pll_r = 0;
+Q.old_cc_r = 0;
 Q.old_pcs_r = 0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
@@ -452,6 +468,7 @@ Q.psri_in_government = 0;
 Q.pnf_in_government = 0; 
 Q.pcs_in_government = 0;
 Q.pll_in_government = 0;
+Q.cc_in_government = 0;
 
 // Left-Wing Coalition = [+ psi_name +] + PSRI
 Q.left_wing_coalition = 0
@@ -804,6 +821,7 @@ Q.pri_colour = '#3CB371';
 Q.bn_colour = '#002d6d';
 Q.pcs_colour = '#656573';
 Q.pll_colour = '#FFD1D9';
+Q.cc_colour = '#203959';
 Q.vacant_colour = '#FFFFFF';
 Q.communist_colour = '#8B0000';
 Q.maximalist_colour = '#DC143C';
