@@ -8,7 +8,7 @@ on-display: {!
     var PARTIES = {
         KPD:   { name: "KPD",   color: "#700000" },
         SPD:   { name: "SPD",   color: "#c00000" },
-        DDP:   { name: Q.ddp_name || "DDP", color: "#D3C24D" },
+        DDP:   { name: "DDP", color: "#D3C24D" },
         Z:     { name: "Center", color: "#000000" },
         DVP:   { name: "DVP",   color: "#D5AC27" },
         DNVP:  { name: "DNVP",  color: "#3E88B3" },
