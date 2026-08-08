@@ -387,6 +387,11 @@
             var relationText = getRelationshipText(Q.psu_relation);
             return baseTooltip.explanationText + '<br>Relation: ' + relationText;
         }
+      
+        if (searchString === 'CC' && Q.cc_relation !== undefined) {
+            var relationText = getRelationshipText(Q.cc_relation);
+            return baseTooltip.explanationText + '<br>Relation: ' + relationText;
+        }
 
         if (searchString === 'PLL' && Q.pll_relation !== undefined) {
             var relationText = getRelationshipText(Q.pll_relation);
