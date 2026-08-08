@@ -644,7 +644,7 @@ on-display: {!
         setTimeout(function() {
             d3.select("#ca-poll-hemicycle").selectAll(".seat")
                 .attr("fill", function(d) { return PARTIES[d.party.id].color; });
-        }, 50);
+        }, );
     }
 !}
 
