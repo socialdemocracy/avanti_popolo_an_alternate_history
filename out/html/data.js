@@ -396,7 +396,7 @@ const tooltipList = [{
     },
     {
     searchString: "CC",
-    explanationText: "<img src=img/placeholder.webp> Cattolici conservatori </br></br> Conservative Catholics"
+    explanationText: "<img src=img/conservative_c-Photoroom.png> Cattolici conservatori </br></br> Conservative Catholics"
     },
     {
     searchString: "PE",
