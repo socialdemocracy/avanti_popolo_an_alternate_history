@@ -665,6 +665,12 @@ Q.public_education_minister_party = 'PSRI';
 
 Q.leverage = Q.psi_seating_disp;
 
+if (Q.year > 1921) {
+    Q.parliament_size = 5.35;
+} else if (Q.year < 1921) {
+    Q.parliament_size = 5.08;
+}
+
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
     election_result[party] = Q[party + '_seating_disp'];
