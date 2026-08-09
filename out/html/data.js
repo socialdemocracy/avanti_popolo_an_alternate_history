@@ -220,7 +220,7 @@ const colourList = [{
    },
     {
         word: "PLL",
-        style: "color: #FFD1D9; font-weight: bold;"
+        style: "color: #fffbc9; font-weight: bold;"
    },
     {
         word: "PRI",
