@@ -913,6 +913,10 @@ go-to: coalition_menu
 
 [? if ds_leader = "Carnazza" and ds_party and (pnf_r >= 5) : {!<tr><td>!} -PDSI {!</td></tr>!} ?]
 
+[? if cc_formed : {!<tr><td><div class="box" style='background-color:#203959'> </div>!} <span style="color: [+ cc_colour +];">Christian-Conservative</span> List: {!</td><td>!} [+ cc_r_disp +]% {!</td><td>!} [+ str_change_cc +]% {!</td><td>!} [+ cc_seating +] {!</td><td>!} [+ cc_seating_disp +]% {!</td></tr>!} ?]
+
+[? if cc_formed : {!<tr><td>!} -CC {!</td></tr>!} ?]
+
 [? if pcs_formed and (pnf_r >= 5) : {!<tr><td>!} -PCS {!</td></tr>!} ?]
 
 [? if not ul_in_bn and pnf_in_power : {!<tr><td>!} -PLI (Def.) {!</td></tr>!} ?]
