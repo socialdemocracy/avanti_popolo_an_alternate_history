@@ -962,6 +962,9 @@ Anti-Socialist Coalition ([+ pnf_name +] + [+ ul_name +] [? if ds_enemies:+ [+ d
 
 There are some potential coalition arrangements.
 
+- @hello: Lets go to the Map. Test.
+
+@hello
 on-display: {!
     var geojson =
 export default function SvgToCode(props) {
@@ -2210,6 +2213,8 @@ export default function SvgToCode(props) {
         }, 50);
     }
 !}
+
+- @coalition_menu: Lets go to the coalition Menu now.
 
 @coalition_menu
 on-arrival: {!
