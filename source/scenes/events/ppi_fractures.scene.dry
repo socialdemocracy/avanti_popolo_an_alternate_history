@@ -88,9 +88,4 @@ for (var record of Q.party_support_records) {
 
 Both the 'Christian Social Party', led by Gabriello Carnazza and the 'Liberal Workers' Party', led by Vincenzo Giuffrida have been founded, as the remnants of the [+ ds_name +] have been left as the party becomes defunct, a shadow of its former self.
 
- - @sad
-
-  @sad
-  title: Sad.
-  subtitle: But the game is not over.
-  go-to: root
+- @root
