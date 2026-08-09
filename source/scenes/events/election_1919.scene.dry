@@ -762,7 +762,7 @@ if (Q.bn_formed == 1 && Q.bn_seating_disp) {
         "legend": "BN",
         "name": "BN",
         "seats": Math.round(Q.bn_seating), 
-    })
+    });
 }
 
 if (Q.ul_in_bn != 1 && Q.ul_seating_disp) {
