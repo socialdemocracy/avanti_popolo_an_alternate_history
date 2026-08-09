@@ -2160,61 +2160,11 @@ export default function SvgToCode(props) {
             .on("click", function(event, d) {
                 Q['selected_district'] = d.properties.DISTRICT;
                 var p = PARTIES[d.properties.PARTY];
-                document.getElementById("ca-poll-detail").innerHTML =
-                    "<strong>District " + d.properties.DISTRICT + "</strong><br>" + p.name;
+                document.getElementById("poll-detail").innerHTML =
             })
-        .append("title")
-            .text(function(d) { return "District " + d.properties.DISTRICT + " — " + PARTIES[d.properties.PARTY].name; });
-
-    // --- seat counts + vote share, feeding both the table and the hemicycle ---
-    var seatCounts = {};
-    for (var k2 in PARTIES) seatCounts[k2] = 0;
-    geojson.features.forEach(function(f) { seatCounts[f.properties.PARTY]++; });
-
-    var totalSeats = geojson.features.length;
-
-    // --- results table, styled like the Saxony scene's party table ---
-    var tableHtml = "<table>";
-    tableHtml += "<tr><td>Party</td><td>Vote share</td><td>Districts won</td></tr>";
-    for (var k3 in PARTIES) {
-        if (!seatCounts[k3]) continue;
-        var voteShare = ((partyShare[k3] / totalShare) * 100).toFixed(1);
-        var seatShare = ((seatCounts[k3] / totalSeats) * 100).toFixed(1);
-        tableHtml += "<tr><td><div class='box' style='background-color:" + PARTIES[k3].color + "; outline: 2px; outline-style: solid;'> </div> </td>" +
-            "<td>" + PARTIES[k3].name + ": " + voteShare + "%</td>" +
-            "<td>" + seatCounts[k3] + " (" + seatShare + "%)</td></tr>";
-    }
-    tableHtml += "</table>";
-    document.getElementById("national-poll-tally").innerHTML = tableHtml;
-
-    // --- parliament hemicycle, same seat counts, same visual convention as Saxony ---
-    if (window && d3 && d3.parliament) {
-        var width2 = 500;
-        var height2 = 500;
-        var screenWidth = document.getElementById('content').offsetWidth;
-        if (screenWidth < width2 - 50) {
-            width2 = screenWidth - 50;
-            height2 = width2;
-            document.getElementById("chamber").style.height = screenWidth/2 + "px";
         }
-        var hemiData = [];
-        for (var k4 in PARTIES) {
-            if (!seatCounts[k4]) continue;
-            hemiData.push({ id: k4, legend: PARTIES[k4].name, name: PARTIES[k4].name, seats: seatCounts[k4] });
-        }
-        var parliament = d3.parliament();
-        parliament.width(width2).height(height2).innerRadiusCoef(0.4);
-        parliament.enter.fromCenter(true).smallToBig(true);
-        parliament.exit.toCenter(false).bigToSmall(true);
-        d3.select("#ca-poll-hemicycle").datum(hemiData).call(parliament);
-        setTimeout(function() {
-            d3.select("#ca-poll-hemicycle").selectAll(".seat")
-                .attr("fill", function(d) { return PARTIES[d.party.id].color; });
-        }, 50);
     }
 !}
-
-- @coalition_menu: Lets go to the coalition Menu now.
 
 @coalition_menu
 on-arrival: {!
