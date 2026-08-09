@@ -6,7 +6,6 @@ max-visits: 1
 on-arrival: {!
 Q.prime_minister = "Nitti";
 Q.prime_minister_party = Q.ldr_name;
-Q.cc_formed = 1;
 
 Q.republican_sentiment -= 1;
 Q.socialist_sentiment += 1;
