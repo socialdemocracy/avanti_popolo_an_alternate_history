@@ -4,15 +4,15 @@ new-page: true
 view-if: year = 1919 and month = 3  and week = 1
 tags: event
 
-= [+ ds_name +] Fractures!
+= PPI fractures!
 
 The [+ ds_name +] has always been a historically unstable party, having had members from left to right wings of the political sphere. However, these ideological differences have typically been placed in check by the party's leadership, notably Giovanni Antonio Colonna di Cesarò. However, the rise of the [+ ds_full_name +] as the dominant party in the liberal sphere has resulted in an worsening of these party internal politics, as arguments and fights between members break out regularly.
 
 The party can no longer hold through compromise.
 
-- @ds_collapse: The left, led by Giuffrida, and the right, led by Carnazza, split from the party.
+- @ppi_collapse: The left, led by Giuffrida, and the right, led by Carnazza, split from the party.
 
-@ds_collapse
+@ppi_collapse
 on-arrival: {!
 
 if (Q.ppi_right < 0) {
