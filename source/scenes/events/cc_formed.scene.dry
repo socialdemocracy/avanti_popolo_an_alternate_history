@@ -1,3 +1,5 @@
+// remember to add a go-to at the end and coalition collapses
+
 on-arrival: {!
 
 Q.cc_formed = 1;
@@ -45,4 +47,3 @@ for (var record of Q.party_support_records) {
     record['cc'] = 0;
 }
 !}
-// remember to do add a go - to and  coalition collapses when i get that
