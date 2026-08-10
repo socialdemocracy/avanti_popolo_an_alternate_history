@@ -24,7 +24,7 @@ Q.unemployed_pnf += 1;
 
 Q.cc_r = Math.round((Q.ppi_r / 2 - 1) * 10) / 10;
 Q.ppi_r = Math.round((Q.ppi_r - Q.cc_r) * 10) / 10;
-Q.dnf_relation = 5
+Q.cc_relation = 5
 
 Q.old_workers_cc_display = 0
 Q.old_middle_class_cc_display = 0
@@ -44,4 +44,5 @@ for (var record of Q.election_records) {
 for (var record of Q.party_support_records) {
     record['cc'] = 0;
 }
-!})
+
+!}
