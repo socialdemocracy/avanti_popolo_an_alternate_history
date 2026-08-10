@@ -19,17 +19,7 @@ if (Q.ppi_right < 0) {
     Q.ppi_right = 0;
 }
 
-if (Q.ppi_moderates < 0) {
-    Q.ppi_moderates = 0;
-}
-
-if (Q.ppi_left < 0) {
-    Q.ppi_left = 0;
-}
-
-Q.ppi_moderates *= 0.5;
-
-Q.ppi_total = Q.ppi_left + Q.ppi_right + Q.ppi_moderates;
+Q.ppi_total = Q.ppi_right;
 Q.cc_defectors = Q.ppi_right / Q.cc_total;
 
 Q.cc_formed = 1;
