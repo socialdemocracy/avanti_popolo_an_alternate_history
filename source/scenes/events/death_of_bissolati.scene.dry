@@ -1,4 +1,5 @@
 title: The Death of Leonida Bissolati
+subtitle: He will be greatly missed.
 view-if: year == 1920 and month >= 5
 frequency: 1000
 max-visits: 1
@@ -7,25 +8,30 @@ tags: event
 new-page: true
 go-to: pm if prime_minister = "Bissolati"; not_pm if prime_minister != "Bissolati"
 
-= The Death of Leonida Bissolati
+= The Loss Of A Man
 
 @pm
+face-image: img/portraits/Leonida_Bissolati.jpeg
 
-Prime Minister Leonida Bissolati has died while in office. He will be greatly missed. But now, we must select a new Prime Minister.
+Prime Minister Leonida Bissolati has died while in office, deciding to do surgery due to his old age, unfortunately he would catch a post-operative infection and would die shortly after..
 
-The PSRI are heavily pushing for us to support Bonomi, Bissolati's successor, as Prime Minister. However, we can support our own candidates, or others.
+Regardless of political affiliation, he will be missed.  A commited <span style="color: #008C45;">rep</span><span style="color: #dddddd;">ubli/span><span style="color: #CD212A;">can/span> and <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democrat/span>, this represents the weakening of <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democracy/span> in the PSRI.
+
+Now, we have to deal with the political side of his death, getting to choose a new Prime Minister. The PSRI are heavily pushing for us to support Bonomi, Bissolati's successor, as Prime Minister. However, we can support our own candidates, or others.
 
 - @turati_pm: Filippo Turati ([+ psi_name +]) for Prime Minister.
 - @bonomi_pm: Ivanoe Bonomi (PSRI) for Prime Minister.
-- @de_gasperi_pm: Let Alcide De Gasperi of the Catholic Party become Prime Minister.
-- @orlando_pm: Let Vittorio Emanuele Orlando of the Liberal Democrats become Prime Minister.
+- @de_gasperi_pm: Let Alcide De Gasperi of the PPI become Prime Minister.
+- @orlando_pm: Let Vittorio Emanuele Orlando of the LDR become Prime Minister.
 
 @turati_pm
 view-if: not reformists_defect
 on-arrival: prime_minister = "Turati"; prime_minister_party = psi_name; psri_relation -= 5; ldr_relation -= 5 if centre_left_coalition; ppi_relation -= 5 if socialist_catholic_coalition
-subtitle: The PSRI argue for their own successor, while the [? if centre_left_coalition : liberals ?][? if socialist_catholic_coalition : Catholics ?] argue for their own man to lead.
+subtitle: The PSRI argue for their own successor, while the [? if centre_left_coalition : LDR and UL ?][? if socialist_catholic_coalition : PPI ?] argue for their own man to lead.
 
 Our coalition partners are reluctant to accept the new Prime Minister, but they do not make loud objections.
+
+- @memento_mori
 
 @bonomi_pm
 on-arrival: prime_minister = "Bonomi"; prime_minister_party = "PSRI"; psri_relation += 5; ldr_relation -= 3 if centre_left_coalition; ppi_relation -= 3 if socialist_catholic_coalition
@@ -33,22 +39,38 @@ subtitle: The PSRI claims allowing Bonomi to lead is the right thing to do.
 
 Our coalition partners on the right are reluctant to accept the new Prime Minister, but they do not make loud objections. The PSRI thanks us for our backing, and we see an improvement in relations.
 
+- @memento_mori
+
 @de_gasperi_pm
 on-arrival: prime_minister = "De Gasperi"; prime_minister_party = "PPI"; psri_relation -= 3; ppi_relation += 5
 view-if: socialist_catholic_coalition
-subtitle: The Catholic Party claim it is their turn...
+subtitle: The PPI claims it is their turn...
 
-The Catholic Party is grateful that we have supported De Gasperi for Prime Minister, while the PSRI are disappointed at our choice.
+The PPI is grateful that we have supported De Gasperi for Prime Minister, while the PSRI are disappointed at our choice.
+
+- @memento_mori
 
 @orlando_pm
 on-arrival: prime_minister = "Orlando"; prime_minister_party = ldr_name; psri_relation -= 3; ldr_relation += 5
 view-if: centre_left_coalition
-subtitle: The Liberals would prefer a moderate to led the country.
+subtitle: The LDR would prefer a moderate to led the country.
 
-The Liberal Democratic Party is grateful that we have supported Orlando for Prime Minister, while the PSRI are disappointed at our choice.
+The LDR is grateful that we have supported Orlando for Prime Minister, while the PSRI are disappointed at our choice.
 
-@not_pm
+- @memento_mori
 
-Leonida Bissolati, right-reformist and leader of the Italian Reformist Socialist Party has passed away. His death represents the weakening of social democracy in the party, and he is succeeded by Ivanoe Bonomi.
+@memento_mori
+title: Memento Mori..
 
 He will be missed.
+
+@not_pm
+face-image: img/portraits/Leonida_Bissolati.jpeg
+
+Leonida Bissolati, leader of the PSRI, has died due to a post-operative infection after he received a surgery due to his old age.
+
+Regardless of political affiliation, he will be missed.  A commited <span style="color: #008C45;">rep</span><span style="color: #dddddd;">ubli/span><span style="color: #CD212A;">can/span> and <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democrat/span>, this represents the weakening of <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democracy/span> in the PSRI. 
+
+In the political side of things, Bonomi has taken  over most of the PSRI due to Bissolati's death and opposition to Bonomi is slowly dying out. 
+
+ @memento_mori
