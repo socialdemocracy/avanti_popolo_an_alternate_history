@@ -1,81 +1,32 @@
-title: The PPI Fractures!
-subtitle: The party's internal machinations have caused its collapse.
-new-page: true
-view-if: year = 1919 and month = 3  and week = 1 and not cc_formed
+title: <span style="color: #3E88B3;">**DNVP**</span> Splits!
+subtitle: Hugenberg and his supporters leave...
+view-if: year = 1919 and month = 2 and week = 3
+max-visits: 1
 tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
 
-= PPI fractures!
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "mg/redguarddeck.jpg";  
 
-The [+ ds_name +] has always been a historically unstable party, having had members from left to right wings of the political sphere. However, these ideological differences have typically been placed in check by the party's leadership, notably Giovanni Antonio Colonna di Cesarò. However, the rise of the [+ ds_full_name +] as the dominant party in the liberal sphere has resulted in an worsening of these party internal politics, as arguments and fights between members break out regularly.
-
-The party can no longer hold through compromise.
-
-- @ppi_collapse: The left, led by Giuffrida, and the right, led by Carnazza, split from the party.
-
-@ppi_collapse
-on-arrival: {!
-
-if (Q.ppi_right < 0) {
-    Q.ppi_right = 0;
-}
-
-Q.ppi_total = Q.ppi_right;
-Q.cc_defectors = Q.ppi_right / Q.cc_total;
-
-Q.cc_formed = 1;
-Q.parties.push('cc');
-
-Q.workers_cc += Q.workers_ppi * Q.cc_defectors;
-Q.middle_class_cc += Q.middle_class_ppi * Q.cc_defectors;
-Q.industrialists_cc += Q.industrialists_ppi * Q.cc_defectors;
-Q.rural_cc += Q.rural_ppi * Q.cc_defectors;
-Q.veterans_cc += Q.veterans_ppi * Q.cc_defectors;
-Q.catholic_cc += Q.catholic_ppi * Q.cc_defectors;
-Q.women_cc += Q.women_ppi * Q.cc_defectors;
-
-Q.workers_ppi -= Q.workers_ppi * Q.cc_defectors;
-Q.middle_class_ppi -= Q.middle_class_ppi * Q.cc_defectors;
-Q.industrialists_ppi -= Q.industrialists_ppi * Q.cc_defectors;
-Q.rural_ppi -= Q.rural_ppi * Q.cc_defectors;
-Q.veterans_ppi -= Q.veterans_ppi * Q.cc_defectors;
-Q.catholic_ppi -= Q.catholic_ppi * Q.cc_defectors;
-Q.women_ppi -= Q.women_ppi * Q.cc_defectors;
-
-Q.cc_r += Q.ppi_r * Q.cc_defectors;
-Q.ppi_r -= Q.ppi_r * Q.cc_defectors;
-
-Q.cc_r = parseFloat(Q.cc_r.toFixed(1));
-Q.ppi_r = parseFloat(Q.ppi_r.toFixed(1));
-
-Q.cc_seating_disp += Q.cc_seating_disp * Q.cc_defectors;
-Q.ppi_seating_disp -= Q.ppi_seating_disp * Q.cc_defectors;
-
-Q.cc_seating_disp = parseFloat(Q.cc_seating_disp.toFixed(1));
-Q.ppi_seating_disp = parseFloat(Q.ppi_seating_disp.toFixed(1));
-
-Q.cc_seating += Q.ppi_seating * Q.cc_defectors;
-Q.ppi_seating -= Q.ppi_seating * Q.cc_defectors;
-
-Q.cc_seating = parseFloat(Q.cc_seating.toFixed(1));
-Q.ppi_seating = parseFloat(Q.ppi_seating.toFixed(1));
-
-Q.old_workers_cc_display = 0;
-Q.old_middle_class_cc_display = 0;
-Q.old_rural_cc_display = 0;
-Q.old_industrialists_cc_display = 0;
-Q.old_veterans_cc_display = 0;
-Q.old_catholic_cc_display = 0;
-Q.old_women_cc_display = 0;
-
-for (var record of Q.election_records) {
-    record['cc'] = 0;
-}
-for (var record of Q.party_support_records) {
-    record['cc'] = 0;
-}
-
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
 !}
+new-page: true
 
-Both the 'Christian Social Party', led by Gabriello Carnazza and the 'Liberal Workers' Party', led by Vincenzo Giuffrida have been founded, as the remnants of the [+ ds_name +] have been left as the party becomes defunct, a shadow of its former self.
+= <span style="color: #003755;">Deutschnationale Front</span> founded
 
-- @root
+Hugenberg and his supporters have went through with his plans to organize a secession from the right of the <span style="color: #3E88B3;">**DNVP**</span> and formed his own political party, the <i>Deutschnationale Front</i> (<span style="color: #003755;">**DNF**</span>). Hugenberg has brought a considerable amount of party infrastructure into his own splinter party, however, it doesn't appear like the <span style="color: #003755;">**DNF**</span> would have much electoral appeal as the <span style="color: #3E88B3;">**DNVP**</span>. The <span style="color: #3E88B3;">**Stahlhelm**</span> paramilitary is caught between the two parties, but doesn't pledge support for either one. It may take some time until the <span style="color: #3E88B3;">**DNVP**</span> rebuilds to fill the hole Hugenberg's influence left behind.
+
+The <span style="color: #385A38;">agrarian</span>, industrialist, <span style="color: #6D5298;">Christian Social</span>, and the new 'Young Conservative' wings of the parties have largely remained in the <span style="color: #3E88B3;">**DNVP**</span>, and will hopefully change their attitude towards the republic. The small <span style="color: #7A3C00;">**NSDAP**</span> has gained among some radicalized <span style="color: #003755;">**DNF**</span> supporters.
+
+- @goodnews: We'll watch as the enemies of the republic tear themselves apart.
+
+@goodnews
+on-arrival: cc_formed = 1
+go-to: cc_formed
+
+The right has been considerably weakened, now is our chance to enact meaningful change without their disruption.
