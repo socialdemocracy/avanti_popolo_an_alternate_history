@@ -32,18 +32,16 @@ Q.old_rural_cc_display = 0
 Q.old_unemployed_cc_display = 0
 Q.old_catholic_cc_display = 0
 
-    Q.socialist_catholic_coalition = parseFloat((Q.psi_seating_disp + Q.psri_seating_disp + Q.ppi_seating_disp + Q.pll_seating_disp.toFixed(1));
-}
+Q.socialist_catholic_coalition = parseFloat((Q.psi_seating_disp + Q.psri_seating_disp + Q.ppi_seating_disp + Q.pll_seating_disp).toFixed(1));
 
-    Q.grand_coalition = parseFloat((Q.psri_seating_disp + Q.ppi_seating_disp + Q.ul_seating_disp + Q.ldr_seating_disp + Q.ds_seating_disp + Q.other_seating_disp).toFixed(1));
-}
+Q.grand_coalition = parseFloat((Q.psri_seating_disp + Q.ppi_seating_disp + Q.ul_seating_disp + Q.ldr_seating_disp + Q.ds_seating_disp + Q.other_seating_disp).toFixed(1));
 
 for (var record of Q.election_records) {
     record['cc'] = 0;
 }
+
 for (var record of Q.party_support_records) {
     record['cc'] = 0;
+}
 
-    });
-});  
-}());
+}!
