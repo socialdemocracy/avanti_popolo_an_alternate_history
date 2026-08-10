@@ -1,5 +1,3 @@
-// remember to add a go-to at the end and coalition collapses
-
 on-arrival: {!
 
 Q.cc_formed = 1;
