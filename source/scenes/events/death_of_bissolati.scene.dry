@@ -13,9 +13,7 @@ go-to: pm if prime_minister = "Bissolati"; not_pm if prime_minister != "Bissolat
 @pm
 face-image: img/portraits/Leonida_Bissolati.jpeg
 
-Prime Minister Leonida Bissolati has died while in office, deciding to do surgery due to his old age, unfortunately he would catch a post-operative infection and would die shortly after..
-
-Regardless of political affiliation, he will be missed.  A commited <span style="color: #008C45;">rep</span><span style="color: #dddddd;">ubli/span><span style="color: #CD212A;">can/span> and <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democrat/span>, this represents the weakening of <span style="color: [+ psri_colour +];">social/span>-<span style="color: [+ psri_colour +];">democracy/span> in the PSRI.
+Prime Minister Leonida Bissolati has died while in office, deciding to do surgery due to his old age, unfortunately he would catch a post-operative infection and would die shortly after.. Regardless of political affiliation, he will be missed.  A commited <span style="color: #008C45;">rep</span><span style="color: #dddddd;">ubli</span><span style="color: #CD212A;">can</span> and <span style="color: [+ psri_colour +];">social</span>-<span style="color: [+ psri_colour +];">democrat</span>, this represents the weakening of <span style="color: [+ psri_colour +];">social</span>-<span style="color: [+ psri_colour +];">democracy</span> in the PSRI.
 
 Now, we have to deal with the political side of his death, getting to choose a new Prime Minister. The PSRI are heavily pushing for us to support Bonomi, Bissolati's successor, as Prime Minister. However, we can support our own candidates, or others.
 
