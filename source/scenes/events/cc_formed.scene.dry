@@ -1,0 +1,48 @@
+on-arrival: {!
+
+Q.cc_formed = 1;
+Q.parties.push('cc');
+Q.parties_graph.push('cc');
+
+Q.workers_cc = 1;
+
+Q.middle_class_cc = 4;
+Q.middle_class_ppi -= 5;
+
+Q.rural_cc = 16;
+Q.rural_ppi -= 18;
+
+Q.unemployed_cc = 1;
+Q.unemployed_ppi -= 1;
+
+Q.catholic_cc = 10;
+Q.catholic_ppi -= 10;
+             
+Q.middle_class_pnf += 2;
+Q.rural_pnf += 2;
+Q.unemployed_pnf += 1;
+
+Q.cc_r = Math.round((Q.ppi_r / 2 - 1) * 10) / 10;
+Q.ppi_r = Math.round((Q.ppi_r - Q.cc_r) * 10) / 10;
+Q.dnf_relation = 5
+
+Q.old_workers_cc_display = 0
+Q.old_middle_class_cc_display = 0
+Q.old_rural_cc_display = 0
+Q.old_unemployed_cc_display = 0
+Q.old_catholic_cc_display = 0
+
+    Q.socialist_catholic_coalition = parseFloat((Q.psi_seating_disp + Q.psri_seating_disp + Q.ppi_seating_disp + Q.pll_seating_disp.toFixed(1));
+}
+
+    Q.grand_coalition = parseFloat((Q.psri_seating_disp + Q.ppi_seating_disp + Q.ul_seating_disp + Q.ldr_seating_disp + Q.ds_seating_disp + Q.other_seating_disp).toFixed(1));
+}
+
+for (var record of Q.election_records) {
+    record['cc'] = 0;
+}
+for (var record of Q.party_support_records) {
+    record['cc'] = 0;
+}
+!}
+// remember to do add a go - to and  coalition collapses when i get that
