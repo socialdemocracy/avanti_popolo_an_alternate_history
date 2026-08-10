@@ -44,4 +44,4 @@ for (var record of Q.party_support_records) {
     record['cc'] = 0;
 }
 !}
-go-to: gpvernment_collapse_1 if grand_coalition < 50
+go-to: government_collapse_1 if grand_coalition < 50
