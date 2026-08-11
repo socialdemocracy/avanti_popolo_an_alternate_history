@@ -206,7 +206,7 @@ go-to: total_defeat_accede if (rome_total_defeat = 1 and king_relation < 60); to
 subtitle: We must prepare for the worst.
 view-if: rome_army_visited = 0 and rome_police_visited = 0 and rome_rg_visited = 0
 on-arrival: mussolini_unopposed = 1
-go-to: pnf_takes_power 
+go-to: mussolini_takes_power if (pnf_leader == "Mussolini")
 
 @total_defeat_accede
 title: Total Defeat
@@ -223,6 +223,9 @@ Whatever the case, our initial force has been defeated and forced to retreat, as
 What happens now?
 
 - @pnf_takes_power: The King accedes to [+ pnf_leader +]'s demands and appoints him Prime Minister.
+
+@pnf_takes_power
+go-to: mussolini_takes_power if (pnf_leader == "Mussolini")
 
 @total_defeat_refuse
 title: Total Defeat
