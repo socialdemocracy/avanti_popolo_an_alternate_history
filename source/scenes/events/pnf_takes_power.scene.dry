@@ -1,20 +1,21 @@
-title: [+ pnf_leader +] appointed Prime Minister
-audio: clear shuffle music/pnf_power/FischiaIlVento.mp3 music/pnf_power/CanzoneDeiPartigianiReggiani.mp3 music/pnf_power/ChiNonVuolChinarLaTesta.mp3 music/pnf_power/EIoEroSandokan.mp3 music/pnf_power/SonProletariIPartigiani.mp3
-set-bg: img/MussoliniBG.png
-view-if: march_succeeded = 1
+title: Mussolini appointed Prime Minister!
+subtitle: Our nightmare has come true.
+view-if: march_succeeded = 1 and pnf_leader = "Mussolini"
 tags: event
 max-visits: 1
 new-page: true
+on-arrival: ul_in_government = 1; ds_in_government = 1; pnf_in_government = 1; ppi_in_government = 1 if ppi_relation < 78; ppi_in_government = 0 if ppi_relation > 78
 
-= [+ pnf_leader +] Appointed Prime Minister!
 
-The March on Rome has succeeded, as the threat of violence and outright civil war forces the King to give in to [+ pnf_leader +]'s demands. Vittorio Emanuele III has officially appointed [+ pnf_leader +] as Prime Minister, as many fear he will quickly consolidate power and bring the full force of the government towards us.
+= Mussolini Appointed Prime Minister!
 
-[+ pnf_leader +] has already formed a governing coalition of willing parties, establishing a firm grip on the state.
+After the March on Rome, [+ king +] has appointed Mussolini to the position of Prime Minister, with many fearing he will start to consolidate power and bring a <span style="color: [+ pnf_colour +];">fascist</span> dictatorship to our country, as <span style="color: [+ pnf_colour +];">fascists</span> take over ministries and begin cracking down on the Red Guard and other leftist groups.  
+
+Mussolini has formed a coalition between the UL, DS, PNF, [? if ppi_in_government = 0 : and the ?] ANI [? if ppi_in_government = 1 : and the PPI ?]  in order to maintain power. [? if ppi_in_government = 0 : However, surprisingly, the PPI has refused to join the coalition due to their good relations with us. ?]
 
 What are we to do now?
 
-- @fight: Mobilise the Red Guards and authorise workers to begin taking up arms against [+ pnf_leader +]'s rule!
+- @fight: We must not allow him to consolidate power; mobilize the Red Guard!
 - @keep_on: Await our opportunity to strike.
 
 
@@ -26,7 +27,7 @@ Do we realize that this means civil war, against the full force of the state?
 - @keep_on: We are not ready for war. Instead, we will continue to struggle and await our opportunity.
 
 @keep_on
-subtitle: This will not end the game.
+subtitle: The game is not over.
 on-arrival: {!
 Q.psi_majority = 0;
 Q.centre_left_coalition = 0;
@@ -60,12 +61,16 @@ Q.interior_minister_party = "PNF";
 Q.interior_minister = "Federzoni";
 Q.justice_minister_party = "PNF";
 Q.justice_minister = "Oviglio"
-Q.labour_minister_party = "PPI"; 
-Q.labour_minister = "Cavazzoni";
+if Q.ppi_in_government = 1: Q.labour_minister_party = "PNF"; 
+if Q.ppi_in_government = 1: Q.labour_minister = "Cavazzoni";
+if Q.ppi_in_government = 0: Q.labour_minister_party = "PNF"; 
+if Q.ppi_in_government = 0: Q.labour_minister = "Bottai";
 Q.finance_minister_party = "PNF";
 Q.finance_minister = "Stefani";
-Q.treasury_minister_party = "PPI";
-Q.treasury_minister = "Tangorra";
+if Q.ppi_in_government = 1: Q.treasury_minister_party = "PPI";
+if Q.ppi_in_government = 1: Q.treasury_minister = "Tangorra";
+if Q.ppi_in_government = 0: Q.treasury_minister_party = "PNF"; 
+if Q.ppi_in_government = 0: Q.treasury_minister = "de' Stefani";
 Q.agriculture_minister_party = "PLI";
 Q.agriculture_minister = "Acerbo";
 Q.public_education_minister_party = "I";
