@@ -4,6 +4,7 @@ view-if: march_succeeded = 1 and pnf_leader = "Mussolini"
 tags: event
 max-visits: 1
 new-page: true
+face-image: img/mussolini_power.jpeg
 on-arrival: {!
 ul_in_government = 1; 
 ds_in_government = 1; 
@@ -12,7 +13,6 @@ if (Q.ppi_relation < 78): Q.ppi_in_government = 1;
 if (Q.ppi_relation >= 78): Q.ppi_in_government = 0;
 if (Q.cc_formed == 1): Q.ppi_in_government = 0;
 !}
-face-image: img/mussolini_power.jpeg
 
 = Mussolini Appointed Prime Minister!
 
