@@ -844,3 +844,23 @@ body.dark-mode .wide_tooltip-tip::after {
 body.dark-mode .wide_tooltip-tip::before {
   border-color: #1a1a2e transparent transparent transparent;
 }
+.wide_tooltip-wrap.drop-down .wide_tooltip-tip {
+  bottom: auto;
+  top: calc(100% + 10px);
+}
+.wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
+  top: auto;
+  bottom: 100%;
+  border-color: transparent transparent #2235b2 transparent;
+}
+.wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
+  top: auto;
+  bottom: 100%;
+  border-color: transparent transparent #d8ddef transparent;
+}
+body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
+  border-color: transparent transparent #8093ff transparent;
+}
+body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
+  border-color: transparent transparent #1a1a2e transparent;
+}
