@@ -1,7 +1,7 @@
 title: [+ pnf_leader +] appointed Prime Minister!
 set-bg: img/MussoliniBG.png
 audio: clear shuffle music/pnf_power/FischiaIlVento.mp3 music/pnf_power/CanzoneDeiPartigianiReggiani.mp3 music/pnf_power/ChiNonVuolChinarLaTesta.mp3 music/pnf_power/EIoEroSandokan.mp3 music/pnf_power/SonProletariIPartigiani.mp3
-view-if: anti_socialist_coalition = 1 and march_succeeded = 0 and march_failed = 0
+view-if: anti_socialist_coalition = 1 and march_succeeded = 0 or march_failed = 0
 max-visits: 1
 tags: event
 new-page: true
