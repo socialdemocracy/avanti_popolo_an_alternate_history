@@ -82,10 +82,13 @@ Q.public_education_minister_party = "I";
 Q.public_education_minister = "Gentile";
 Q.public_works_minister_party = "DS";
 Q.public_works_minister = "Carnazza";
+
 Q.next_election_year = 1924; 
 Q.next_election_month = 4;
+
 Q.pnf_in_power = 1;
 Q.violent_pnf = 1;
+
 !}
 
 We will continue onwards, biding our time. We are facing an extremely uphill battle, and will have to act fast.
