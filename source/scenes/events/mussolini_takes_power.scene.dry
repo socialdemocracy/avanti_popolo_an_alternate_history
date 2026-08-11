@@ -9,16 +9,17 @@ on-arrival: {!
 ul_in_government = 1; 
 ds_in_government = 1; 
 pnf_in_government = 1;
-if (Q.ppi_relation < 78): Q.ppi_in_government = 1;
-if (Q.ppi_relation >= 78): Q.ppi_in_government = 0;
-if (Q.cc_formed == 1): Q.ppi_in_government = 0;
+if (Q.ppi_relation < 78) Q.ppi_in_government = 1;
+if (Q.ppi_relation >= 78) Q.ppi_in_government = 0;
+if (Q.cc_formed == 1) Q.ppi_in_government = 0;
+if (Q.ppi_leader == "Miglioli") Q.ppi_in_government = 0;
 !}
 
 = Mussolini Appointed Prime Minister!
 
 After the March on Rome, [+ king +] has appointed Mussolini to the position of Prime Minister, with many fearing he will start to consolidate power and bring a <span style="color: [+ pnf_colour +];">fascist</span> dictatorship to our country, as <span style="color: [+ pnf_colour +];">fascists</span> take over ministries and begin cracking down on the Red Guard and other leftist groups.  
 
-Mussolini has formed a coalition between the PLI, PDSI, PNF, [? if ppi_in_government = 0 : and the ?] ANI [? if ppi_in_government = 1 : and the PPI ?]  in order to maintain power. [? if ppi_in_government = 0 and not cc_formed : However, surprisingly, the PPI has refused to join the coalition due to their good relations with us. ?] [? if ppi_in_government = 0 and cc_formed : Due to most of the right-wing elements of the PPI defecting to the CC in their party spilt, Mussolini has added the CC to the coalition instead of the PPI due to the PPI not having much of a reason to join the coalition. ?]
+Mussolini has formed a coalition between the PLI, PDSI, PNF, [? if ppi_in_government = 0 : and the ?] ANI [? if ppi_in_government = 1 : and the PPI ?]  in order to maintain power. [? if ppi_in_government = 0 and not cc_formed : However, surprisingly, the PPI has refused to join the coalition due to their good relations with us. ?] [? if ppi_in_government = 0 and cc_formed : Due to most of the right-wing elements of the PPI defecting to the CC in their party spilt, Mussolini has added the CC to the coalition instead of the PPI due to the PPI not having much of a reason to join the coalition. ?] [? if ppi_in_government = 0 and ppi_leader == "Miglioli" : Due to the republican leanings of the current leadership of the PPI, they have refused to join the government, too. ?]
 
 What are we to do now?
 
