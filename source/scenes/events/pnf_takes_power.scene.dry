@@ -5,6 +5,7 @@ tags: event
 max-visits: 1
 new-page: true
 on-arrival: ul_in_government = 1; ds_in_government = 1; pnf_in_government = 1; ppi_in_government = 1 if ppi_relation < 78; ppi_in_government = 0 if ppi_relation > 78
+face-image: img/mussolini_power.jpeg
 
 
 = Mussolini Appointed Prime Minister!
@@ -83,6 +84,7 @@ Q.next_election_month = 4;
 
 Q.pnf_in_power = 1;
 Q.violent_pnf = 1;
+   }
 !}
 
 We will continue onwards, biding our time. We are facing an extremely uphill battle, and will have to act fast.
