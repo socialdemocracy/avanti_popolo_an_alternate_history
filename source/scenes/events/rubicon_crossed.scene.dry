@@ -1,6 +1,6 @@
 title: The Rubicon is Crossed
 subtitle: The fate of Italy rests in [+ king +]
-view-if: prime_minister = "Mussolini" and march_succeeded = 1
+view-if: true and year = 1922 and month = 11 and week = 1
 priority: 3
 new-page: true
 tags: event
