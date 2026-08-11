@@ -4,7 +4,7 @@ view-if: march_succeeded = 1 and pnf_leader = "Mussolini"
 tags: event
 max-visits: 1
 new-page: true
-face-image: img/mussolini_power.jpeg
+face-image: img/portraits/mussolini_power2.jpeg
 on-arrival: {!
 ul_in_government = 1; 
 ds_in_government = 1; 
@@ -17,15 +17,24 @@ if (Q.ppi_leader == "Miglioli") Q.ppi_in_government = 0;
 
 = Mussolini Appointed Prime Minister!
 
-After the March on Rome, [+ king +] has appointed Mussolini to the position of Prime Minister, with many fearing he will start to consolidate power and bring a <span style="color: [+ pnf_colour +];">fascist</span> dictatorship to our country, as <span style="color: [+ pnf_colour +];">fascists</span> take over ministries and begin cracking down on the Red Guard and other leftist groups.  
+After the March on Rome, [+ king +] has appointed Mussolini to the position of Prime Minister, with many fearing he will start to consolidate power and bring a <span style="color: [+ pnf_colour +];">fascist</span> dictatorship to our country, as <span style="color: [+ pnf_colour +];">fascists</span> take over ministries and begin cracking down on the Red Guard and other leftist groups. Many of our members inside the Syndicalist wing, however, are still deluded that Mussolini will somehow collaborate with the more left-wing elements of his party and let the PSI in government, somehow, despite the clear bourgeois orientations of his cabinet.
 
 Mussolini has formed a coalition between the PLI, PDSI, PNF, [? if ppi_in_government = 0 : and the ?] ANI [? if ppi_in_government = 1 : and the PPI ?]  in order to maintain power. [? if ppi_in_government = 0 and not cc_formed : However, surprisingly, the PPI has refused to join the coalition due to their good relations with us. ?] [? if ppi_in_government = 0 and cc_formed : Due to most of the right-wing elements of the PPI defecting to the CC in their party spilt, Mussolini has added the CC to the coalition instead of the PPI due to the PPI not having much of a reason to join the coalition. ?] [? if ppi_in_government = 0 and ppi_leader == "Miglioli" : Due to the republican leanings of the current leadership of the PPI, they have refused to join the government, too. ?]
 
 What are we to do now?
 
+- @cheater: Offer to join Mussolini's governing coalition.
 - @fight: We must not allow him to consolidate power; mobilize the Red Guard!
 - @keep_on: Await our opportunity to strike.
 
+
+@cheater
+unavailable-subtitle: Our party would never do this.
+subtitle: Cheater.
+choose-if: pnf_relation > 100
+on-arrival: dataminer_detected = 1; ip_grabber = 1;
+
+Cheater.
 
 @fight
 
