@@ -537,6 +537,30 @@ Q.ppi_moderates = 0;
 Q.ppi_right = 0;
 Q.ppi_accept_land_reform = 0;
 
+// rubicon
+Q.king_mussolini_r = 5;
+Q.king_annunzio_r = 5;
+Q.king_grandi_r = 1;
+
+Q.annunzio_mussolini_r = 3;
+Q.annunzio_psi_r = 2;
+Q.annunzio_psi_support = 0;
+Q.annunzio_psi_influence = 0;
+Q.annunzio_psi_concession = 0;
+Q.annunzio_approval = 2;
+Q.mussolini_approval = 2;
+Q.grandi_approval = 1;
+
+Q.mussolini_strength = 5;
+Q.annunzio_strength = 3;
+Q.grandi_strength = 2;
+Q.stefani_strength = 1;
+
+Q.mussolini_goal = "Consolidate power";
+Q.annunzio_goal = "Attempt to push Mussolini towards syndicalist policy";
+Q.grandi_goal = "Become acquainted with Mussolini";
+Q.stefani_goal = "Push free-market economic reforms";
+
 Q.ul_giolitti = 4;
 Q.ul_salandra = 0;
 
