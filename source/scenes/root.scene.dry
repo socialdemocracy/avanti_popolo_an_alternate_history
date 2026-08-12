@@ -543,6 +543,9 @@ Q.king_annunzio_r = 5;
 Q.king_grandi_r = 1;
 
 Q.annunzio_mussolini_r = 3;
+Q.grandi_mussolini_r = 3;
+Q.grandi_annunzio_r = -1;
+Q.grandi_mussolini_r = 6;
 Q.annunzio_psi_r = 2;
 Q.annunzio_psi_support = 0;
 Q.annunzio_psi_influence = 0;
