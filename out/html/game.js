@@ -621,18 +621,39 @@ window.enableDarkMode = function() {
     }
   };
 
-  window.updateSidebar = function() {
-      $('#qualities').empty();
-      var scene = dendryUI.game.scenes[window.statusTab];
-      dendryUI.dendryEngine._runActions(scene.onArrival);
-      var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-      $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
-  };
+window.updateSidebar = function() {
+    $('#qualities').empty();
+    if (!window.dendryUI || !dendryUI.game || !dendryUI.game.scenes) {
+        console.warn('updateSidebar: dendryUI.game.scenes not ready');
+        return;
+    }
+    var scene = dendryUI.game.scenes[window.statusTab];
+    if (!scene) {
+        console.warn('updateSidebar: scene "' + window.statusTab + '" not found');
+        return;
+    }
+    if (scene.onArrival) {
+        dendryUI.dendryEngine._runActions(scene.onArrival);
+    }
+    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+    $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+};
 
-  window.updateSidebarRight = function() {
+// replace the existing updateSidebarRight function with this
+window.updateSidebarRight = function() {
     $('#qualities_right').empty();
+    if (!window.dendryUI || !dendryUI.game || !dendryUI.game.scenes) {
+        console.warn('updateSidebarRight: dendryUI.game.scenes not ready');
+        return;
+    }
     var scene = dendryUI.game.scenes[window.statusTabRight];
-    dendryUI.dendryEngine._runActions(scene.onArrival);
+    if (!scene) {
+        console.warn('updateSidebarRight: scene "' + window.statusTabRight + '" not found');
+        return;
+    }
+    if (scene.onArrival) {
+        dendryUI.dendryEngine._runActions(scene.onArrival);
+    }
     var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
     $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
 };
