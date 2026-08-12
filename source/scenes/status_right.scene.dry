@@ -18,7 +18,7 @@ is-special: true
 <p style="white-space: nowrap;margin-bottom: 2px;">Influence: [+ mussolini_strength : camarilla_strength +]</p> 
 <p style="margin-bottom: 2px;">Goal: [+ mussolini_goal +] </p> 
  </div> 
- <div style="flex: 1;margin-right: -8px;"> ?]
+ <div style="flex: 1;margin-right: -8px;"> 
  <p style="white-space: nowrap;text-align: center;font-weight: bold;margin-bottom: 0px;">Gabriele D'Annunzio</p> 
  <p style="margin-bottom: 2px;">Influence: [+ annunzio_strength : camarilla_strength +]</p> 
  <p style="margin-bottom: 2px;">Goal: [+ annunzio_goal +]</p> 
