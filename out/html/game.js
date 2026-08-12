@@ -604,11 +604,6 @@ window.enableDarkMode = function() {
     } else {
         $('#light_mode')[0].checked = true;
     }
-    if (window.dendryUI.gray_mode) {
-        $('#gray_on')[0].checked = true;
-    } else {
-        $('#gray_no')[0].checked = true;
-    }
   };
 
   // This function allows you to do something in response to signals.
