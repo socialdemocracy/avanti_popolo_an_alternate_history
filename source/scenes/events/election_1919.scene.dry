@@ -121,6 +121,26 @@ if (Q.bn_formed) {
         Q.ul_seating_disp = 0;
     }
 
+    if (Q.cc_formed && Q.prime_minister_party == Q.pnf_name) {
+        Q.bn_r += Q.cc_r;
+        Q.bn_seating += Q.cc_seating;
+        Q.bn_seating_disp += Q.cc_seating_disp;
+
+        Q.cc_r = 0;
+        Q.cc_seating = 0;
+        Q.cc_seating_disp = 0;
+    }
+
+    if (Q.pcs_formed && Q.prime_minister_party == Q.pnf_name) {
+        Q.bn_r += Q.pcs_r;
+        Q.bn_seating += Q.pcs_seating;
+        Q.bn_seating_disp += Q.pcs_seating_disp;
+
+        Q.pcs_r = 0;
+        Q.pcs_seating = 0;
+        Q.pcs_seating_disp = 0;
+    }
+
     if (Q.pnf_in_bn) {
         Q.bn_r += Q.pnf_r;
         Q.bn_seating += Q.pnf_seating;
@@ -913,15 +933,17 @@ go-to: coalition_menu
 
 [? if ds_leader = "Carnazza" and ds_party and (pnf_r >= 5) : {!<tr><td>!} -PDSI {!</td></tr>!} ?]
 
-[? if cc_formed : {!<tr><td><div class="box" style='background-color:#203959'> </div>!} <span style="color: [+ cc_colour +];">Christian-Conservative</span> List: {!</td><td>!} [+ cc_r_disp +]% {!</td><td>!} [+ str_change_cc +]% {!</td><td>!} [+ cc_seating +] {!</td><td>!} [+ cc_seating_disp +]% {!</td></tr>!} ?]
-
-[? if cc_formed : {!<tr><td>!} -CC {!</td></tr>!} ?]
-
 [? if pcs_formed and (pnf_r >= 5) : {!<tr><td>!} -PCS {!</td></tr>!} ?]
+
+[? if cc_formed and pnf_in_power : {!<tr><td>!} -CC {!</td></tr>!} ?]
 
 [? if not ul_in_bn and pnf_in_power : {!<tr><td>!} -PLI (Def.) {!</td></tr>!} ?]
 
 [? if pnf_in_power : {!<tr><td>!} -PPI (Def.) {!</td></tr>!} ?]
+
+[? if cc_formed and not pnf_in_power : {!<tr><td><div class="box" style='background-color:#203959'> </div>!} <span style="color: [+ cc_colour +];">Christian-Conservative</span> List: {!</td><td>!} [+ cc_r_disp +]% {!</td><td>!} [+ str_change_cc +]% {!</td><td>!} [+ cc_seating +] {!</td><td>!} [+ cc_seating_disp +]% {!</td></tr>!} ?]
+
+[? if cc_formed and not pnf_in_power : {!<tr><td>!} -CC {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div>!} Others: {!</td><td>!} [+ other_r_disp +]% {!</td><td>!} [+ str_change_other +]% {!</td><td>!} [+ other_seating +] {!</td><td>!} [+ other_seating_disp +]% {!</td></tr>!}
 
