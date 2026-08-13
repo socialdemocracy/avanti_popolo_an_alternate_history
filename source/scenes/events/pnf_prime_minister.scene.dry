@@ -1,6 +1,6 @@
 title: The Rubicon is Crossed
 subtitle: The fate of Italy rests in [+ king +]
-view-if: prime_minister_party = "PNF" and march_succeeded = 1
+view-if: march_succeeded = 1 and pnf_leader = "Mussolini" 
 priority: 3
 new-page: true
 tags: event
