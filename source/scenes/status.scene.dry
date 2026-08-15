@@ -204,6 +204,10 @@ Unemployment: [+ unemployment_2 +]%
 [? if not pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
 [? if pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
 
+= Party Leadership
+
+[? if not pldi_merge: PLI: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
+
 = Internal Factions of the <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>
 
 <span style="color: [+ communist_colour +];">**Communist**</span> strength: [+ communist_strength : strength +], dissent: [+ communist_dissent : dissent +]
