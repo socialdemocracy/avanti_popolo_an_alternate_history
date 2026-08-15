@@ -206,7 +206,7 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if pcdi_formed: PCd'I: [? if pcdi_leader = "Bordiga": <span style="color: #C43988;">Left-Communism</span> ?][? if pcdi_leader = "Gramsci": <span style="color: #ab5757;">Western Marxism</span>?] ([+ pcdi_leader +]) ?]
 
-[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/psu.webp">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
+[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];"><span=";">Reformist Socialism</span></span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/psu.webp">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
 
 [? if pll_formed: PLL: <span style="color: #fb925d;">Liberal Socialism</span> (Giuffrida) ?]
 
