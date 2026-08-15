@@ -205,6 +205,9 @@ Unemployment: [+ unemployment_2 +]%
 [? if pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
 
 = Party Leadership
+[? if communist_spilt: PCd'I: [? if pcdi_leader = "Bordiga": <span style="color: #C43988;">Left-Communism</span> ?][? if pcdi_leader = "Gramsci": <span style="color: #ab5757;">Western Marxism</span>?] ([+ pcdi_leader +]) ?]
+
+[+ psi_name +]: [? if communist_strength > reformist_strength and labour_strength and maximalist_strength: <span style="color: [+ communist_colour +];">Communism</span> to <span style="color: [+ maximalist_colour +];">Revolutionary Socialism</span> ?][? if maximalist_strength > reformist_strength and labour_strength and communist_strength: <span style="color: [+ maximalist_colour +];">Center-Marxism</span>?][? if labour_strength > reformist_strength and maximalist_strength and communist_strength: <span style="color: [+ labour_colour +];">Labour Socialism</span>?][? if reformist_strength > labour_strength and maximalist_strength and communist_strength: <span style="color: [+ reformist_colour +];">Reformist Socialism</span>?][? if labour_strength and reformist_strength > maximalist_strength and communist_strength: <span style="color: [+ reformist_colour +];">Reformist Socialism</span> to <span style="color: [+ labour_colour +];">Labour Socialism</span> ?][? if communist_strength and maximalist_strength > reformist_strength and labour_strength: <span style="color: [+ communist_colour +];">Communism</span> to <span style="color: [+ maximalist_colour +];">Centre-Marxism</span> ?]       
 
 [? if not pldi_merge: PLI: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
 
