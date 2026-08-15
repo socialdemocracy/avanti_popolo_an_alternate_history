@@ -178,8 +178,6 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_relation : relationships +] ?]
 
-[? if pll_formed : PLL: [+ pll_relation : relationships +] ?]
-
 [? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_relation : relationships +] ?]
 
 [? if pll_formed : PLL: [+ pll_relation : relationships +] ?]
@@ -208,13 +206,13 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if pcdi_formed: PCd'I: [? if pcdi_leader = "Bordiga": <span style="color: #C43988;">Left-Communism</span> ?][? if pcdi_leader = "Gramsci": <span style="color: #ab5757;">Western Marxism</span>?] ([+ pcdi_leader +]) ?]
 
-[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/portraits/GiacomoMatteotti.jpg">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
+[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/psu.webp">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
 
 [? if pll_formed: PLL: <span style="color: #fb925d;">Liberal Socialism</span> (Giuffrida) ?]
 
 [? if not psri_collapse: PSRI: [? if not psri_solo: <span style="color: [+ psri_colour +];"><span;">Reformist Socialism</span></span> to <span style="color: #dbd325;">Social-Liberalism</span>  ?][? if psri_solo: <span style="color: #dbd325;">Social-Liberalism</span> ?] ([? if psri_solo:Bonomi?][? if not psri_solo and not bissolati_dead:Bissolati?][? if not psri_solo and bissolati_dead:Ciotti?]) ?]
 
-[? if pri_prominent: PRI: <span style="color: #008C45;">Repu</span><span style="color: #CCC;">blica</span><span style="color: #CD212A;">nism</span> (Several) ?]
+[? if pri_prominent: PRI: <span style="color: #008C45;">Repu</span><span style="color: #CCC;">blica</span><span style="color: #CD212A;">nism</span> to <span style="color: #008000;">Radicalism</span>  ([? if year < 1920 and month < 4:<span class="wide_tooltip-wrap drop-down">Triumvirate<span class="wide_tooltip-tip"><img src="img/pribetter.webp">June 1919 - December 1919</br>Carlo Bazzi</br>Oliverio Zuccarini</br>Armando Casalini</br>December 1919 - April 1920</br>Armando Casalini</br>Mario Gibelli</br>Giuseppe Gaudenzi</span></span>?][? if year < 1920 and month < 4:<span class="wide_tooltip-wrap drop-down">Several<span class="wide_tooltip-tip"><img src="img/pribetter.webp">April 1920 - November 1922</br>Fernando Schiavetti</br>December 1922 – May 1925</br>Giuseppe Gaudenzi</span></span>?] ) ?]
 
 [+ ds_name +]: [? if ds_leader = "Giuffrida": <span style="color: #dbd325;">Social-Liberalism</span> to <span style="color: #008000;">Radicalism</span> ?][? if ds_leader = "Colonna": <span style="color: #808080;">Syncretic</span>?][? if ds_leader = "Carnazza": <span style="color: #063547;">National Conservatism</span>?] ([+ ds_leader +]) 
 
