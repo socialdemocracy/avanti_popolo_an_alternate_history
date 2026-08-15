@@ -220,7 +220,7 @@ const colourList = [{
    },
     {
         word: "PLL",
-        style: "color: #fbec5d; font-weight: bold;"
+        style: "color: #d1c44b; font-weight: bold;"
    },
     {
         word: "PRI",
@@ -580,7 +580,7 @@ const tooltipList = [{
     },
     {
     searchString: "Philipp Scheidemann",
-    explanationText: "<img src=img/portraits/scheidemann.jpeg> Philipp Scheidemann </br> The  man who declared the Weimar Republic."
+    explanationText: "<img src=img/portraits/scheidemann.jpeg> The  man who declared the Weimar Republic."
     },
     {
     searchString: "Arthur Graf von Posadowsky-Wehner",
