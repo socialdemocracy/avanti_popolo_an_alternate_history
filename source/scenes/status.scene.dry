@@ -210,6 +210,10 @@ Unemployment: [+ unemployment_2 +]%
 
 [? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/portraits/GiacomoMatteotti.jpg">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
 
+[? if pll_formed: PLL: <span style="color: #fb925d;">Liberal Socialism</span> (Giuffrida) ?]
+
+PSRI: [? if not psri_solo: <span style="color: [+ psri_colour +];">Reformist Socialism</span> to <span style="color: #ebe898;">Social-Liberalism</span>  ?][? if psri_solo: <span style="color: #ebe898;">Social-Liberalism</span> ?] ([? if psri_solo:Bonomi?][? if not psri_solo and not bissolati_dead:Bissolati?][? if not psri_solo and bissolati_dead:Ciotti?]])
+
 [? if not pldi_merge: PLI: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
 
 = Internal Factions of the <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>
