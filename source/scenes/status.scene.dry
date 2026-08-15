@@ -222,6 +222,12 @@ PPI: [? if ppi_leader = "Sturzo": <span style="color: #94c5d1;">Popolarism</span
 
 [? if not pldi_merge: [+ ul_name +]: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
 
+[? if cc_formed: CC: <span style="color: #022838;">Clerical Ultra-Conservatism</span> (Cavazzoni) ?]
+
+[? if pcs_formed: PCS: <span style="color: #021a24;">Reactionary Conservatism</span> (Carnazza) ?]
+
+[+ pnf_name +]: [? if pnf_leader = "D'Annunzio": <span style="color: #111c1c;"><span;">Futurist Proto-Fascism</span></span> ?][? if pnf_leader = "Grand Council": <span style="color: #0a0900;">Classical Fascism</span> ?][? if pnf_leader = "Mussolini": <span style="color: #0a0900;">Classical Fascism</span>?][? if pnf_leader = "Grandi": <span style="color: #0a0900;">Classical Fascism</span>?] ([+ pnf_leader +]) 
+
 = Internal Factions of the <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>
 
 <span style="color: [+ communist_colour +];">**Communist**</span> strength: [+ communist_strength : strength +], dissent: [+ communist_dissent : dissent +]
