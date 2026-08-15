@@ -205,9 +205,10 @@ Unemployment: [+ unemployment_2 +]%
 [? if pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
 
 = Party Leadership
+
 [? if pcdi_formed: PCd'I: [? if pcdi_leader = "Bordiga": <span style="color: #C43988;">Left-Communism</span> ?][? if pcdi_leader = "Gramsci": <span style="color: #ab5757;">Western Marxism</span>?] ([+ pcdi_leader +]) ?]
 
-[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Triumvirate<span class="wide_tooltip-tip-drop-down">Giacomo Matteoti </br> Filippo Turati </br> Carlo Rosselli </br> Giuseppe Saragat</span></span>) ?]
+[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];">Social Democracy</span> to <span style="color: #EC1F27;">Democratic Socialism</span> (<span class="wide_tooltip-wrap drop-down">Triumvirate<span class="wide_tooltip-tip-drop-down"><img src="img/portraits/GiacomoMatteotti.jpg"> Giacomo Matteoti </br> Filippo Turati </br> Carlo Rosselli </br> Giuseppe Saragat </span></span>) ?]
 
 [? if not pldi_merge: PLI: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
 
