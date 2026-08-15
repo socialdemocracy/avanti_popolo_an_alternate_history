@@ -218,7 +218,7 @@ Unemployment: [+ unemployment_2 +]%
 
 PPI: [? if ppi_leader = "Sturzo": <span style="color: #94c5d1;">Popolarism</span> ?][? if ppi_leader = "De Gasperi": <span style="color: #62929e;">Christian Democracy</span>?][? if ppi_leader = "Miglioli": <span style="color: #27c488;">Religious Social-Agrarianism</span>?] ([+ ppi_leader +]) 
 
-[+ ldr_name +]: [? if ldr_leader = "Nitti": <span style="color: #f5ee5d;"><span;">Reformist Liberalism</span></span> ?][? if ldr_leader = "Orlando": <span style="color: #e8e376;">Economic Liberalism</span> ?][? if ldr_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ldr_leader +]) ?]
+[+ ldr_name +]: [? if ldr_leader = "Nitti": <span style="color: #f5ee5d;"><span;">Reformist Liberalism</span></span> ?][? if ldr_leader = "Orlando": <span style="color: #e8e376;">Economic Liberalism</span> ?][? if ldr_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ldr_leader +]) 
 
 [? if not pldi_merge: [+ ul_name +]: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
 
