@@ -55,7 +55,7 @@ Party: [+ resources +]
 Paramilitary: [+ para_resources +]
 
 <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span> position: [? if psi_in_government : in government - ?][? if psi_in_government == 0 : opposition ?]
-[? if centre_left_coalition and psi_in_government: <span style="color: [+ ul_colour +];">**Center**</span>-<span style="color: [+ psi_colour +];">**Left**</span> Coalition ?][? if psi_majority and psi[^...]
+[? if centre_left_coalition and psi_in_government: <span style="color: [+ ul_colour +];">**Center**</span>-<span style="color: [+ psi_colour +];">**Left**</span> Coalition ?][? if psi_majority and psi_in_government: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span> majority ?][? if socialist_catholic_coalition and psi_in_government: <span style="color: [+ ppi_colour +];">**Catholic**</span>-<span style="color: [+ psi_colour +];">**Socialist**</span> Coalition ?][? if left_wing_coalition and psi_in_government: <span style="color: [+ psi_colour +];">**Left**</span>-<span style="color: [+ psri_colour +];">**Wing**</span> Coalition ?]
 
 [? if psi_in_government and not psi_majority: Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -77,26 +77,200 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 [? if not king_abolished and not king_figurehead : <span style="color: [+ i_colour +];">**King**</span> Approval: [+ king_relation : relationships +] ?]
 
-Prime Minister: [? if prime_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party != "PSI" and prime_minister_party != "LDR" and prime_minister_party != "PPI" and prime_minister_party != "UL" and prime_minister_party != "PNF" and prime_minister_party != "DS" and prime_minister_party != "PCDI" and prime_minister_party != "PSU" and prime_minister_party != "PSRI" and prime_minister_party != "PLL" and prime_minister_party != "PRI" and prime_minister_party != "CC" and prime_minister_party != "PCS": [+ prime_minister +] ?]
+Prime Minister: [? if prime_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ prime_minister +]</span>?] ([? if prime_minister_party == "PSI":<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>?][? if prime_minister_party == "LDR":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if prime_minister_party == "PSRI":<span style="color: [+ psri_colour +];">**PSRI**</span>?][? if prime_minister_party == "UL":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if prime_minister_party == "PCd'I":<span style="color: [+ pcdi_colour +];">**PCd'I**</span>?][? if prime_minister_party == "PSU":<span style="color: [+ psu_colour +];">**PSU**</span>?][? if prime_minister_party == "PLL":<span style="color: [+ pll_colour +];">**PLL**</span>?][? if prime_minister_party == "PRI":<span style="color: [+ pri_colour +];">**PRI**</span>?][? if prime_minister_party == "DS":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if prime_minister_party == "PDSI":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if prime_minister_party == "PPI":<span style="color: [+ ppi_colour +];">**PPI**</span>?][? if prime_minister_party == "PLDI":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if prime_minister_party == "PLI":<span style="color: [+ pli_colour +];">**[+ pli_name +]**</span>?][? if prime_minister_party == "PLI":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if prime_minister_party == "PCS":<span style="color: [+ pcs_colour +];">**PCS**</span>?][? if prime_minister_party == "FdC":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?][? if prime_minister_party == "PNF":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?])
+
+Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?]
+
+Chamber of Deputies composition:
+
+{!<svg id="status_parliament" style="width: 100%; display: block;"></svg>
+<script>
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_parliament');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 220;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.55));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_parliament').datum(window._parliData).call(parl);
+})();
+</script>!}
+
+<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ psi_seating_disp +]% 
+[? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ pcdi_seating_disp +]% ?]
+[? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_seating_disp +]% ?]
+[? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_seating_disp +]% ?]
+[? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ pll_seating_disp +]% ?]
+[? if pri_prominent : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ pri_seating_disp +]% ?]
+[? if not pdsi_formed : <span style="color: [+ ds_colour +];">**DS**</span>: [+ ds_seating_disp +]% ?]
+[? if pdsi_formed : <span style="color: [+ ds_colour +];">**PDSI**</span>: [+ ds_seating_disp +]% ?]
+<span style="color: [+ ppi_colour +];">**PPI**</span>: [+ ppi_seating_disp +]%
+[? if not pldi_formed : <span style="color: [+ ldr_colour +];">**LDR**</span>: [+ ldr_seating_disp +]% ?]
+[? if pldi_formed : <span style="color: [+ ldr_colour +];">**PLDI**</span>: [+ ldr_seating_disp +]% ?]
+[? if not pli_formed : <span style="color: [+ ul_colour +];">**UL**</span>: [+ ul_seating_disp +]% ?]
+[? if pli_formed : <span style="color: [+ ul_colour +];">**PLI**</span>: [+ ul_seating_disp +]% ?]
+[? if cc_formed : CC: [+ cc_seating_disp +]% ?]
+[? if pcs_formed : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ pcs_seating_disp +]% ?]
+[? if not pnf_formed : <span style="color: [+ pnf_colour +];">**FdC**</span>: [+ pnf_seating_disp +]% ?]
+[? if pnf_formed : <span style="color: [+ pnf_colour +];">**PNF**</span>: [+ pnf_seating_disp +]% ?]
+<span style="color: #808080;">**Others**</span>: [+ other_seating_disp +]%
+
+[? if psi_in_government = 1 : Budget: [+ budget +] ?]
+
+Next election: [+ next_election_month : month +] [+ next_election_year +]
+
+= Coalition Demands
+
+[? if left_wing_coalition : We are in a coalition without demands. ?]
+
+[? if not psi_in_government : We are not in government. ?]
+
+[? if psi_majority : The <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span> holds a majority. ?]
+
+[? if liberal_reform_accepted : No land reform. ?]
+
+[? if liberal_crackdown_accepted and liberal_crackdown_complete == 0 : Crackdown on Paramilitaries: [+ liberal_crackdown_timer +] weeks left. ?]
+
+[? if liberal_crackdown_accepted and liberal_crackdown_complete == 1: Crackdown on Paramilitaries: Completed. ?]
+
+[? if liberal_nationalisation_accepted : No nationalisation. ?]
+
+[? if liberal_budget_accepted : No entering deficit spending. ?]
+
+[? if liberal_foreign_accepted : Continuation of our alignment with the <span style="color: #002654;">**Western**</span> <span style="color: #D7141A;">**Allies**</span>. ?]
+
+[? if liberal_aid_accepted : No aid to the <span style="color: #750e0e;">**Soviet Union**</span>. ?]
+
+[? if catholic_papacy_accepted and roman_question_answered == 0 : Roman Question resolved: [+ catholic_papacy_timer +] weeks left ?]
+
+[? if catholic_papacy_accepted and roman_question_answered == 1 : Roman Question resolved: Completed ?]
+
+[? if catholic_education_accepted : Pro-secular education reforms disallowed. ?]
+
+[? if catholic_women_accepted : No women's rights reform. ?]
+
+[? if catholic_charity_accepted : No funding for non-<span style="color: [+ ppi_colour +];">**catholic**</span> charities. ?]
+
+[? if catholic_nationalisation_accepted :  No Anti-<span style="color: [+ ppi_colour +];">**Catholic**</span> nationalisations. ?]
+
+= Economics
+
+Inflation: [+ inflation_2 +]%
+
+Economic Growth: [+ economic_growth_2 +]%
+
+Unemployment: [+ unemployment_2 +]%
+
+<span style="color: #C8102E;">**British**</span> Debts: [? if uk_debts > 0 and not in_default : <span style="color: #d42f2f;">Significant</span> ?] [? if uk_debts_over and not in_default : <span style="color: #EBD97D;">Amortisation Plan</span> ?] [? if in_default : <span style="color: #66BB6A;">Defaulted</span> ?]
+
+<span style="color: #B31942;">**Amer**</span><span style="color: #0A3161;">**ican**</span> Debts: [? if american_debts > 0 and not in_default : <span style="color: #d42f2f;">Significant</span> ?] [? if us_debts_over and not in_default : <span style="color: #EBD97D;">Amortisation Plan</span> ?] [? if in_default : <span style="color: #66BB6A;">Defaulted</span> ?]
+
+@politics
+
+= Inter-party Relations
+
+[? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ pcdi_relation : relationships +] ?]
+
+[? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_relation : relationships +] ?]
+
+[? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_relation : relationships +] ?]
+
+[? if pll_formed : PLL: [+ pll_relation : relationships +] ?]
+
+[? if pri_prominent = 1: <span style="color: [+ pri_colour +];">**PRI**</span>: [+ pri_relation : relationships +] ?]
+
+[? if not pdsi_formed : <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ ds_relation : relationships +] ?]
+[? if pdsi_formed : <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ ds_relation : relationships +] ?]
+
+<span style="color: [+ ppi_colour +];">**PPI**</span>: [+ ppi_relation : relationships +]
+
+[? if not pldi_formed : <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ ldr_relation : relationships +] ?]
+[? if pldi_formed : <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ ldr_relation : relationships +] ?]
+
+[? if not pli_formed : <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ ul_relation : relationships +] ?]
+[? if pli_formed : <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ ul_relation : relationships +] ?]
+
+[? if cc_formed : CC: [+ cc_relation : relationships +] ?]
+
+[? if pcs_formed : PCS: [+ pcs_relation : relationships +] ?]
+
+[? if not pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
+[? if pnf_formed : <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_relation : relationships +] ?]
+
+= Party Leadership
+
+[? if pcdi_formed: PCd'I: [? if pcdi_leader = "Bordiga": <span style="color: #C43988;">Left-Communism</span> ?][? if pcdi_leader = "Gramsci": <span style="color: #ab5757;">Western Marxism</span>?] ([+ pcdi_leader +]) ?]
+
+[? if psu_formed: PSU: <span style="color: [+ reformist_colour +];"><span;">Reformist Socialism</span></span> (<span class="wide_tooltip-wrap drop-down">Quadrumvirate<span class="wide_tooltip-tip"><img src="img/psu.webp">Giacomo Matteoti</br>Filippo Turati</br>Carlo Rosselli</br>Giuseppe Saragat</span></span>) ?]
+
+[? if pll_formed: PLL: <span style="color: #fb925d;">Liberal Socialism</span> (Giuffrida) ?]
+
+[? if not psri_collapse: PSRI: [? if not psri_solo: <span style="color: [+ psri_colour +];"><span;">Reformist Socialism</span></span> to <span style="color: #dbd325;">Social-Liberalism</span>  ?][? if psri_solo: <span style="color: #dbd325;">Social-Liberalism</span> ?] ([? if psri_solo:Bonomi?][? if not psri_solo and not bissolati_dead:Bissolati?][? if not psri_solo and bissolati_dead:Ciotti?]) ?]
+
+[? if pri_prominent: PRI: <span style="color: #008C45;">Repu</span><span style="color: #CCC;">blica</span><span style="color: #CD212A;">nism</span> to <span style="color: #00542E;">Radicalism</span>  ([? if year < 1920 and month < 4:<span class="wide_tooltip-wrap drop-down">Triumvirate<span class="wide_tooltip-tip"><img src="img/pribetter.webp">June 1919 - December 1919</br>Carlo Bazzi</br>Oliverio Zuccarini</br>Armando Casalini</br>December 1919 - April 1920</br>Armando Casalini</br>Mario Gibelli</br>Giuseppe Gaudenzi</span></span>?][? if year > 1920 and month > 4:<span class="wide_tooltip-wrap drop-down">Several<span class="wide_tooltip-tip"><img src="img/pribetter.webp">April 1920 - November 1922</br>Fernando Schiavetti</br>December 1922 – May 1925</br>Giuseppe Gaudenzi</span></span>?]) ?]
+
+[+ ds_name +]: [? if ds_leader = "Giuffrida": <span style="color: #dbd325;">Social-Liberalism</span> to <span style="color: #00542E;">Radicalism</span> ?][? if ds_leader = "Colonna": <span style="color: #808080;">Syncretic</span>?][? if ds_leader = "Carnazza": <span style="color: #063547;">National Conservatism</span>?] ([+ ds_leader +]) 
+
+PPI: [? if ppi_leader = "Sturzo": <span style="color: #94c5d1;">Popolarism</span> ?][? if ppi_leader = "De Gasperi": <span style="color: #62929e;">Christian Democracy</span>?][? if ppi_leader = "Miglioli": <span style="color: #27c488;">Religious Social-Agrarianism</span>?] ([+ ppi_leader +]) 
+
+[+ ldr_name +]: [? if ldr_leader = "Nitti": <span style="color: #f5ee5d;"><span;">Reformist Liberalism</span></span> ?][? if ldr_leader = "Orlando": <span style="color: #e8e376;">Economic Liberalism</span> ?][? if ldr_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ldr_leader +]) 
+
+[? if not pldi_merge: [+ ul_name +]: [? if ul_leader = "Giolitti": <span style="color: #1E87B2;">Giolittian System</span> ?][? if ul_leader = "Salandra": <span style="color: #063547;">National Conservatism</span>?] ([+ ul_leader +]) ?]
+
+[? if cc_formed: CC: <span style="color: #022838;">Clerical Ultra-Conservatism</span> (Cavazzoni) ?]
+
+[? if pcs_formed: PCS: <span style="color: #021a24;">Reactionary Conservatism</span> (Carnazza) ?]
+
+[+ pnf_name +]: [? if pnf_leader = "D'Annunzio": <span style="color: #111c1c;"><span;">Futurist Proto-Fascism</span></span> ?][? if pnf_leader = "Grand Council": <span style="color: #0a0900;">Classical Fascism</span> ?][? if pnf_leader = "Mussolini": <span style="color: #0a0900;">Classical Fascism</span>?][? if pnf_leader = "Grandi": <span style="color: #0a0900;">Classical Fascism</span>?] ([+ pnf_leader +]) 
+
+= Internal Factions of the <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>
+
+<span style="color: [+ communist_colour +];">**Communist**</span> strength: [+ communist_strength : strength +], dissent: [+ communist_dissent : dissent +]
+
+<span style="color: [+ maximalist_colour +];">**Maximalist**</span> strength: [+ maximalist_strength : strength +], dissent: [+ maximalist_dissent : dissent +]
+
+<span style="color: [+ labour_colour +];">**Labour**</span> strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
+
+<span style="color: [+ syndicalist_colour +];">**Syndicalist**</span> strength: [+ syndicalist_strength : strength +], dissent: [+ syndicalist_dissent : dissent +] 
+
+<span style="color: [+ reformist_colour +];">**Reformist**</span> strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+
+@cabinets
+
+= Cabinet
+</br>
+</br>
+[? if king == "Vittorio Emanuele III": <img src="img/portraits/VitorioEmanuel.jpg" margin-right: 1em; margin-bottom: 0.5em; margin-top: 1em; overflow: hidden; border: 1.5px solid #CCC; style="width: 100%; height: 300px;"></div> ?]
+[? if king == "Umberto II": <img src="img/portraits/UmbertoII.jpg" margin-right: 1em; margin-bottom: 0.5em; margin-top: 1em; overflow: hidden; border: 1.5px solid #CCC; style="width: 100%; height: 300px;"></div> ?]
+</br>
+</br>
+Monarch: [? if king == "Vittorio Emanuele III": <span style="color: [+ i_colour +];">**<span;">Vittorio Emanuele III di Savoia</span>**</span> ?] [? if king == "Umberto II": <span style="color: [+ i_colour +];">**<span;">Umberto II di Savoia</span>**</span> ?]
+
+Prime Minister: [? if prime_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ prime_minister +]</span>?][? if prime_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ prime_minister +]</span>?] ([? if prime_minister_party == "PSI":<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>?][? if prime_minister_party == "LDR":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if prime_minister_party == "PSRI":<span style="color: [+ psri_colour +];">**PSRI**</span>?][? if prime_minister_party == "UL":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if prime_minister_party == "PCd'I":<span style="color: [+ pcdi_colour +];">**PCd'I**</span>?][? if prime_minister_party == "PSU":<span style="color: [+ psu_colour +];">**PSU**</span>?][? if prime_minister_party == "PLL":<span style="color: [+ pll_colour +];">**PLL**</span>?][? if prime_minister_party == "PRI":<span style="color: [+ pri_colour +];">**PRI**</span>?][? if prime_minister_party == "DS":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if prime_minister_party == "PDSI":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if prime_minister_party == "PPI":<span style="color: [+ ppi_colour +];">**PPI**</span>?][? if prime_minister_party == "PLDI":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if prime_minister_party == "PLI":<span style="color: [+ pli_colour +];">**[+ pli_name +]**</span>?][? if prime_minister_party == "PLI":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if prime_minister_party == "PCS":<span style="color: [+ pcs_colour +];">**PCS**</span>?][? if prime_minister_party == "FdC":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?][? if prime_minister_party == "PNF":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?])
 
 
-<span">Labour</span> Minister: [? if labour_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party != "PSI" and labour_minister_party != "LDR" and labour_minister_party != "PPI" and labour_minister_party != "UL" and labour_minister_party != "PNF" and labour_minister_party != "DS" and labour_minister_party != "PCDI" and labour_minister_party != "PSU" and labour_minister_party != "PSRI" and labour_minister_party != "PLL" and labour_minister_party != "PRI" and labour_minister_party != "CC" and labour_minister_party != "PCS": [+ labour_minister +] ?]
+<span;">Labour</span> Minister: [? if labour_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ labour_minister +]</span>?][? if labour_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ labour_minister +]</span>?] ([? if labour_minister_party == "PSI":<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>?][? if labour_minister_party == "LDR":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if labour_minister_party == "PSRI":<span style="color: [+ psri_colour +];">**PSRI**</span>?][? if labour_minister_party == "UL":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if labour_minister_party == "PCd'I":<span style="color: [+ pcdi_colour +];">**PCd'I**</span>?][? if labour_minister_party == "PSU":<span style="color: [+ psu_colour +];">**PSU**</span>?][? if labour_minister_party == "PLL":<span style="color: [+ pll_colour +];">**PLL**</span>?][? if labour_minister_party == "PRI":<span style="color: [+ pri_colour +];">**PRI**</span>?][? if labour_minister_party == "DS":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if labour_minister_party == "PDSI":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if labour_minister_party == "PPI":<span style="color: [+ ppi_colour +];">**PPI**</span>?][? if labour_minister_party == "PLDI":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if labour_minister_party == "PLI":<span style="color: [+ pli_colour +];">**[+ pli_name +]**</span>?][? if labour_minister_party == "PLI":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if labour_minister_party == "PCS":<span style="color: [+ pcs_colour +];">**PCS**</span>?][? if labour_minister_party == "FdC":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?][? if labour_minister_party == "PNF":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?])
 
-Interior Minister: [? if interior_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party != "PSI" and interior_minister_party != "LDR" and interior_minister_party != "PPI" and interior_minister_party != "UL" and interior_minister_party != "PNF" and interior_minister_party != "DS" and interior_minister_party != "PCDI" and interior_minister_party != "PSU" and interior_minister_party != "PSRI" and interior_minister_party != "PLL" and interior_minister_party != "PRI" and interior_minister_party != "CC" and interior_minister_party != "PCS": [+ interior_minister +] ?]
+Interior Minister: [? if interior_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ interior_minister +]</span>?][? if interior_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ interior_minister +]</span>?]
 
-Finance Minister: [? if finance_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party != "PSI" and finance_minister_party != "LDR" and finance_minister_party != "PPI" and finance_minister_party != "UL" and finance_minister_party != "PNF" and finance_minister_party != "DS" and finance_minister_party != "PCDI" and finance_minister_party != "PSU" and finance_minister_party != "PSRI" and finance_minister_party != "PLL" and finance_minister_party != "PRI" and finance_minister_party != "CC" and finance_minister_party != "PCS": [+ finance_minister +] ?]
+Finance Minister: [? if finance_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ finance_minister +]</span>?][? if finance_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ finance_minister +]</span>?]
 
-Treasury Minister: [? if treasury_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party != "PSI" and treasury_minister_party != "LDR" and treasury_minister_party != "PPI" and treasury_minister_party != "UL" and treasury_minister_party != "PNF" and treasury_minister_party != "DS" and treasury_minister_party != "PCDI" and treasury_minister_party != "PSU" and treasury_minister_party != "PSRI" and treasury_minister_party != "PLL" and treasury_minister_party != "PRI" and treasury_minister_party != "CC" and treasury_minister_party != "PCS": [+ treasury_minister +] ?]
+Treasury Minister: [? if treasury_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ treasury_minister +]</span>?][? if treasury_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ treasury_minister +]</span>?]
 
-Justice Minister: [? if justice_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party != "PSI" and justice_minister_party != "LDR" and justice_minister_party != "PPI" and justice_minister_party != "UL" and justice_minister_party != "PNF" and justice_minister_party != "DS" and justice_minister_party != "PCDI" and justice_minister_party != "PSU" and justice_minister_party != "PSRI" and justice_minister_party != "PLL" and justice_minister_party != "PRI" and justice_minister_party != "CC" and justice_minister_party != "PCS": [+ justice_minister +] ?]
+Justice Minister: [? if justice_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ justice_minister +]</span>?][? if justice_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ justice_minister +]</span>?]
 
-Public Works Minister: [? if public_works_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party != "PSI" and public_works_minister_party != "LDR" and public_works_minister_party != "PPI" and public_works_minister_party != "UL" and public_works_minister_party != "PNF" and public_works_minister_party != "DS" and public_works_minister_party != "PCDI" and public_works_minister_party != "PSU" and public_works_minister_party != "PSRI" and public_works_minister_party != "PLL" and public_works_minister_party != "PRI" and public_works_minister_party != "CC" and public_works_minister_party != "PCS": [+ public_works_minister +] ?]
+Public Works Minister: [? if public_works_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ public_works_minister +]</span>?][? if public_works_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ public_works_minister +]</span>?]
 
-Public Education Minister: [? if public_education_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party != "PSI" and public_education_minister_party != "LDR" and public_education_minister_party != "PPI" and public_education_minister_party != "UL" and public_education_minister_party != "PNF" and public_education_minister_party != "DS" and public_education_minister_party != "PCDI" and public_education_minister_party != "PSU" and public_education_minister_party != "PSRI" and public_education_minister_party != "PLL" and public_education_minister_party != "PRI" and public_education_minister_party != "CC" and public_education_minister_party != "PCS": [+ public_education_minister +] ?]
+Public Education Minister: [? if public_education_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ public_education_minister +]</span>?][? if public_education_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ public_education_minister +]</span>?]
 
-Foreign Minister: [? if foreign_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party != "PSI" and foreign_minister_party != "LDR" and foreign_minister_party != "PPI" and foreign_minister_party != "UL" and foreign_minister_party != "PNF" and foreign_minister_party != "DS" and foreign_minister_party != "PCDI" and foreign_minister_party != "PSU" and foreign_minister_party != "PSRI" and foreign_minister_party != "PLL" and foreign_minister_party != "PRI" and foreign_minister_party != "CC" and foreign_minister_party != "PCS": [+ foreign_minister +] ?]
+Foreign Minister: [? if foreign_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ foreign_minister +]</span>?][? if foreign_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ foreign_minister +]</span>?]
 
-Agriculture Minister: [? if agriculture_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCDI": <span style="color: [+ pcdi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party != "PSI" and agriculture_minister_party != "LDR" and agriculture_minister_party != "PPI" and agriculture_minister_party != "UL" and agriculture_minister_party != "PNF" and agriculture_minister_party != "DS" and agriculture_minister_party != "PCDI" and agriculture_minister_party != "PSU" and agriculture_minister_party != "PSRI" and agriculture_minister_party != "PLL" and agriculture_minister_party != "PRI" and agriculture_minister_party != "CC" and agriculture_minister_party != "PCS": [+ agriculture_minister +] ?]
+Agriculture Minister: [? if agriculture_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ agriculture_minister +]</span>?]
 
 @paramilitaries
 on-arrival: {!
@@ -134,4 +308,231 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 = Legality
 
-[? if not national_congress_seen : <span style="color: [+ pnf_colour +];">**Fasci**</span>: [? if not fdc_banned : <span style="color: #d42f2f;">Operating</span>?][? if fdc_banned : <span style="color:[...]
+[? if not national_congress_seen : <span style="color: [+ pnf_colour +];">**Fasci**</span>: [? if not fdc_banned : <span style="color: #d42f2f;">Operating</span>?][? if fdc_banned : <span style="color: #66BB6A;">Banned</span>?][? if fasci_adp_active or fasci_rg_active : <span style="color: #EBD97D;">*Under Attack*</span> ?] ?]
+
+[? if not national_congress_seen : <span style="color: #b5aeae;">**Arditismo**</span>: [? if not ard_banned : <span style="color: #d42f2f;">Operating</span>?][? if ard_banned : <span style="color: #66BB6A;">Banned</span>?][? if arditi_adp_active or arditi_rg_active :, <span style="color: #EBD97D;">*Under Attack*</span> ?] ?]
+
+[? if not national_congress_seen : <span style="color: #240606;">**Anti-Bolshevik Leagues**</span>: [? if not abl_banned : <span style="color: #d42f2f;">Operating</span>?][? if abl_banned : <span style="color: #66BB6A;">Banned</span>?][? if abl_adp_active or abl_rg_active :, <span style="color: #EBD97D;">*Under Attack*</span> ?] ?]
+
+[? if not national_congress_seen : <span style="color: #693232;">**Red Guard**</span>: [? if not rg_banned : <span style="color: #66BB6A;">Operating</span> ?][? if rg_banned : <span style="color: #d42f2f;">Banned</span> ?] ?]
+
+[? if arditi_formed : <span style="color: #dddddd;">**Arditi del Popolo**</span>: <span style="color: #66BB6A;">Operating</span> ?]
+
+= Paramilitary Forces
+
+[? if not national_congress_seen and not pcdi_formed : <span style="color: #693232;">**Red Guard**</span> Strength: [+ rg_strength_2 +] thousand ?]
+
+[? if not national_congress_seen and not pcdi_formed : <span style="color: #693232;">**Red Guard**</span> Militarization: [+ rg_militancy : militancy +] ?]
+
+[? if not national_congress_seen and pcdi_formed : <span style="color: [+ communist_colour +];">**Red Guards - PCd'I**</span> Strength: [+ sov_rg_strength_2 +] thousand ?]
+
+[? if not national_congress_seen and pcdi_formed : <span style="color: [+ communist_colour +];">**Red Guards - PCd'I**</span> Militarization: [+ sov_rg_militancy : militancy +] ?]
+
+[? if not national_congress_seen and pcdi_formed : <span style="color: [+ reformist_colour +];">**Red Guards - PSI**</span> Strength: [+ rg_strength_2 +] thousand ?]
+
+[? if not national_congress_seen and pcdi_formed : <span style="color: [+ reformist_colour +];">**Red Guards - PSI**</span> Militarization: [+ rg_militancy : militancy +] ?]
+
+[? if arditi_formed : <span style="color: #dddddd;">**Arditi del Popolo**</span> Strength: [+ adp_strength_2 +] thousand ?]
+
+[? if arditi_formed: <span style="color: #dddddd;">**Arditi del Popolo**</span> Militarization: [+ adp_militancy : militancy +] ?]
+
+[? if not national_congress_seen : <span style="color: [+ pnf_colour +];">**Fasci**</span> Strength: [+ fdc_strength_2 +] thousand ?]
+
+[? if not national_congress_seen : <span style="color: [+ pnf_colour +];">**Fasci**</span> Militarization: [+ fdc_militancy : militancy +] ?]
+
+[? if not national_congress_seen : <span style="color: #b5aeae;">**Arditismo**</span> Strength: [+ ard_strength_2 +] thousand ?]
+
+[? if not national_congress_seen : <span style="color: #b5aeae;">**Arditismo**</span> Militarization: [+ ard_militancy : militancy +] ?]
+
+[? if not national_congress_seen : <span style="color: #240606;">**Anti-Bolshevik Leagues**</span> Strength: [+ abl_strength_2 +] thousand ?]
+
+[? if not national_congress_seen : <span style="color: #240606;">**Anti-Bolshevik Leagues**</span> Militarization: [+ abl_militancy : militancy +] ?]
+
+[? if communist_terror : <span style="color: [+ communist_colour +];">**New Red Guards**</span> ?]
+
+[? if communist_terror: <span style="color: [+ communist_colour +];">**NRG**</span> Attack Likelihood : [+ communist_bomb_display : warnings +] ?]
+
+[? if republican_terror : <span style="color: #240606;">**Anti-Communist Brigades**</span> ?]
+
+[? if republican_terror: <span style="color: #240606;">**ACB**</span> Attack Likelihood : [+ republican_bomb_display : warnings +] ?]
+
+[? if fascist_terror : <span style="color: [+ pnf_colour +];">**Fasci**</span> ?]
+
+[? if fascist_terror: <span style="color: [+ pnf_colour +];">**FdC**</span> Attack Likelihood : [+ fascist_bomb_display : warnings +] ?]
+
+= Government Forces
+
+[? if not national_congress_seen : <span style="color: #808080;">**Regio Esercito**</span>: ?][? if national_congress_seen : <span style="color: #808080;">**Esercito Italiano**</span>: ?] [+ army_strength +] thousand troops.
+
+[? if not national_congress_seen : <span style="color: #808080;">**Regio Esercito**</span> Loyalty: ?][? if national_congress_seen : <span style="color: #808080;">**Esercito Italiano**</span> Loyalty: ?] [+ army_loyalty : loyalty +]
+
+[? if psi_in_government : <span style="color: #808080;">**Carabinieri**</span>: [+ interior_police_strength +] thousand officers ?]
+
+[? if psi_in_government : <span style="color: #808080;">**Carabinieri**</span> Loyalty: [+ interior_police_loyalty: loyalty +] ?]
+
+@polls
+on-arrival: {!
+Q.republican_sentiment_disp = Math.round(Q.republican_sentiment);
+Q.socialist_sentiment_disp = Math.round(Q.socialist_sentiment);
+Q.nationalist_sentiment_disp = Math.round(Q.nationalist_sentiment);
+!}
+
+= Projected election results
+
+(if the election were to be held now):
+
+<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ psi_votes +]%
+
+[? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ pcdi_votes +]% ?]
+
+[? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ psu_votes +]% ?]
+
+[? if not psri_collapse : <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ psri_votes +]% ?]
+
+[? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ pll_votes +]% ?]
+
+[? if pri_prominent = 1: <span style="color: [+ pri_colour +];">**PRI**</span>: [+ pri_votes +]% ?]
+
+<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ ds_votes +]%
+
+<span style="color: [+ ppi_colour +];">**PPI**</span>: [+ ppi_votes +]%
+
+<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ ldr_votes +]% 
+
+<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ ul_votes +]%
+
+[? if cc_formed : <span style="color: [+ cc_colour +];">**CC**</span>: [+ cc_votes +]% ?]
+
+[? if pcs_formed : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ pcs_votes +]% ?]
+
+<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ pnf_votes +]%
+
+<span style="color: #808080;">**Others**</span>: [+ other_votes +]%
+
+= Public Opinion
+
+Support for <span style="color: #008C45;">**Dem**</span><span style="color: #E5E4E2;">**ocr**</span><span style="color: #CD212A;">**acy**</span>: [+ republican_sentiment_disp +]%
+
+Support for <span style="color: #9B0000;">**Socialism**</span>: [+ socialist_sentiment_disp +]%
+
+Support for <span style="color: [+ pnf_colour +];">**Nationalism**</span>: [+ nationalist_sentiment_disp +]%
+
+**Detailed results for each demographic**
+
+Urban Workers: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ workers_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ workers_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ workers_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ workers_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ workers_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ workers_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ workers_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ workers_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ workers_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ workers_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ workers_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ workers_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ workers_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ workers_other_display +]%
+
+Middle Class: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ middle_class_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ middle_class_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ middle_class_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ middle_class_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ middle_class_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ middle_class_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ middle_class_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ middle_class_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ middle_class_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ middle_class_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ middle_class_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ middle_class_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ middle_class_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ middle_class_other_display +]%
+
+Rural Workers & Farmers: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ rural_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ rural_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ rural_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ rural_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ rural_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ rural_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ rural_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ rural_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ rural_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ rural_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ rural_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ rural_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ rural_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ rural_other_display +]%
+
+Industrialists & Landowners: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ industrialists_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ industrialists_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ industrialists_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ industrialists_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ industrialists_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ industrialists_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ industrialists_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ industrialists_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ industrialists_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ industrialists_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ industrialists_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ industrialists_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ industrialists_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ industrialists_other_display +]%
+
+Veterans & Unemployed: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ veterans_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ veterans_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ veterans_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ veterans_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ veterans_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ veterans_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ workers_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ veterans_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ veterans_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ veterans_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ veterans_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ veterans_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ veterans_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ veterans_other_display +]%
+
+Catholics: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ catholic_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ catholic_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ catholic_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ catholic_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ catholic_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ catholic_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ catholic_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ catholic_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ catholic_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ catholic_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ catholic_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ catholic_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ catholic_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ catholic_other_display +]%
+
+[? if womens_suffrage = 1 : Women: <span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>: [+ women_psi_display +]%, [? if pcdi_formed : <span style="color: [+ pcdi_colour +];">**PCd'I**</span>: [+ women_pcdi_display +]%, ?] [? if psu_formed : <span style="color: [+ psu_colour +];">**PSU**</span>: [+ women_psu_display +]%, ?] <span style="color: [+ psri_colour +];">**PSRI**</span>: [+ women_psri_display +]%, [? if pll_formed : <span style="color: [+ pll_colour +];">**PLL**</span>: [+ women_pll_display +]%, ?] [? if pri_prominent = 1 : <span style="color: [+ pri_colour +];">**PRI**</span>: [+ women_pri_display +]%, ?] <span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>: [+ women_ds_display +]%, <span style="color: [+ ppi_colour +];">**PPI**</span>: [+ women_ppi_display +]%, <span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>: [+ women_ldr_display +]%, <span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>: [+ women_ul_display +]%, [? if cc_formed = 1 : <span style="color: [+ cc_colour +];">**CC**</span>: [+ women_cc_display +]%, ?] [? if pcs_formed = 1 : <span style="color: [+ pcs_colour +];">**PCS**</span>: [+ women_pcs_display +]%, ?] <span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>: [+ women_pnf_display +]%, <span style="color: #808080;">**Others**</span>: [+ women_other_display +]% ?]
+
+@foreign
+
+= Foreign Relations
+
+<span style="color: #FFF200;">**Holy**</span> <span style="color: #dddddd;">**See**</span>: [+ papal_relation : radicalisation +]
+
+<span style="color: #002654;">**Ente**</span><span style="color: #D7141A;">**nte**</span>: [+ entente_relation : radicalisation +]
+
+<span style="color: #B31942;">**United Sta**</span><span style="color: #0A3161;">**tes of America**</span>: [+ american_relation : radicalisation +]
+
+<span style="color: #750e0e;">**Russian Soviet Federative Socialist Republic**</span>: [+ soviet_relation : radicalisation +]
+
+<span style="color: #003893;">**Yug**</span><span style="color: #dddddd;">**osla**</span><span style="color: #DD0000;">**via**</span>: [+ balkan_relation : radicalisation +]
+
+= International Situations
+
+<span style="color: #dddddd;">**Ru**</span><span style="color: #0036A7;">**ssi**</span><span style="color: #D62718;">**an**</span> **Civil War**: [? if not rcw_over : Ongoing, Estimated [+ soviet_end_timer +] Months Remaining ?][? if rcw_over : <span style="color: #750e0e;">**Soviet**</span> Victory ?]
+
+**Fiume**: [? if not resolved_adriatic : <span style="color: #EBD97D;">Negotiating</span> ?][? if fiume_free : **Free City** ?][? if fiume_italian : <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**al**</span><span style="color: #CD212A;">**ian**</span> ?]
+
+**Adriatic Question**: [? if resolved_adriatic : <span style="color: #66BB6A;">Complete</span> ?][? if not resolved_adriatic : <span style="color: #EBD97D;">Negotiating</span> ?]
+
+**Roman Question**: [? if roman_question_answered : <span style="color: #66BB6A;">Complete</span> ?][? if not roman_question_answered : <span style="color: #EBD97D;">Negotiating</span> ?]
+
+@interior
+
+= Reforms
+
+**Work Councils**: [? if work_councils = 0 and councils_empowered = 0: <span style="color: #d42f2f;">Non-existent</span> ?][? if work_councils >= 1 and councils_empowered = 0: <span style="color: #66BB6A;">Influential</span> ?][? if councils_empowered = 1 : <span style="color: #66BB6A;">Empowered</span> ?]
+
+[? if syndicalist_active : **Worker Syndicates**: [? if syndicate_progress = 0: <span style="color: #d42f2f;">Non-existent</span> ?][? if syndicate_progress = 1: <span style="color: #EBD97D;">Minor</span> ?][? if syndicate_progress = 2: <span style="color: #EBD97D;">Moderate</span> ?][? if syndicate_progress = 3 or syndicate_progress = 4: <span style="color: #66BB6A;">Major</span> ?][? if syndicate_progress >= 5 : <span style="color: #66BB6A;">Majority-Established</span> ?] ?]
+
+**Economic Nationalisation**: [? if nationalisation_progress = 0: <span style="color: #d42f2f;">Non-existent</span> ?][? if nationalisation_progress = 1: <span style="color: #EBD97D;">Minor</span> ?][? if nationalisation_progress = 2: <span style="color: #EBD97D;">Moderate</span> ?][? if nationalisation_progress = 3 or nationalisation_progress = 4: <span style="color: #66BB6A;">Major</span> ?][? if nationalisation_progress >= 5 : <span style="color: #66BB6A;">Majority-Seized</span> ?]
+
+= Education
+
+**Funding**: [? if education_funded = 0 : <span style="color: #d42f2f;">Decrepit</span> ?][? if education_funded = 1 : <span style="color: #EBD97D;">Minimal</span> ?][? if education_funded = 2 : <span style="color: #66BB6A;">Adequate</span> ?][? if education_funded = 3 : <span style="color: #66BB6A;">Generous</span> ?]
+
+**Curriculum**: [? if education_reformed = 0 : <span style="color: #d42f2f;">Decrepit</span> ?][? if education_reformed = 1 : <span style="color: #EBD97D;">Traditional</span> ?][? if education_reformed = 2 : <span style="color: #66BB6A;">Standardised</span> ?][? if education_reformed >= 3 : <span style="color: #66BB6A;">Modernised</span> ?]
+
+**Trade Schools**: [? if trade_school_funded = 0 : <span style="color: #d42f2f;">Unfunded</span> ?][? if trade_school_funded = 1 : <span style="color: #EBD97D;">Minimal</span> ?][? if trade_school_funded = 2 : <span style="color: #66BB6A;">Adequate</span> ?][? if trade_school_funded >= 3 : <span style="color: #66BB6A;">Numerous</span> ?]
+
+= Labor
+
+**Veterans Insurance Program**: [? if not unemployment_insurance_founded : <span style="color: #d42f2f;">Not yet founded</span> ?][? if unemployment_insurance_founded : [+ insurance_payments_veterans_timer +] Months left before renewal ?]
+
+[? if unemployment_insurance_founded : **Workers Insurance Program**: [? if not unemployment_insurance_expanded : <span style="color: #EBD97D;">Not yet expanded</span> ?][? if unemployment_insurance_expanded : [+ insurance_payments_workers_timer +] Months left before renewal ?] ?]
+
+**Working Hours**: [? if working_hours = 0 : <span style="color: #d42f2f;">Unlimited</span> ?][? if working_hours = 1 : <span style="color: #66BB6A;">80 Hour Work Week</span> ?][? if working_hours = 2 : <span style="color: #66BB6A;">60 Hour Work Week</span> ?][? if working_hours >= 3 : <span style="color: #66BB6A;">40 Hour Work Week</span> ?]
+
+**Workplace Safety**: [? if workers_safety = 0 : <span style="color: #d42f2f;">Dangerous</span> ?][? if workers_safety = 1 : <span style="color: #EBD97D;">Safe</span> ?][? if workers_safety >= 2 : <span style="color: #66BB6A;">Monitored</span> ?]
+
+**Minimum Wage**: [? if wage_increase = 0 : <span style="color: #d42f2f;">Non-existent</span> ?][? if wage_increase = 1 : <span style="color: #EBD97D;">Minimal</span> ?][? if wage_increase = 2 : <span style="color: #66BB6A;">Basic</span> ?][? if wage_increase >= 3 : <span style="color: #66BB6A;">Living</span> ?]
+
+= Judiciary
+
+**Judicial Reforms**: [? if judicial_reform <= 0 : <span style="color: #d42f2f;">Reactionary</span> ?][? if judicial_reform = 1: <span style="color: #EBD97D;">Corrupt</span> ?][? if judicial_reform >= 2: <span style="color: #66BB6A;">Reformed</span> ?]
+
+[? if mussolini_jailed and not mussolini_convicted: Trial Date: [+ mussolini_trial_timer +] Months remaining ?]
+
+[? if mussolini_jailed and not mussolini_convicted and judicial_reform < 2: **Evidence**: [? if evidence < 3 : <span style="color: #d42f2f;">Insufficient</span> ?][? if evidence >= 3 : <span style="color: #66BB6A;">Sufficient</span> ?] ?]
+
+[? if mussolini_jailed and not mussolini_convicted and judicial_reform >= 2: **Evidence**: [? if evidence < 2 : <span style="color: #d42f2f;">Insufficient</span> ?][? if evidence >= 2 : <span style="color: #66BB6A;">Sufficient</span> ?] ?]
+
+= Women's Rights
+
+**Voting Rights**: [? if not womens_suffrage: <span style="color: #d42f2f;">Unable to vote</span>. ?][? if womens_suffrage : <span style="color: #66BB6A;">Able to vote</span>. ?]
+
+**Women's Rights**: [? if womens_rights = 0 : <span style="color: #d42f2f;">Restrictive</span> ?][? if womens_rights = 1 : <span style="color: #d42f2f;">Regressive</span> ?][? if womens_rights = 2 : <span style="color: #EBD97D;">Conservative</span> ?][? if womens_rights >= 3 : <span style="color: #66BB6A;">Fair</span> ?]
+
+**Workplace Status**: [? if womens_work = 0 : <span style="color: #d42f2f;">Discriminated</span> ?][? if womens_work = 1 : <span style="color: #d42f2f;">Regressive</span> ?][? if womens_work = 2 : <span style="color: #EBD97D;">Biased</span> ?][? if womens_work >= 3 : <span style="color: #66BB6A;">Fair</span> ?]
+
+**Legal Status**: [? if family_law = 0 : <span style="color: #d42f2f;">Patriarchal</span> ?][? if family_law = 1 : <span style="color: #EBD97D;">Biased</span> ?][? if family_law >= 2 : <span style="color: #66BB6A;">Progressive</span> ?]
+
+**Abortion Rights**: [? if abortion_rights = 0 : <span style="color: #d42f2f;">Restrictive</span> ?][? if abortion_rights >= 1 : <span style="color: #66BB6A;">Liberalised</span> ?]
+
+= Taxation
+
+**Upper-Class**: [+ upper_tax_rates : taxation +]
+
+**Lower-Class**: [+ lower_tax_rates : taxation +]
+
+**Tariffs**: [+ tariffs : taxation +]
+
+= Child Labor
+
+**Legality**: [? if child_labour_laws = 0: <span style="color: #d42f2f;">Legal</span> ?][? if child_labour_laws = 1: <span style="color: #66BB6A;">Heavily Restricted</span> ?]
+
+**Education Attendance**: [? if child_attendance = 0: <span style="color: #d42f2f;">Nonexistent</span> ?][? if child_attendance = 1: <span style="color: #d42f2f;">Poor</span> ?][? if child_attendance = 2: <span style="color: #EBD97D;">Moderate</span> ?][? if child_attendance >= 3: <span style="color: #66BB6A;">High</span> ?]
+
+**Workplace Safety**: [? if child_safety = 0 : <span style="color: #d42f2f;">Dangerous</span> ?][? if child_safety = 1 : <span style="color: #EBD97D;">Safe</span> ?][? if child_safety >= 2 : <span style="color: #66BB6A;">Monitored</span> ?]
+
+= Mezzogiorno 
+
+**Southern Question**: [? if not southern_resolved : <span style="color: #EBD97D;">Ongoing</span> ?][? if southern_resolved : <span style="color: #66BB6A;">Ameliorated</span> ?]
+
+**Land Reform**: [? if southern_land_reformed = 0 : <span style="color: #d42f2f;">Unreformed</span> ?][? if southern_land_reformed = 1 : <span style="color: #66BB6A;">Ongoing</span> ?]
+
+**Infrastructure**: [? if southern_infrastructure_funded < 1 : <span style="color: #d42f2f;">Poor</span> ?][? if southern_infrastructure_funded > 0 and southern_infrastructure_funded < 2 : <span style="color: #EBD97D;">Lackluster</span> ?][? if southern_infrastructure_funded > 1 : <span style="color: #66BB6A;">Recovering</span> ?]
+
+**Education**: [? if southern_education_funded < 1 : <span style="color: #d42f2f;">Poor</span> ?][? if southern_education_funded > 0 and southern_education_funded < 2 : <span style="color: #EBD97D;">Lackluster</span> ?][? if southern_education_funded > 1 : <span style="color: #66BB6A;">Recovering</span> ?]
+
+**Mafia**: [? if mafia_strength < 1 : <span style="color: #66BB6A;">Neutralised</span> ?][? if mafia_strength > 2: <span style="color: #d42f2f;">Strong</span> ?][? if mafia_strength = 1 : <span style="color: #EBD97D;">Drained</span> ?][? if mafia_strength = 2 : <span style="color: #EBD97D;">Weakened</span> ?]
