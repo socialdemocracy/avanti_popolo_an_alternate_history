@@ -57,7 +57,6 @@ subtitle: The party will fully refuse to participate in the upcoming election.
 choose-if: participating = 0
 unavailable-subtitle: [? if participating = 1 : We have already chosen to achieve <span style="color: #9B0000;">socialism</span> via parliamentary means. ?]
 on-arrival: reformist_dissent += 7; reformist_strength -= 7; communist_strength += 7; communist_dissent -= 7; not_participating = 1; abstentionist_psi = 1;
-go-to: @international_agenda
 
 The Communist and Left-Maximalist factions sway the Moderate-Maximalist faction, as the party votes for full abstention in the upcoming elections.
 
@@ -66,7 +65,6 @@ subtitle: The party will participate, but not form coalitions with the bourgeois
 choose-if: not_participating = 0
 unavailable-subtitle: [? if not_participating = 1: We have already chosen to abandon the Reformist approach. ?]
 on-arrival: maximalist_strength += 10; maximalist_dissent -= 10; maximalist_participating = 1;
-go-to: @international_agenda
 
 The Maximalist majority secures a compromise solution, agreeing to participate in the upcoming elections but refusing any sort of coalition with the bourgeois parties. 
 
@@ -75,6 +73,5 @@ choose-if: not_participating = 0
 unavailable-subtitle: [? if not_participating = 1 : We have already chosen to achieve <span style="color: #9B0000;">socialism</span> via extraparliamentary ways. ?]
 subtitle: The party will fully participate in the upcoming election.
 on-arrival: reformist_dissent -= 7; reformist_strength += 7; communist_strength -= 7; communist_dissent += 7; participating = 1; election_participation = 1;
-go-to: @international_agenda
 
 The Reformists are able to convince sympathetic Maximalist members to support their endeavour to participate in the November elections and form a coalition with the bourgeois parties. The Communist and Left-Maximalist factions, though, are unsurprisingly, outraged.
