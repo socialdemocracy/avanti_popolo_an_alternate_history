@@ -82,19 +82,47 @@ Prime Minister: [? if prime_minister_party == "PSI": <span style="color: [+ psi_
 Senate: [? if veto_removed == 0: Empowered ?][? if veto_removed == 1: Weakened ?]
 
 Current Government:
+</br>
+</br>
 [? if pcdi_in_government == 1: PCd'I ?]
+</br>
+</br>
 [? if psi_in_government == 1: [+ psi_name +] ?]
+</br>
+</br>
 [? if psu_in_government == 1: PSU ?]
+</br>
+</br>
 [? if psri_in_government == 1: PSRI ?]
+</br>
+</br>
 [? if pll_in_government == 1: PLL ?]
+</br>
+</br>
 [? if pri_in_government == 1: PRI ?]
+</br>
+</br>
 [? if ds_in_government == 1: [+ ds_name +] ?]
+</br>
+</br>
 [? if ppi_in_government == 1: PPI ?]
+</br>
+</br>
 [? if ldr_in_government == 1: [+ ldr_name +] ?]
+</br>
+</br>
 [? if ul_in_government == 1: [+ ul_name +] ?]
+</br>
+</br>
 [? if cc_in_government == 1: CC ?]
+</br>
+</br>
 [? if pcs_in_government == 1: PCS ?]
+</br>
+</br>
 [? if pnf_in_government == 1: [+ pnf_name +] ?]
+</br>
+</br>
 [? if other_in_government == 1: Others ?]
 
 Chamber of Deputies composition:
