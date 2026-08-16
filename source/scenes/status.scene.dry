@@ -241,18 +241,9 @@ PPI: [? if ppi_leader = "Sturzo": <span style="color: #94c5d1;">Popolarism</span
 <span style="color: [+ reformist_colour +];">**Reformist**</span> strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 @cabinets
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    if (Q.king == "Vittorio Emanuele III") image.src = "img/portraits/VitorioEmanuel.jpg";    
-    if (Q.king == "Umberto II") image.src = "img/portraits/UmbertoII.jpg";
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #upper_panel #content");
-    contentDiv.appendChild(cardEl);
+face-image: {!  
+    if (Q.king == "Vittorio Emanuele III") "img/portraits/VitorioEmanuel.jpg";    
+    if (Q.king == "Umberto II") "img/portraits/UmbertoII.jpg";
 !}
 
 Monarch: [+ king +]
