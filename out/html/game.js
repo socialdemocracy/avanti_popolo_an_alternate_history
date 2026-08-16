@@ -123,6 +123,7 @@ window.enableDarkMode = function() {
     document.body.classList.add('dark-mode');
     window.dendryUI.saveSettings();
   }
+  // * TOOLTIP IS MADE BY COMMUNIST 45 AND DYNAMIC DEV; DONT TAKE THIS, THIS IS NOT MINE. * //
    window.displayText = function (text) {
         return applyWholesome(text);
     };
