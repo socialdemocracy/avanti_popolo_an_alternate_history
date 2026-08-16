@@ -4,12 +4,15 @@ new-page: true
 view-if: communist_split and pcdi_congress_time <= time
 tags: event
 max-visits: 1
+face-image: img/livorno.jpeg
 
 = [+ year +] PCd'I Party Congress
 
-The first Party Congress of the PCd'I have begun, following their recent split from the [+ psi_name +]. Bordiga has emerged as temporary leader of the party, pending the new party elections which might result in his resignation.
+The first congress of the PCd'I has begun, held in Livorno, following their recent split from the [+ psi_name +]. Bordiga was appointed temporary leader, however these elections might result in his resignation. The congress was held in San Marco Theatre, which was filled with broken glass and the roof was leaking, due to its usage as a Regio Esercito warehouse during WW1, with all the delegates having to bring umbrellas due to this.
 
-The two factions within the PCd'I are Amadeo Bordiga, leading the traditional leftist faction within the party and Antonio Gramsci, leading the *L'Ordine Nuovo* faction in Turin. Bordiga advocates for a more centralised position amongst the party, viewing the party as necessary to have power over the workers' party. Gramsci, on the other hand, is more supportive of workers' councils, pushing for a mass movement, and more importantly, *viewed more positively by the Soviet Union.*
+A agenda signed by Bruno Fortichiari,  a highly respected politician within the PCd'I and revolutionary, was voted on and passed, declaring the PCd'I a section of the Comintern. It also declared their official newspaper the <span class="wide_tooltip-wrap drop-down">Jl Comunista<span class="wide_tooltip-tip"><img src="img/comunista.jpeg">Official Newspaper Of The PCd'I</span></span>, and Milan as its official headquarters.
+
+There are two primary factions inside the PCd'I, one headed Amadeo Bordiga, leading the <span style="color: #C43988;">Left-Communist</span> faction within the party and the other Antonio Gramsci, leading the <span class="wide_tooltip-wrap drop-down">L'Ordine Nuovo<span class="wide_tooltip-tip"><img src="img/ordine_jpeg..jpg">Newspaper founded by Antonio Gramsci and others</span></span> faction in Turin. Bordiga advocates for a more centralised position amongst the party, viewing the party as necessary to have power over the workers' party. Gramsci, on the other hand, is more supportive of workers' councils, pushing for a mass movement, and more importantly, *viewed more positively by the <span style="color: #700000;">**Soviets**</span>.*
 
 - @bordiga_elected: Amadeo Bordiga retains his position as Party Secretary.
 - @gramsci_elected: Antonio Gramsci is able to ascend to the position of Party Secretary.
