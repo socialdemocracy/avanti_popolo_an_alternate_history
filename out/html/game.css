@@ -481,10 +481,9 @@ a.card {
 }
 
 a.card:hover {
-   z-index: 999;
-  filter: brightness(105%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  transform: translate(-5px,-5px)
+  left: -5px;
+  top: -5px;
 }
 
 div.blank-card {
