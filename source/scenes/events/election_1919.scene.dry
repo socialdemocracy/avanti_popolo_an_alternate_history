@@ -988,7 +988,7 @@ Anti-Socialist Coalition ([+ pnf_name +] + [+ ul_name +] [? if ds_enemies:+ [+ d
 
 There are some potential coalition arrangements.
 
-<svg id="italy_election3.svg" viewBox="0 0 2500 100" width="500" height="500" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
+{!<svg id="italy_election3.svg" viewBox="800 -2000 9500 9000" width="2500" height="2000" style="display:block; margin:auto; border: 3px solid #3B3B3B;">
   <style>
     .district { fill: #b5b2a7; stroke: #000000; stroke-width: 2px; }
     .district:hover { fill: #d1cfc2; opacity: 0.8; cursor: pointer; }
