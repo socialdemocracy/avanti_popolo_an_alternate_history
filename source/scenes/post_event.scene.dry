@@ -288,7 +288,7 @@ if (Q.dissent < 0) {
 if (Q.week_actions >= 1) {
     Q.time += 1;
     Q.week_actions = 0;
-    if not (Q.rubicon == 1) Q.week += 2;
+    if (Q.rubicon == 0) Q.week += 2;
     if (Q.rubicon == 1) Q.week += 1;
     if (Q.week >= 5) {
         Q.week = 1;
