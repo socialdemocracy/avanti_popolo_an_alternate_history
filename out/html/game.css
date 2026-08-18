@@ -457,54 +457,48 @@ body.dark-mode .mytooltip .mytooltiptext {
  * 
  */
 
-ul.decks,
-ul.hand,
-ul.pinned-cards {
+ul.decks, ul.hand, ul.pinned-cards {
   list-style: none;
   padding-left: 0;
 }
 
-.hand {}
-
-.pinned-cards {}
-
-.deck {}
-
 a.card {
   display: inline-block;
-  width: 120px;
-  height: 150px;
+  width: 90px;
+  height: 112.5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid var(--card-border-color);
+  border: 8px solid var(--card-border-color);
   margin-bottom: 0.5em;
   position: relative;
+  transition: transform 1s, filter 1s
 }
 
 a.card:hover {
+   z-index: 999;
+  filter: brightness(105%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  left: -5px;
-  top: -5px;
+  transform: translate(-5px,-5px)
 }
 
 div.blank-card {
   display: inline-block;
-  width: 120px;
-  height: 150px;
+  width: 90px;
+  height: 112.5px;
   background-color: var(--card-bg-color);
-  border: 10px solid var(--card-border-color);
+  border: 8px solid var(--card-border-color);
   margin-bottom: 0.5em;
 }
 
-.card-in-hand,
-.pinned-card,
-.deck {
+.card-in-hand, .pinned-card, .deck {
+  padding: 0.3em;
   display: inline-block;
   position: relative;
-  max-width: 150px;
+  max-width: 95px;
   margin-right: 1em;
   vertical-align: top;
 }
 
+/* TODO: unavailable card */
 .unavailable-card {
   color: var(--unavailable-color);
   background-color: var(--unavailable-bg-color) !important;
@@ -514,9 +508,16 @@ div.blank-card {
 .card-caption {
   text-align: center;
   display: block;
-  font-size: 1em;
+  font-size: 0.95em;
+  -webkit-text-stroke: 0.15px #000000;
+  color: #d6703a;
 }
 
+.dark-mode .card-caption {
+  color: #c58766;
+  -webkit-text-stroke: 0.15px #ffffff;
+}
+/* 
 .card-tooltip {
   position: absolute;
   visibility: hidden;
@@ -525,20 +526,19 @@ div.blank-card {
   font-size: 0.9em;
   z-index: 2;
   padding: 0.2em;
-  border: 1px solid var(--border-color);;
-  background-color: var(--content-bg-color);;
+  border: 1px solid var(--border-color);
+  background-color: var(--content-bg-color);
   left: 105%;
 }
-
+*/
 .card-img {
   height: 150px;
   width: 120px;
   object-fit: cover;
 }
 
-a.card:focus .card-tooltip,
-a.card:hover .card-tooltip {
-  visibility: visible;
+a.card:focus .card-tooltip, a.card:hover .card-tooltip {
+  visibility: hidden;
   position: absolute;
 }
 
