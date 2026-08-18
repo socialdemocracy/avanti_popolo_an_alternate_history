@@ -219,6 +219,7 @@ Q.acerbo_law_passed = 0;
 Q.capital_strike_progress = 0;
 Q.capital_strike_seen = 0;
 Q.turin_action = 0;
+Q.rubicon = 0;
 // if fasci_coup_progress reaches 10 before historical, march on rome event is triggered
 Q.fasci_coup_progress = 0;
 
