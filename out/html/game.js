@@ -622,68 +622,54 @@ window.enableDarkMode = function() {
     }
   };
 
-window.updateSidebar = function() {
-    $('#qualities').empty();
-    if (!window.dendryUI || !dendryUI.game || !dendryUI.game.scenes) {
-        console.warn('updateSidebar: dendryUI.game.scenes not ready');
-        return;
-    }
-    var scene = dendryUI.game.scenes[window.statusTab];
-    if (!scene) {
-        console.warn('updateSidebar: scene "' + window.statusTab + '" not found');
-        return;
-    }
-    if (scene.onArrival) {
+    window.updateSidebar = function () {
+        $('#qualities').empty();
+        var statusScene = dendryUI.game.scenes["status"];
+        var scene = dendryUI.game.scenes[window.statusTab];
+        dendryUI.dendryEngine._runActions(statusScene.onArrival);
         dendryUI.dendryEngine._runActions(scene.onArrival);
-    }
-    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-    $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
-};
+        var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+        $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+        dendryUI.dendryEngine._runActions(scene.onDisplay);
+    };
 
-// replace the existing updateSidebarRight function with this
-window.updateSidebarRight = function() {
-    $('#qualities_right').empty();
-    if (!window.dendryUI || !dendryUI.game || !dendryUI.game.scenes) {
-        console.warn('updateSidebarRight: dendryUI.game.scenes not ready');
-        return;
-    }
-    var scene = dendryUI.game.scenes[window.statusTabRight];
-    if (!scene) {
-        console.warn('updateSidebarRight: scene "' + window.statusTabRight + '" not found');
-        return;
-    }
-    if (scene.onArrival) {
+    window.updateSidebarRight = function () {
+        $('#qualities_right').empty();
+        var statusScene = dendryUI.game.scenes["status_right"];
+        var scene = dendryUI.game.scenes[window.statusTabRight];
+        dendryUI.dendryEngine._runActions(statusScene.onArrival);
         dendryUI.dendryEngine._runActions(scene.onArrival);
-    }
-    var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
-    $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
-};
+        var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
+        $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
+        dendryUI.dendryEngine._runActions(scene.onDisplay);
+    };
+    window.changeTab = function (newTab, tabId, isRight) {
+        if (tabId == 'poll_tab_left' && dendryUI.dendryEngine.state.qualities.historical_mode) {
+            window.alert('Polls are not available in historical mode.');
+            return;
+        }
+        var tabButton = document.getElementById(tabId);
+        var tabButtons = isRight ?
+            document.querySelectorAll('#stats_sidebar_right .tab_button') :
+            document.querySelectorAll('#stats_sidebar .tab_button');
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].className = tabButtons[i].className.replace(' active', '');
+        }
+        tabButton.className += ' active';
 
-  window.changeTab = function(newTab, tabId, isRight) {
-      if (tabId == 'poll_tab' && (dendryUI.dendryEngine.state.qualities.historical_mode || dendryUI.dendryEngine.state.qualities.rubicon)) {
-          if (dendryUI.dendryEngine.state.qualities.historical_mode && !dendryUI.dendryEngine.state.qualities.rubicon) window.alert('Polls are not available in historical mode.');
-          if (dendryUI.dendryEngine.state.qualities.rubicon) window.alert('Polls are not available after crossing the rubicon.');
-          return;
-      }
-      var tabButton = document.getElementById(tabId);
-      var tabButtons = document.getElementsByClassName('tab_button');
-      for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].className = tabButtons[i].className.replace(' active', '');
-      }
-      tabButton.className += ' active';
-      if (isRight) {
-        window.statusTabRight = newTab;
-        window.updateSidebarRight();
+        if (isRight) {
+            window.statusTabRight = newTab;
+            window.updateSidebarRight();
         } else {
-          window.statusTab = newTab;
-          window.updateSidebar();
-    }
-  };
+            window.statusTab = newTab;
+            window.updateSidebar();
+        }
+    };
 
-  window.onDisplayContent = function() {
-      window.updateSidebar();
-      window.updateSidebarRight();
-  };
+    window.onDisplayContent = function () {
+        window.updateSidebar();
+        window.updateSidebarRight();
+    }
 
   window.toggleDem = function toggleDemographicTable() {
       const resultsDiv = document.getElementById('results');
