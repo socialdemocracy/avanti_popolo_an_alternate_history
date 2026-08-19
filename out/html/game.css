@@ -509,8 +509,8 @@ div.blank-card {
   text-align: center;
   display: block;
   font-size: 0.95em;
-  -webkit-text-stroke: 0.15px #000000;
-  color: #000000;
+  -webkit-text-stroke: 0.15px #685a3f;
+  color: #685a3f;
 }
 
 .dark-mode .card-caption {
@@ -524,11 +524,13 @@ div.blank-card {
   width: 150px;
   max-width: 200px;
   font-size: 0.9em;
+  border-radius: 8px;
   z-index: 2;
   padding: 0.2em;
   border: 1px solid var(--border-color);
   background-color: var(--content-bg-color);
   left: 105%;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 */
 .card-img {
