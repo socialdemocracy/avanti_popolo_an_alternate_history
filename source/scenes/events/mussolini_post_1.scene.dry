@@ -1,17 +1,35 @@
-title: Repeal of the Acerbo Law
+title: Repealing the Acerbo Law?
+subtitle: Obviously, such an unconstitutional law needs to go.
 view-if: acerbo_law_passed and psi_in_government and pnf_waiting = 0 and pnf_in_power = 0 and (pnf_leader = "Mussolini" or pnf_leader = "Balbo")
 priority: -1
 max-visits: 1
 new-page: true
 tags: event
 achievement: follia_di_acerbo
+go-to: repeal_acerbo_Wow
 
 = Repeal of the Acerbo Law
 
-The Acerbo Law, passed in July 1923, has backfired immensely, as the PNF was unable to receive the 25% to secure a majority. Now that we are in power, however, we can remove this corrupt law and restore fair democracy to Italy once more.
+@repeal_acerbo_wow
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/chamber.jpeg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+The Acerbo Law, passed in July 1923 backfired inmensely in the elections, where we won a majority agaisnt the PNF. The PNF has become extremely disorganised and we can expect them to not become much more of a threat to us anymore, except if somehow the bourgeoisie form some sort of anti-socialist coalition in the next elections, which is still, unlikely.
+
+Now, we are expected to repeal the unfair law, but many of the Communist and Maximalist members of our party argue that we could use the opportunity to seize power and gain a permanent position in <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**ali**</span><span style="color: #CD212A;">*an**</span> politics.
 
 - @remove_acerbo: Repeal the Law.
-- @keep_acerbo: Actually...
+- @keep_acerbo: Actually... 
 
 @remove_acerbo
 subtitle: Such an unconstitutional law needs to go.
@@ -22,6 +40,7 @@ The Acerbo Law is easily repealed, reinstating the previous system of the D'Hond
 - @root: Good riddance.
 
 @keep_acerbo
+subtitle: Is the fallout from keeping the law really worth it?
 view-if: psi_seating_disp >= 50
 go-to: king_low if king_relation < 54; king_letter if king_relation >= 54
 
@@ -31,19 +50,21 @@ We decide to keep the Acerbo Law to maintain our grip within the Chamber of Depu
 
 Recently, however, a letter has been sent from Ivanoe Bonomi to [? if not reformists_defect : Filippo Turati’s ?][? if reformists_defect : Giovanni Bacci's ?] office, concerning the possibility of a sustained Acerbo Law. Though the author has yet to be determined, it can be safely assumed that Vittorio Emanuele III has sent it to us as a warning. 
 
-In it, is a plea to repeal the law, as its preservation could provide the other parties with the opportunity for mass agitation against the [+ psi_name +], and give the party the status of Italy’s pariah within its political sphere. Vittorio might be considered a political ally of ours, but even he cannot defend us should we consider the possibility of taking power in such an unlawful and deceitful manner. After all, we were the ones who pushed the idea of the Anti-Fascist Bloc in the first place, and we could end up being considered no different to the Blackshirts. 
+In it, is a plea to repeal the law, as its preservation could provide the other parties with the opportunity for mass agitation against the [+ psi_name +], and give the party the status of <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**al**</span><span style="color: #CD212A;">*y**</span>’<span style="color: #CD212A;">*s**</span> pariah within its political sphere. [+ king +] might be considered a political ally of ours, but even he cannot defend us should we consider the possibility of taking power in such an unlawful and deceitful manner. After all, we were the ones who began the united front agaisnt the PNF, and we would look no better than them.
 
 What do we do?
 
 - @king_low: Ignore the warnings, the law must remain.
-- @remove_acerbo: So be it. Repeal the law.
+- @remove_acerbo: Perhaps we should just collaborate..
 
 @king_low
 on-arrival: royal_coup = 1
 subtitle: Is the fallout from keeping the law really worth it?
 
-This has caused an outrage within our own party's right flank, as well with our allies in the Chamber of Deputies, calling us no better than the fascists that attempted to take over the nation.
+This has caused outrage from the Reformist members of our party, the PPI, the [+ ldr_name +], the PDSI, the UL, and all the other parties in parliament, calling us no better than the <span style="color: [+ pnf_colour +];">fascists</span> that proposed the law, however we will ignore these warnings and proceed.
 
-Already, the King has mobilised the Regio Esercito and begun raiding our offices, bases and arresting our deputies. We have to strike back.
+Now-
 
-- @civil_war: Wait, wha-
+Wait, what?  We are receiving reports of offices all over the country being raided, surely the king wouldnt have-
+
+- @civil_war: It is civil war.
