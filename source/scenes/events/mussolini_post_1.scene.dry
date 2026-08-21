@@ -40,7 +40,7 @@ The Acerbo Law is easily repealed, reinstating the previous system of the D'Hond
 - @root: Good riddance.
 
 @keep_acerbo
-subtitle: Is the fallout from keeping the law really worth it?
+subtitle: We will be able to cement our position in politics..
 view-if: psi_seating_disp >= 50
 go-to: king_low if king_relation < 54; king_letter if king_relation >= 54
 
@@ -54,12 +54,12 @@ In it, is a plea to repeal the law, as its preservation could provide the other 
 
 What do we do?
 
-- @king_low: Ignore the warnings, the law must remain.
-- @remove_acerbo: Perhaps we should just collaborate..
+- @king_low: Ignore the warnings.
+- @remove_acerbo: Lets just remove it already..
 
 @king_low
 on-arrival: royal_coup = 1
-subtitle: Is the fallout from keeping the law really worth it?
+subtitle: This is easily our best chance to seize revolutionary power, we are not letting it pass.
 
 This has caused outrage from the Reformist members of our party, the PPI, the PLDI, the PDSI, the PLI, and all the other parties in parliament, calling us no better than the <span style="color: [+ pnf_colour +];">fascists</span> that proposed the law, however we will ignore these warnings and proceed.
 
@@ -68,3 +68,19 @@ Now-
 Wait, what?  We are receiving reports of offices all over the country being raided, surely the king wouldnt have-
 
 - @civil_war: It is civil war.
+- @surrender: We must surrender.
+
+@surrender
+subtitle: Would [+ king +] grant mercy?
+
+The coup occurs swiftly, as PSI deputies are arrested and most are let go except the leadership of our own party, with most Communist and Maximalist members of our party also being purged by the king due to the opportunity, with the PSI being heavily weakened in <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**ali**</span><span style="color: #CD212A;">*an**</span> politics, and the fall into obscurity begins.
+
+Most of our leadership is sentenced to 30 years in prison due to treason.
+
+- @worth_it: Was it truly worth it?
+
+@worth_it
+
+For the sake of our democracy, yes, it was.
+
+- @game_over: Game over.
