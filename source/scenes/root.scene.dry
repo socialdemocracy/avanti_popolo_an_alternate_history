@@ -565,6 +565,9 @@ Q.mussolini_goal = "Consolidate power";
 Q.annunzio_goal = "Attempt to push Mussolini towards syndicalist policy";
 Q.grandi_goal = "Become acquainted with Mussolini";
 Q.stefani_goal = "Push free-market economic reforms";
+Q.vote_yes_bread_fixing = 0;
+Q.vote_no_bread_fixing = 0;
+Q.abstain_bread_fixing = 0;
 
 Q.ul_giolitti = 4;
 Q.ul_salandra = 0;
