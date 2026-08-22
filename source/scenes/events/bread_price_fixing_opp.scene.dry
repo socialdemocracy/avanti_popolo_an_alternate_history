@@ -3,7 +3,7 @@ subtitle: The Nitti Government floors a controversial bill.
 tags: event, govt_affairs
 is-card: true
 view-if: year = 1920 and month = 6 and week = 1 and prime_minister = "Nitti"
-on-arrival: bread_price_seen = 1
+on-arrival: bread_price_seen = 1; ul_opinion = "Si"
 max-visits: 1
 new-page: true
 
@@ -42,7 +42,6 @@ Regardless of our vote, the bill is voted down a significant measure in fear of 
 
 @vote_bread
 on-arrival: {!
-Q.yes_votes = Q.ul_seating + Q.ldr_seating;
 
 if (Q.vote_yes_bread_fixing == 1) {
     Q.yes_votes += Q.psi_seating;
@@ -113,14 +112,8 @@ if (Q.ldr_opinion == "Si") {
 if (Q.ldr_opinion == "No") {
     Q.no_votes += Q.ldr_seating;
 }
-if (Q.ul_opinion == "Abstain") {
-    Q.abstain_votes += Q.ul_seating;
-}
 if (Q.ul_opinion == "Si") {
     Q.yes_votes += Q.ul_seating;
-}
-if (Q.ul_opinion == "No") {
-    Q.no_votes += Q.ul_seating;
 }
 if (Q.pnf_opinion == "Abstain") {
     Q.abstain_votes += Q.pnf_seating;
