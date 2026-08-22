@@ -18,7 +18,7 @@ What should we do?
 - @abstain: Abstain from the vote.
 
 @vote_yes
-on-arrival: communist_dissent += 10; labour_dissent += 5; maximalist_dissent += 5; reformist_dissent += 5; syndicalist_dissent += 5; workers_pcdi += 6 if pcdi_formed; workers_psi -= 7
+on-arrival: communist_dissent += 10; labour_dissent += 5; maximalist_dissent += 5; reformist_dissent += 5; syndicalist_dissent += 5; workers_pcdi += 6 if pcdi_formed; workers_psi -= 7; vote_yes_bread_fixing = 1
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our own delegation members even plan a full vote on the proposal, contravening the government's decision.
 
@@ -27,14 +27,14 @@ The workers view this as betrayal, as do the unions. The bill is voted down anyw
 - @vote_bread: The Chamber Of Deputies votes..
 
 @vote_no
-on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent);
+on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent); vote_no_bread_fixing = 1
 
 Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
 
 - @vote_bread: The Chamber Of Deputies votes..
 
 @abstain
-on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_dissent += 5; workers_psi -= 3*(1-dissent)
+on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_dissent += 5; workers_psi -= 3*(1-dissent); abstain_bread_fixing = 1
 
 Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
 
