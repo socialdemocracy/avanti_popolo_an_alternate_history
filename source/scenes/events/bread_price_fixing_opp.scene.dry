@@ -45,13 +45,13 @@ on-arrival: {!
 Q.yes_votes = Q.ul_seating + Q.ldr_seating;
 
 if (Q.vote_yes_bread_fixing == 1) {
-    Q.no_votes += Q.psi_seating -= Q.reformist_strength && Q.maximalist_strength;
+    Q.no_votes += Q.psi_seating; Q.yes_votes += Q.reformist_strength && Q.maximalist_strength;
 }
 if (Q.vote_no_bread_fixing == 1) {
     Q.no_votes += Q.psi_seating;
 }
 if (Q.abstain_bread_fixing == 1) {
-    Q.no_votes += Q.psi_seating -= Q.reformist_strength && Q.maximalist_strength;
+    Q.abstain_votes += Q.psi_seating
 }
 if (Q.pll_formed == 1) {
     Q.no_votes += Q.pll_seating;
