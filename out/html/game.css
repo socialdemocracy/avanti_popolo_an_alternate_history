@@ -830,6 +830,18 @@ th {
   fill: #FF6961;
 }
 
+.seat.si {
+  fill: #74cf74;
+}
+
+.seat.no {
+  fill: #eb0e24;
+}
+
+.seat.astenersi {
+  fill: #c8cccc;
+}
+
     z-index: 3;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid #555;
