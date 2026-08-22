@@ -45,7 +45,7 @@ on-arrival: {!
 Q.yes_votes = Q.ul_seating + Q.ldr_seating;
 
 if (Q.vote_yes_bread_fixing == 1) {
-    Q.no_votes += Q.psi_seating -= Q.reformist_strength;
+    Q.no_votes += Q.psi_seating -= Q.reformist_strength && Q.maximalist_strength;
 }
 if (Q.vote_no_bread_fixing == 1) {
     Q.no_votes += Q.psi_seating;
@@ -56,72 +56,118 @@ if (Q.abstain_bread_fixing == 1) {
 if (Q.pll_formed == 1) {
     Q.no_votes += Q.pll_seating;
 }
-if (Q.oclk_candidate == "Abstain") {
-    Q.abstain_votes += Q.oclk_seats;
+if (Q.pcs_formed == 1) {
+    Q.yes_votes += Q.pcs_seating;
+}
+if (Q.cc_formed == 1) {
+    Q.yes_votes += Q.cc_seating;
+}
+if (Q.pcdi_formed == 1) {
+    Q.no_votes += Q.pcdi_seating;
+}
+if (Q.psu_formed == 1) {
+    Q.no_votes += Q.psu_seating;
+}
+if (Q.psri_opinion == "Abstain") {
+    Q.abstain_votes += Q.psri_seating;
+}
+if (Q.psri_opinion == "Si") {
+    Q.yes_votes += Q.psri_seating;
+}
+if (Q.psri_opinion == "No") {
+    Q.no_votes += Q.psri_seating;
+}
+if (Q.pri_opinion == "Abstain") {
+    Q.abstain_votes += Q.pri_seating;
+}
+if (Q.pri_opinion == "Si") {
+    Q.yes_votes += Q.pri_seating;
+}
+if (Q.pri_opinion == "No") {
+    Q.no_votes += Q.pri_seating;
+}
+if (Q.ds_opinion == "Abstain") {
+    Q.abstain_votes += Q.ds_seating;
+}
+if (Q.ds_opinion == "Si") {
+    Q.yes_votes += Q.ds_seating;
+}
+if (Q.ds_opinion == "No") {
+    Q.no_votes += Q.ds_seating;
+}
+if (Q.ppi_opinion == "Abstain") {
+    Q.abstain_votes += Q.ppi_seating;
+}
+if (Q.ppi_opinion == "Si") {
+    Q.yes_votes += Q.ppi_seating;
+}
+if (Q.ppi_opinion == "No") {
+    Q.no_votes += Q.ppi_seating;
+}
+if (Q.ldr_opinion == "Abstain") {
+    Q.abstain_votes += Q.ldr_seating;
+}
+if (Q.ldr_opinion == "Si") {
+    Q.yes_votes += Q.ldr_seating;
+}
+if (Q.ldr_opinion == "No") {
+    Q.no_votes += Q.ldr_seating;
+}
+if (Q.ul_opinion == "Abstain") {
+    Q.abstain_votes += Q.ul_seating;
+}
+if (Q.ul_opinion == "Si") {
+    Q.yes_votes += Q.ul_seating;
+}
+if (Q.ul_opinion == "No") {
+    Q.no_votes += Q.ul_seating;
+}
+if (Q.pnf_opinion == "Abstain") {
+    Q.abstain_votes += Q.pnf_seating;
+}
+if (Q.pnf_opinion == "Si") {
+    Q.yes_votes += Q.pnf_seating;
+}
+if (Q.pnf_opinion == "No") {
+    Q.no_votes += Q.pnf_seating;
+}
+if (Q.other_opinion == "Abstain") {
+    Q.abstain_votes += Q.other_seating;
+}
+if (Q.other_opinion == "Si") {
+    Q.yes_votes += Q.other_seating;
+}
+if (Q.other_opinion == "No") {
+    Q.no_votes += Q.other_seating;
 }
 
-if (Q.ap_candidate == "Kelsen") {
-    Q.kelsen_votes += Q.ap_seats;
-}
-if (Q.ap_candidate == "Renner") {
-    Q.renner_votes += Q.ap_seats;
-}
-if (Q.ap_candidate == "Abstain") {
-    Q.abstain_votes += Q.ap_seats;
-}
-
-if (Q.dnlp_candidate == "Dinghofer") {
-    Q.dinghofer_votes += Q.dnlp_seats;
-}
-if (Q.dnlp_candidate == "Abstain") {
-    Q.abstain_votes += Q.dnlp_seats;
-}
-
-Q.kelsen_percent = parseFloat((Q.kelsen_votes / 2).toFixed(1));
-Q.renner_percent = parseFloat((Q.renner_votes / 2).toFixed(1));
-Q.dinghofer_percent = parseFloat((Q.dinghofer_votes / 2).toFixed(1));
-Q.skubl_percent = parseFloat((Q.skubl_votes / 2).toFixed(1));
+Q.yes_percent = parseFloat((Q.yes_votes / 2).toFixed(1));
+Q.no_percent = parseFloat((Q.no_votes / 2).toFixed(1));
 Q.abstain_percent = parseFloat((Q.abstain_votes / 2).toFixed(1));
 !}
 on-display: {!
 data = []
-if (Q.renner_votes) {
+if (Q.yes_votes) {
     data.push({
-        "id": "ap",
-        "legend": "Renner",
-        "name": "Renner",
-        "seats": Math.round(Q.renner_votes),
+        "id": "si",
+        "legend": "Sì",
+        "name": "Sì",
+        "seats": Math.round(Q.yes_votes),
     });
 }
-if (Q.kelsen_votes) {
+if (Q.no_votes) {
     data.push({
-        "id": "oclk",
-        "legend": "Kelsen",
-        "name": "Kelsen",
-        "seats": Math.round(Q.kelsen_votes),
-    });
-}
-if (Q.skubl_votes) {
-    data.push({
-        "id": "vf",
-        "legend": "Skubl",
-        "name": "Skubl",
-        "seats": Math.round(Q.skubl_votes),
-    });
-}
-if (Q.dinghofer_votes) {
-    data.push({
-        "id": "dnlp",
-        "legend": "Dinghofer",
-        "name": "Dinghofer",
-        "seats": Math.round(Q.dinghofer_votes),
+        "id": "no",
+        "legend": "No",
+        "name": "No",
+        "seats": Math.round(Q.no_votes),
     });
 }
 if (Q.abstain_votes) {
     data.push({
-        "id": "other",
-        "legend": "Abstain",
-        "name": "Abstain",
+        "id": "astenersi",
+        "legend": "Astenersi",
+        "name": "Astenersi",
         "seats": Math.round(Q.abstain_votes),
     });
 }
@@ -133,13 +179,18 @@ if (window && d3) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50; 
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("chamber").style.height = screenWidth/2 + "px";
     } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#chamber").datum(data).call(parliament);
 }
 !}
+
+= Election results
+
+{!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
+
