@@ -24,12 +24,122 @@ Our grassroots party members are shocked by our intransigence! Many party branch
 
 The workers view this as betrayal, as do the unions. The bill is voted down anyways by a slight margin in fear of the ongoing general strike. The coalition government does not seem that it will last, but it unclear if we will benefit following our betrayal.
 
+- @vote_bread: The Chamber Of Deputies votes..
+
 @vote_no
 on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent);
 
 Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
 
+- @vote_bread: The Chamber Of Deputies votes..
+
 @abstain
 on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_dissent += 5; workers_psi -= 3*(1-dissent)
 
 Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
+
+- @vote_bread: The Chamber Of Deputies votes..
+
+@vote_bread
+on-arrival: {!
+Q.yes_votes = Q.ul_seating + Q.ldr_seating;
+
+if (Q.vote_yes_bread_fixing == 1) {
+    Q.no_votes += Q.psi_seating -= Q.reformist_strength;
+}
+if (Q.vote_no_bread_fixing == 1) {
+    Q.no_votes += Q.psi_seating;
+}
+if (Q.abstain_bread_fixing == 1) {
+    Q.no_votes += Q.psi_seating -= Q.reformist_strength && Q.maximalist_strength;
+}
+if (Q.pll_formed == 1) {
+    Q.no_votes += Q.pll_seating;
+}
+if (Q.oclk_candidate == "Abstain") {
+    Q.abstain_votes += Q.oclk_seats;
+}
+
+if (Q.ap_candidate == "Kelsen") {
+    Q.kelsen_votes += Q.ap_seats;
+}
+if (Q.ap_candidate == "Renner") {
+    Q.renner_votes += Q.ap_seats;
+}
+if (Q.ap_candidate == "Abstain") {
+    Q.abstain_votes += Q.ap_seats;
+}
+
+if (Q.dnlp_candidate == "Dinghofer") {
+    Q.dinghofer_votes += Q.dnlp_seats;
+}
+if (Q.dnlp_candidate == "Abstain") {
+    Q.abstain_votes += Q.dnlp_seats;
+}
+
+Q.kelsen_percent = parseFloat((Q.kelsen_votes / 2).toFixed(1));
+Q.renner_percent = parseFloat((Q.renner_votes / 2).toFixed(1));
+Q.dinghofer_percent = parseFloat((Q.dinghofer_votes / 2).toFixed(1));
+Q.skubl_percent = parseFloat((Q.skubl_votes / 2).toFixed(1));
+Q.abstain_percent = parseFloat((Q.abstain_votes / 2).toFixed(1));
+!}
+on-display: {!
+data = []
+if (Q.renner_votes) {
+    data.push({
+        "id": "ap",
+        "legend": "Renner",
+        "name": "Renner",
+        "seats": Math.round(Q.renner_votes),
+    });
+}
+if (Q.kelsen_votes) {
+    data.push({
+        "id": "oclk",
+        "legend": "Kelsen",
+        "name": "Kelsen",
+        "seats": Math.round(Q.kelsen_votes),
+    });
+}
+if (Q.skubl_votes) {
+    data.push({
+        "id": "vf",
+        "legend": "Skubl",
+        "name": "Skubl",
+        "seats": Math.round(Q.skubl_votes),
+    });
+}
+if (Q.dinghofer_votes) {
+    data.push({
+        "id": "dnlp",
+        "legend": "Dinghofer",
+        "name": "Dinghofer",
+        "seats": Math.round(Q.dinghofer_votes),
+    });
+}
+if (Q.abstain_votes) {
+    data.push({
+        "id": "other",
+        "legend": "Abstain",
+        "name": "Abstain",
+        "seats": Math.round(Q.abstain_votes),
+    });
+}
+             
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
