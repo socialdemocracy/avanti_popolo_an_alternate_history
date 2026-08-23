@@ -211,7 +211,7 @@ window.enableDarkMode = function() {
             return baseTooltip.explanationText 
         }
 
-        if (searchString === 'No' ) {
+        if (searchString === 'Nó' ) {
             return baseTooltip.explanationText 
         }
       
