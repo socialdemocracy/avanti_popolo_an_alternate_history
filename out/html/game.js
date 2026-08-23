@@ -207,6 +207,18 @@ window.enableDarkMode = function() {
             return baseTooltip.explanationText 
         }
       
+        if (searchString === 'Si' ) {
+            return baseTooltip.explanationText 
+        }
+
+        if (searchString === 'No' ) {
+            return baseTooltip.explanationText 
+        }
+      
+        if (searchString === 'Astenersi' ) {
+            return baseTooltip.explanationText 
+        }
+      
         if (searchString === 'Others' ) {
             return baseTooltip.explanationText 
         }
