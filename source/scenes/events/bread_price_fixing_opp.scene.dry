@@ -153,20 +153,20 @@ Q.abstain_percent = parseFloat((Q.abstain_votes / 2).toFixed(1));
 !}
 on-display: {!
 data = []
-if (Q.yes_votes) {
-    data.push({
-        "id": "si",
-        "legend": "Sì",
-        "name": "Sì",
-        "seats": Math.round(Q.yes_votes),
-    });
-}
 if (Q.no_votes) {
     data.push({
-        "id": "no",
+        "id": "nó",
         "legend": "No",
         "name": "No",
         "seats": Math.round(Q.no_votes),
+    });
+}
+if (Q.yes_votes) {
+    data.push({
+        "id": "si",
+        "legend": "Si",
+        "name": "Si",
+        "seats": Math.round(Q.yes_votes),
     });
 }
 if (Q.abstain_votes) {
