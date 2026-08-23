@@ -42,6 +42,9 @@ Regardless of our vote, the bill is voted down a significant measure in fear of 
 
 @vote_bread
 on-arrival: {!
+Q.yes_votes = 0;
+Q.no_votes = 0;
+Q.abstain_votes = 0;
 
 if (Q.vote_yes_bread_fixing == 1) {
     Q.yes_votes += Q.psi_seating;
