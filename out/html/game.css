@@ -342,7 +342,7 @@ blockquote+blockquote.attribution {
   position: fixed;
   z-index: 999999;
   width: 130px;
-  background: #edf0fa;
+  background: #ebe1e1;
   color: #3b1f0a;
   text-align: left;
   border-radius: 8px;
@@ -374,9 +374,10 @@ body.dark-mode .mytooltip:hover {
 }
 
 body.dark-mode .mytooltip .mytooltiptext {
-    background: #1a1a2e;
+    background: #151517;
     color: #e0e0e0;
-    border: 1px solid #8093ff;
+    border: 2px solid #CD212A;
+    outline: 2px solid #008C45;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
