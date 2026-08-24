@@ -95,7 +95,7 @@ on-arrival: other_opinion = "No"
 go-to: bread_menu_no
 max-visits: 1
 
-We contact the left-leaning minor parties, specifically the [? if pri_prominent : PRI ?] [? if pri_prominent and psri_collapse : and the ?] [? if psri_collapse : PSRI ?], who agree to vote against the bill.
+We contact the left-leaning minor parties, specifically the [? if not pri_prominent : PRI ?] [? if pri_prominent and psri_collapse : and the ?] [? if psri_collapse : PSRI ?], who agree to vote against the bill.
 
 
 @vote_bread
