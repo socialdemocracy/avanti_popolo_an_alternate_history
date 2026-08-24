@@ -15,6 +15,18 @@ const colourList = [{
         style: "color: #90EE90; font-weight: bold;"
    },
     {
+        word: "Si",
+        style: "color: #74cf74; font-weight: bold;"
+   },
+    {
+        word: "Nó",
+        style: "color: #FF746C; font-weight: bold;"
+   },
+    {
+        word: "Astenersi",
+        style: "color: #c2bdb9; font-weight: bold;"
+   },
+    {
         word: "SFIO",
         style: "color: #ff0000; font-weight: bold;"
    },
@@ -373,6 +385,18 @@ const tooltipList = [{
     {
     searchString: "PRI",
     explanationText: "<img src=img/pribetter.webp>  Partito Republicano Italiano </br></br> Italian Republican Party"
+    },
+    {
+    searchString: "Si",
+    explanationText: "<img src=img/Astenersi (2)-Photoroom.png>  Si </br></br> Aye"
+    },
+    {
+    searchString: "Nó",
+    explanationText: "<img src=img/Astenersi (1)-Photoroom.png>  No </br></br> Nay"
+    },
+    {
+    searchString: "Astenersi",
+    explanationText: "<img src=img/Astenersi-Photoroom.png>  Astenersi </br></br> Abstain"
     },
     {
     searchString: "MKP",
