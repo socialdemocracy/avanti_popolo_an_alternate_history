@@ -349,8 +349,8 @@ blockquote+blockquote.attribution {
   padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
-  border: 1px solid #008C45;
-  outline: 1px solid #CD212A;
+  border: 2px solid #008C45;
+  outline: 2px solid #CD212A;
   pointer-events: none;
   font-size: 14px !important;
   line-height: 1.5em !important;
