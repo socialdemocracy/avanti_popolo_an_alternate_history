@@ -1,5 +1,5 @@
-title: Abolishment of Price Controls
-subtitle: The Nitti Government floors a controversial bill.
+title: Abolishment of Subsidies and Price Controls.
+subtitle: The <span class="wide_tooltip-wrap drop-down">Nitti government<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">In Government: PSRI, [+ ldr_name +], [+ ul_name +], PPI, [+ ds_name +]</span></span> floors a controversial bill.
 tags: event, govt_affairs
 is-card: true
 view-if: year = 1920 and month = 6 and week = 1 and prime_minister = "Nitti"
@@ -9,20 +9,22 @@ Q.no_votes = 0;
 Q.abstain_votes = 0;
 Q.ul_opinion = "Si";
 Q.bread_price_seen = 1;
-Q.psri_opinion = "Abstain";
-Q.pri_opinion = "Abstain";
-Q.ds_opinion = "Abstain";
+Q.psri_opinion = "No";
+Q.pri_opinion = "No";
+Q.ds_opinion = "Si";
 Q.ppi_opinion = "Abstain";
-Q.ldr_opinion = "Abstain";
-Q.pnf_opinion = "Abstain";
+Q.ldr_opinion = "Si";
+Q.pnf_opinion = "No";
 Q.other_opinion = "Abstain";
 !}
 max-visits: 1
 new-page: true
 
-= Price Control Measures
+= Abolishment Of Subsidies and Price Controls.
 
-The <span class="wide_tooltip-wrap drop-down">Nitti I<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">53rd Government Of Italy</span></span> government has floored a bill that would abolish price controls on essential goods, including a controversial abolishing of price controls on bread. Our support base, allies and the vast majority of our leadership has demanded we vote against the bill, as a general strike has seemingly begun once more in response to this.
+The <span class="wide_tooltip-wrap drop-down">Nitti government<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">In Government: PSRI, [+ ldr_name +], [+ ul_name +], PPI, [+ ds_name +]</span></span> has floored a bill that would abolish price controls on essential goods, including a controversial abolishing of price controls on bread, due to the crippling deficit that <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> is starting to gain. However, this bill is not popular among the left wing parties, specifically the PSI, PSRI, PRI, and Others, and our support base, the workers, and many in our party leadership are calling for us to vote agaisnt the bill.
+
+Already, a general strike has been called by several unions under the PSI.
 
 What should we do?
 
@@ -33,37 +35,41 @@ What should we do?
 @vote_yes
 on-arrival: communist_dissent += 10; labour_dissent += 5; maximalist_dissent += 5; reformist_dissent += 5; syndicalist_dissent += 5; workers_pcdi += 6 if pcdi_formed; workers_psi -= 7; vote_yes_bread_fixing = 1
 
-Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our own delegation members even plan a full vote on the proposal, contravening the government's decision.
+Our party members are shocked by our betrayal of the workers in order to side with a clearly unpopular policy! Some even begin dissenting and many Communist and Labour members have defected to the No! side. Party leadership is also infuriated, with even some Reformist members of our party calling this a bad idea.
 
-The workers view this as betrayal, as do the unions. The bill is voted down anyways by a slight margin in fear of the ongoing general strike. The coalition government does not seem that it will last, but it unclear if we will benefit following our betrayal.
-
-- @vote_bread: The Chamber Of Deputies votes..
+- @vote_bread: The  Chamber Of Deputies votes on the proposal..
 
 @vote_no
 on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent); vote_no_bread_fixing = 1
 
-Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
+Most of our party leadership are relieved, along with the workers which support us, and they appreciate the vote agaisnt the bill, however  some of our contacts with the [+ ul_name +] and the [+ ldr_name +] have stopped talking to us, most likely due to our decision.
 
-- @vote_bread: The Chamber Of Deputies votes..
+- @vote_bread: The Chamber Of Deputies votes on the proposal..
 
 @abstain
 on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_dissent += 5; workers_psi -= 3*(1-dissent); abstain_bread_fixing = 1
 
-Regardless of our vote, the bill is voted down a significant measure in fear of the ongoing general strike. The coalition government does not seem that it will last.
+Our party members AND the [+ ul_name +] and [+ ldr_name +] are shocked at our decisionmaking! What were we thinking? Are we hoping the Abstain side will somehow win? Well, it doesnt matter now..
 
-- @vote_bread: The Chamber Of Deputies votes..
+- @vote_bread: The Chamber Of Deputies votes on the proposal..
 
 @vote_bread
 on-arrival: {!
 
 if (Q.vote_yes_bread_fixing == 1) {
-    Q.yes_votes += Q.psi_seating;
+    Q.yes_votes += Q.psi_seating -= Q.communist_strength & Q.labour_strength;
+}
+if (Q.vote_yes_bread_fixing == 1) {
+    Q.no_votes += Q.communist_strength & Q.labour_strength;
 }
 if (Q.vote_no_bread_fixing == 1) {
     Q.no_votes += Q.psi_seating;
 }
 if (Q.abstain_bread_fixing == 1) {
-    Q.abstain_votes += Q.psi_seating
+    Q.abstain_votes += Q.psi_seating -= Q.communist_strength & Q.labour_strength;
+}
+if (Q.abstain_bread_fixing == 1) {
+    Q.no_votes += Q.communist_strength & Q.labour_strength;
 }
 if (Q.pll_formed == 1) {
     Q.no_votes += Q.pll_seating;
@@ -196,7 +202,12 @@ if (window && d3) {
 }
 !}
 
-= Election results
+= Voting
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
+Si - [+ yes_votes +] votes ([+ yes_percent +]%) ?]
+
+Nó - [+ yes_votes +] votes ([+ yes_percent +]%) ?]
+
+Astenersi - [+ abstain_votes +] votes ([+ abstain_percent +]%)
