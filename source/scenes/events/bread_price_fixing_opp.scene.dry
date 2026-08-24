@@ -208,6 +208,6 @@ if (window && d3) {
 
 Si - [+ yes_votes +] votes 
 
-Nó - [+ no_votes +] votes 
+<span style="color: #FF746C;">**No**</span> - [+ no_votes +] votes 
 
 Astenersi - [+ abstain_votes +] votes 
