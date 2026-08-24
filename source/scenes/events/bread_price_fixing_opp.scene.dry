@@ -19,10 +19,11 @@ Q.other_opinion = "Abstain";
 !}
 max-visits: 1
 new-page: true
+face-image: img/bread.jpeg
 
 = Abolishment Of Subsidies and Price Controls
 
-The <span class="wide_tooltip-wrap drop-down">Nitti government<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">In Government: PSRI, [+ ldr_name +], [+ ul_name +], PPI, [+ ds_name +]</span></span> has floored a bill that would abolish price controls on essential goods, including a controversial abolishing of price controls on bread, due to the crippling deficit that <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> is starting to gain. However, this bill is not popular among the left wing parties, specifically the PSI, PSRI, PRI, and Others, and our support base, the workers, and many in our party leadership are calling for us to vote agaisnt the bill.
+The <span class="wide_tooltip-wrap drop-down">Nitti government<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">In Government: PSRI, [+ ldr_name +], [+ ul_name +], PPI, [+ ds_name +]</span></span> has floored a bill that would abolish price controls on essential goods, including a controversial abolishing of price controls on bread, due to the crippling deficit that <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> is starting to gain. However, this bill is not popular among the left wing parties, specifically the PSI, PSRI, PRI, some members of the PPI and dissident socialists spread across the Others, and our support base, the workers, and many in our party leadership are calling for us to vote agaisnt the bill.
 
 Already, a general strike has been called by several unions under the PSI.
 
@@ -37,14 +38,14 @@ on-arrival: communist_dissent += 10; labour_dissent += 5; maximalist_dissent += 
 
 Our party members are shocked by our betrayal of the workers in order to side with a clearly unpopular policy! Some even begin dissenting and many Communist and Labour members have defected to the No! side. Party leadership is also infuriated, with even some Reformist members of our party calling this a bad idea.
 
-- @vote_bread: The  Chamber Of Deputies votes on the proposal..
+- @vote_bread: The Chamber Of Deputies votes on the proposal..
 
 @vote_no
 on-arrival: ul_relation -= 10; ldr_relation -= 5; communist_dissent -= 5; labour_dissent -= 5; workers_psi += 3*(1-dissent); vote_no_bread_fixing = 1
 
 Most of our party leadership are relieved, along with the workers which support us, and they appreciate the vote agaisnt the bill, however  some of our contacts with the [+ ul_name +] and the [+ ldr_name +] have stopped talking to us, most likely due to our decision.
 
-- @vote_bread: The Chamber Of Deputies votes on the proposal..
+- @bread_menu_no: Negotiations start between us and the other parties about the bill.
 
 @abstain
 on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_dissent += 5; workers_psi -= 3*(1-dissent); abstain_bread_fixing = 1
@@ -52,6 +53,50 @@ on-arrival: ul_relation -= 5; ldr_relation -= 3; communist_dissent += 5; labour_
 Our party members AND the [+ ul_name +] and [+ ldr_name +] are shocked at our decisionmaking! What were we thinking? Are we hoping the Abstain side will somehow win? Well, it doesnt matter now..
 
 - @vote_bread: The Chamber Of Deputies votes on the proposal..
+
+@bread_menu_no
+
+- @convince_ds_wow: Attempt to convince the [+ ds_name +] to vote agaisnt the bill.
+- @convince_ldr_wow: Attempt to convince the [+ ldr_name +] to vote agaisnt the bill.
+- @convince_other_wow: Attempt to convince the Others.
+- @vote_bread: We have done enough.
+
+@ldr_convince
+on-arrival: {!
+if (Q.ldr_relation < 65) {
+    Q.ldr_opinion = "Si";
+}
+if (Q.ldr_relation > 75) {
+    Q.ldr_opinion = "No";
+}
+!}
+go-to: bread_menu_no
+max-visits: 1
+
+[? if ldr_opinion = "Si": Unfortunately, and perhaps unsurprisingly, the LDR and its leader have voted in favour of the law, though some claim that voting for it would be pointless since the war already seems doomed.  ?]
+
+[? if ldr_opinion = "No": Thankfully, the LDR has realized the unpopularity of the bill and has voted agaisnt after having previously favoured the Si option, being swayed by its left wing. ?]
+
+@convince_ds_wow
+subtitle: [? if ds_leader = "Carnazza" or ds_leader = "Colonna" : We shouldn't be optimistic about their response. ?]
+on-arrival: {!
+if (Q.ds_leader == "Giuffrida") {
+        Q.ds_opinion = "No"
+}
+!}
+go-to: bread_menu_no
+max-visits: 1
+
+[? if ds_opinion = "No": Thankfully, the [+ ds_name +] has told us they are to vote agaisnt the bill! ?] [? if ds_opinion = "Si": Unfortunately, the [+ ds_name +] will be voting for the bill. ?]
+
+@convince_other_wow
+view-if: not pri_prominent or psri_collapse
+on-arrival: other_opinion = "No"
+go-to: bread_menu_no
+max-visits: 1
+
+We contact the left-leaning minor parties, specifically the [? if pri_prominent : PRI ?] [? if pri_prominent and psri_collapse : and the ?] [? if psri_collapse : PSRI ?], who agree to vote against the bill.
+
 
 @vote_bread
 on-arrival: {!
