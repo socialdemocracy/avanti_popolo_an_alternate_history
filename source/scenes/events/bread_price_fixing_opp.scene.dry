@@ -20,7 +20,7 @@ Q.other_opinion = "Abstain";
 max-visits: 1
 new-page: true
 
-= Abolishment Of Subsidies and Price Controls.
+= Abolishment Of Subsidies and Price Controls
 
 The <span class="wide_tooltip-wrap drop-down">Nitti government<span class="wide_tooltip-tip"><img src="img/portraits/FrancescoSaverioNitti.png">In Government: PSRI, [+ ldr_name +], [+ ul_name +], PPI, [+ ds_name +]</span></span> has floored a bill that would abolish price controls on essential goods, including a controversial abolishing of price controls on bread, due to the crippling deficit that <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> is starting to gain. However, this bill is not popular among the left wing parties, specifically the PSI, PSRI, PRI, and Others, and our support base, the workers, and many in our party leadership are calling for us to vote agaisnt the bill.
 
@@ -208,6 +208,6 @@ if (window && d3) {
 
 Si - [+ yes_votes +] votes ([+ yes_percent +]%) 
 
-Nó - [+ yes_votes +] votes ([+ yes_percent +]%) 
+Nó - [+ no_votes +] votes ([+ no_percent +]%) 
 
 Astenersi - [+ abstain_votes +] votes ([+ abstain_percent +]%)
