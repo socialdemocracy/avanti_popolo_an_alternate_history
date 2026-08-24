@@ -206,8 +206,8 @@ if (window && d3) {
 
 {!<svg id="chamber" style="width: 500px; height: 250px;"> </svg>!}
 
-Si - [+ yes_votes +] votes ([+ yes_percent +]%) ?]
+Si - [+ yes_votes +] votes ([+ yes_percent +]%) 
 
-Nó - [+ yes_votes +] votes ([+ yes_percent +]%) ?]
+Nó - [+ yes_votes +] votes ([+ yes_percent +]%) 
 
 Astenersi - [+ abstain_votes +] votes ([+ abstain_percent +]%)
