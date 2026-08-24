@@ -388,11 +388,11 @@ const tooltipList = [{
     },
     {
     searchString: "Si",
-    explanationText: "<img src=img/Astenersi (2)-Photoroom.png>  Si </br></br> Aye"
+    explanationText: "<img src=img/si-Photoroom.png>  Si </br></br> Aye"
     },
     {
     searchString: "Nó",
-    explanationText: "<img src=img/Astenersi (1)-Photoroom.png>  No </br></br> Nay"
+    explanationText: "<img src=img/no-Photoroom.png>  No </br></br> Nay"
     },
     {
     searchString: "Astenersi",
