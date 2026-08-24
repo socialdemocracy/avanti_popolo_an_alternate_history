@@ -61,7 +61,7 @@ Our party members AND the [+ ul_name +] and [+ ldr_name +] are shocked at our de
 - @convince_other_wow: Attempt to convince the Others.
 - @vote_bread: We have done enough.
 
-@ldr_convince
+@convince_ldr_wow
 on-arrival: {!
 if (Q.ldr_relation < 65) {
     Q.ldr_opinion = "Si";
