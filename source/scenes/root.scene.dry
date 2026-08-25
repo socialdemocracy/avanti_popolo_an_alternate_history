@@ -923,4 +923,4 @@ audio: shuffle music/main/Innodeilavoratori.mp3 music/main/FraIl19FraLAnno20.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1919
+= **[+ year +]**
