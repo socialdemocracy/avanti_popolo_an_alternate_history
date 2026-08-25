@@ -259,17 +259,13 @@ Astenersi - [+ abstain_votes +] votes
 
 - @yay: The bill is shot down.
 - @huhabstain: The bill is shot down via abstain votes.
-- @how_could_you_do_this: The bill passes and is signed into law.
-
-@yay
-subtitle: Predictable.
-view-if: no_votes >= yes_votes & abstain_votes
+- @how_could_you_do_this: The bill passes and is si& abstain_votes
 
 The bill, as expected, has been shot down, and the bill will not become law. What a close call. The governing coalition is seeming unstable.
 
 @how_could_you_do_this
 subtitle: The workers are furious.
-view-if: yes_votes >= no_votes & abstain_votes
+view-if: yes_votes >= no_votes && abstain_votes
 
 Somehow, the bill has passed the Chamber Of Deputies. Members of our party are mad, that we didnt do more to stop the bill, that we even collaborate with parties that do this. However, the governing coalition has mostly suffered from this as dissent inmediately brews among the PPI, PSRI, LDR, UL, etc.
 
@@ -277,7 +273,7 @@ Somehow, the bill has passed the Chamber Of Deputies. Members of our party are m
 
 @huh_abstain
 subtitle: An unexpected result?
-view-if: abstain_votes >= yes_votes & no_votes
+view-if: abstain_votes >= yes_votes && no_votes
 on-arrival: radicalism += 1
 
 Somehow, the abstain option has won, hurting the governments legitimacy and raising radicalism. The governing coalition is seeming unstable.
