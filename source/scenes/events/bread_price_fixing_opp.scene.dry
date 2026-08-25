@@ -259,7 +259,11 @@ Astenersi - [+ abstain_votes +] votes
 
 - @yay: The bill is shot down.
 - @huhabstain: The bill is shot down via abstain votes.
-- @how_could_you_do_this: The bill passes and is si& abstain_votes
+- @how_could_you_do_this: The bill passes and is signed into law.
+
+@yay
+subtitle: Predictable.
+view-if: no_votes >= yes_votes && abstain_votes
 
 The bill, as expected, has been shot down, and the bill will not become law. What a close call. The governing coalition is seeming unstable.
 
