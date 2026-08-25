@@ -953,27 +953,6 @@ body.dark-mode .parliament-tooltip {
   opacity: 0;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-.wide_tooltip-tip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 15px;
-  border-width: 7px;
-  border-style: solid;
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
-}
-.wide_tooltip-tip::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 16px; 
-  border-width: 6px;
-  border-style: solid;
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
-  z-index: 1;
-}
 .wide_tooltip-wrap:hover .wide_tooltip-tip,
 .wide_tooltip-wrap:focus .wide_tooltip-tip {
   visibility: visible;
@@ -1006,24 +985,4 @@ body.dark-mode .wide_tooltip-tip::before {
 .wide_tooltip-wrap.drop-down .wide_tooltip-tip {
   bottom: auto;
   top: calc(100% + 10px);
-}
-.wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
-  top: auto;
-  bottom: 100%;
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
-}
-.wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
-  top: auto;
-  bottom: 100%;
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
-}
-body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
-}
-body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
-  border: 2px solid #CD212A transparent transparent transparent;
-  outline: 2px solid #008C45 transparent transparent transparent;
 }
