@@ -275,7 +275,7 @@ Somehow, the bill has passed the Chamber Of Deputies. Members of our party are m
 
 - @root: Good riddance.
 
-@huh_abstain
+@huhabstain
 subtitle: An unexpected result?
 view-if: abstain_votes >= yes_votes && no_votes
 on-arrival: radicalism += 1
