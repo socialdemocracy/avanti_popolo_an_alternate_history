@@ -960,7 +960,8 @@ body.dark-mode .parliament-tooltip {
   left: 15px;
   border-width: 7px;
   border-style: solid;
-  border-color: #2235b2 transparent transparent transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 .wide_tooltip-tip::before {
   content: "";
@@ -969,7 +970,8 @@ body.dark-mode .parliament-tooltip {
   left: 16px; 
   border-width: 6px;
   border-style: solid;
-  border-color: #d8ddef transparent transparent transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
   z-index: 1;
 }
 .wide_tooltip-wrap:hover .wide_tooltip-tip,
@@ -981,8 +983,7 @@ body.dark-mode .parliament-tooltip {
   width: 100%;
   display: block;
   margin: 0 auto 6px auto;
-  border: 2px solid #CD212A;
-  outline: 2px solid #008C45;
+  border: 1px solid #DDD;
 }
 body.dark-mode .wide_tooltip-tip {
   background-color: #151517;
@@ -995,10 +996,12 @@ body.dark-mode .wide_tooltip-tip img {
   border-color: #555; 
 }
 body.dark-mode .wide_tooltip-tip::after {
-  border-color: #8093ff transparent transparent transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 body.dark-mode .wide_tooltip-tip::before {
-  border-color: #1a1a2e transparent transparent transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 .wide_tooltip-wrap.drop-down .wide_tooltip-tip {
   bottom: auto;
