@@ -946,7 +946,8 @@ body.dark-mode .parliament-tooltip {
 
   background-color: #d8ddef;
   color: #3b1f0a;
-  border: 1px solid #2235b2;
+  border: 2px solid #CD212A;
+  outline: 2px solid #008C45;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   visibility: hidden;
   opacity: 0;
@@ -980,12 +981,14 @@ body.dark-mode .parliament-tooltip {
   width: 100%;
   display: block;
   margin: 0 auto 6px auto;
-  border: 1px solid #999;
+  border: 2px solid #CD212A;
+  outline: 2px solid #008C45;
 }
 body.dark-mode .wide_tooltip-tip {
-  background-color: #1a1a2e;
+  background-color: #151517;
   color: #e0e0e0;
-  border: 1px solid #8093ff;
+  border: 2px solid #CD212A;
+  outline: 2px solid #008C45;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 body.dark-mode .wide_tooltip-tip img {
