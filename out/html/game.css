@@ -1010,16 +1010,20 @@ body.dark-mode .wide_tooltip-tip::before {
 .wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
   top: auto;
   bottom: 100%;
-  border-color: transparent transparent #2235b2 transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 .wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
   top: auto;
   bottom: 100%;
-  border-color: transparent transparent #d8ddef transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::after {
-  border-color: transparent transparent #8093ff transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
 body.dark-mode .wide_tooltip-wrap.drop-down .wide_tooltip-tip::before {
-  border-color: transparent transparent #1a1a2e transparent;
+  border: 2px solid #CD212A transparent transparent transparent;
+  outline: 2px solid #008C45 transparent transparent transparent;
 }
