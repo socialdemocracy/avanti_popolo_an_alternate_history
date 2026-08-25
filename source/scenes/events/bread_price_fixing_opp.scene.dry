@@ -269,7 +269,7 @@ The bill, as expected, has been shot down, and the bill will not become law. Wha
 
 @how_could_you_do_this
 subtitle: The workers are furious. 
-view-if: yes_votes >= no_votes and abstain_votes if abstain_votes > 0
+view-if: yes_votes >= no_votes and abstain_votes
 
 Somehow, the bill has passed the Chamber Of Deputies. Members of our party are mad, that we didnt do more to stop the bill, that we even collaborate with parties that do this. However, the governing coalition has mostly suffered from this as dissent inmediately brews among the PPI, PSRI, LDR, UL, etc.
 
