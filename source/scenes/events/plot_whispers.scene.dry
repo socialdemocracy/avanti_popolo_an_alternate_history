@@ -1,19 +1,19 @@
-title: Whispers of a Plot
-subtitle: Our sources have gathered crucial information...
+title: A plot?
+subtitle: The [+ pnf_name +] might be planning something.
 view-if: (year = 1922 and month = 8) or (fasci_coup_progress > 8 and year = 1922 and month < 8) and not national_congress_seen
 new-page: true
 on-arrival: fdc_strength += 25; plot_whispers_seen = 1
 max-visits: 1 
 tags: event
 
-= Whispers of a Plot
+= A brewing plot?
 
-Our sources have sent us concerning behaviour regarding the Fasci. They have been militarising further, as meetings between the fascists and the military have increased in frequency, with some even floating the rumor that the [+ pnf_leader +] is planning a coup.
+We have received information from our sources, which indicate a plan to do something soon, as the Fasci is mobilizing and moving and the [+ pnf_name +] is surprisingly silent. Could [+ pnf_leader +] be planning a coup? Some in our party think so.
 
 How should we react to these claims?
 
-- @expand_paramilitaries: Expand the Red Guards.
-- @increase_relations: Improve our relation with our coalition allies and the King.
+- @expand_paramilitaries: Expand the Red Guard.
+- @increase_relations: Improve our relation with our coalition allies and [+ king +].
 - @root: What's the worst that could happen?
 
 @expand_paramilitaries
@@ -22,7 +22,7 @@ unavailable-subtitle: [? if resources < 1 : Not enough resources. (Need 1) ?][? 
 choose-if: resources > 0 and revolutionary_fervour > 39
 on-arrival: resources -= 1; rg_strength += 20;
 
-The expansion of the Red Guards is accepted by most of the factions as a necessity, especially seeing the violence occurring daily within Italy.
+The expansion of the Red Guard is accepted by most of the factions as a necessity, especially seeing the cycle of political violence which is continuing.
 
 @increase_relations
 subtitle: Stronger relations with our allies in government might help in the event of anything.
@@ -30,4 +30,4 @@ choose-if: participating = 1 and psi_in_government = 1 and resources > 0
 unavailable-subtitle: [? if participating = 0 : We have already agreed to abandon parliamentary means. ?][? if not psi_in_government : We are not in government. ?][? if resources < 1 : Not enough resources. (Need 1) ?]
 on-arrival: ppi_relation += 6 if socialist_catholic_coalition; ds_relation += 6 if ds_allies; psri_relation += 10; pll_relation += 7; king_relation += 10 if radicalisation < 6; resources -= 1; king_relation += 15 if radicalisation > 5;
 
-Relations between the coalition parties are strengthened and overtures are made to the King, [? if radicalisation < 6 :who responds warmly to our outreach. ?][? if radicalisation > 5 :who responds mildly to our outreach. ?]
+Relations between the coalition parties are strengthened and overtures are made to [+ king +], [? if radicalisation < 6 :who responds warmly to our outreach. ?][? if radicalisation > 5 :who responds mildly to our outreach. ?]
