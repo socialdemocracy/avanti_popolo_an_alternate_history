@@ -67,7 +67,7 @@ However, it is reliant on [+ king +] accepting the plan.
 
 @king_deny
 subtitle: Expected..
-view-if: king relation < 50 and ul_relation < 60
+view-if: king relation <=  50 and ul_relation <=  60
 
 Outright, [+ king +] has denied the decree. History shall judge [+ king +] for his choices later, but now, we have to focus on getting the Fasci out of Rome!
 
@@ -85,7 +85,7 @@ Surprisingly, [+ king +] has accepted Facta's plan to crush the Fasci and [+ pnf
 
 @king_threaten
 subtitle: What is going on?
-view-if: king relation < 73 and ul_relation >= 50 and fasci_urgency >= 4
+view-if: king relation <=  73 and ul_relation >= 50 and fasci_urgency >= 4
 
 [+ king +] has threatened Facta with his abdication if he is to put the state of siege into effect. Facta, being a devoted <span style="color: [+ i_colour +];">monarchist</span> although somewhat liberal, is worried about the repercussions of [+ king +]'s abdication and he will have to make a  decision, quickly, now, to stop the <span style="color: [+ pnf_colour +];">fascist</span> hordes, or doom our country to <span style="color: [+ pnf_colour +];">fascist</span> rule..
 
@@ -97,7 +97,7 @@ Now, Facta..
 
 @facta_step_down
 subtitle: Expected..
-view-if: king relation < 73 and ul_relation < 60
+view-if: king relation <=  73 and ul_relation <=  60
 
 Facta has given up. The decree will not be signed into law. History shall judge [+ king +] and Facta for their choices later, but now, we have to focus on getting the Fasci out of Rome!
 
@@ -108,7 +108,7 @@ Facta has given up. The decree will not be signed into law. History shall judge 
 
 @facta_abdicate
 subtitle: Can Facta really save our democracy?
-view-if: king relation < 73 and ul_relation >= 71 and fasci_urgency >= 4 and republican_sentiment >= 55 and nationalist_sentiment < 34
+view-if: king relation <=  73 and ul_relation >= 71 and fasci_urgency >= 4 and republican_sentiment >= 55 and nationalist_sentiment <=  34
 on-arrival: army_convinced = 1; army_king_successful = 1; police_convinced = 1; police_king_successful = 1
 
 Surprisingly, Facta has called [+ king +]'s bluff, and has gotten into a lengthy argument with [+ king +], arguing this was the only way to atleast salvage the Facta Government, his government. Facta still hasnt convinced [+ king +], but given his stubborness, the king..
@@ -119,7 +119,7 @@ Surprisingly, Facta has called [+ king +]'s bluff, and has gotten into a lengthy
 
 @aceed_king
 subtitle: Finally..
-view-if: king relation < 50 and ul_relation >= 78 and fasci_urgency >= 4 and not_participating = 0
+view-if: king relation <=  50 and ul_relation >= 78 and fasci_urgency >= 4 and not_participating = 0
 
 [+ king +] has accepted Facta's plan to crush the Fasci and [+ pnf_leader +]'s forces after a long discussion with him. The Regio Esercito, Caribieniri, among others, have begun to be mobilized as they begin to protect Rome and fighting starts.. Now, we have to choose if we are mobilizing the Red Guard [? if arditi_cooperation = 1: and Arditi Del Popolo ?] or not.
 
@@ -128,7 +128,7 @@ view-if: king relation < 50 and ul_relation >= 78 and fasci_urgency >= 4 and not
 
 @adbicate_king_wow
 subtitle: WHAT? - This path is still WIP.
-view-if: republican_sentiment >= 78 and socialist_sentiment >= 78 and nationalist_sentiment < 23
+view-if: republican_sentiment >= 78 and socialist_sentiment >= 78 and nationalist_sentiment <=  23
 on-arrival: king = "Vacant" 
 
 The king for some reason has decided to abdicate, claiming that the country clearly didnt want him anymore and has left almost everything to Facta, after a long and heated discussion. Facta has inmediately put his decree into effect using his powers as Prime Minister due to the king's abdication.
