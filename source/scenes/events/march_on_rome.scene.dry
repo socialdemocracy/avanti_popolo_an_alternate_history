@@ -278,7 +278,7 @@ if (Q.army_loyalty < 0) {
     Q.army_loyalty = 0;
 }
 Q.army_power = Q.army_strength * Q.army_loyalty * Q.army_militancy;
-Q.adp_power = Q.adp_strength * Q.adp_militancy
+Q.adp_power = Q.adp_strength * Q.adp_militancy;
 
 if (Q.rome_rg_visited == 1 && Q.rg_banned == 0) {
     Q.rome_total_power += Q.rg_power;
