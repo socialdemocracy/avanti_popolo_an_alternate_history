@@ -22,9 +22,9 @@ on-arrival: pnf_leader = "Balbo" if pnf_leader == "Grand Council"
 face-image: img/MarchOnRome.jpg
 go-to: rome_menu
  
-It is now clear that those suspicious movements were preparations for a March On Rome, as [+ pnf_leader +] has demanded the resignation of the current government and appointment to the position of prime minister. [? if fasci_urgency < 2: However, most in our party believe this is a bluff and that [+ pnf_leader +]'s forces are too weak to win a battle agaisnt the Regio Esercito. ?] , Either way, the <span class="wide_tooltip-wrap">Squadrismo<span class="wide_tooltip-tip">Thugs mainly from the Fasci and PNF.</span></span> and Fasci are prepared to enter into the capital in strategic positions, and most agree that something must be done to stop them.
+It is now clear that those suspicious movements were preparations for a March On Rome, as [+ pnf_leader +] has demanded the resignation of the current government and appointment to the position of prime minister. [? if fasci_urgency < 2 : However, most in our party believe this is a bluff and that [+ pnf_leader +]'s forces are too weak to win a battle agaisnt the Regio Esercito. ?] , Either way, the <span class="wide_tooltip-wrap">Squadrismo<span class="wide_tooltip-tip">Thugs mainly from the Fasci and PNF.</span></span> and Fasci are prepared to enter into the capital in strategic positions, and most agree that something must be done to stop them.
 
-[? if prime_minister = "Facta" and psi_in_government = 0: Prime Minister Facta has drafted a plan for the defence of  <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> to preserve his government for [+ king +] to sign, with the Regio Esercito exuding confidence. Now, it is up for [+ king +] to sign the decree if that course is to be followed. ?]
+[? if prime_minister = "Facta" and psi_in_government = 0 : Prime Minister Facta has drafted a plan for the defence of  <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> to preserve his government for [+ king +] to sign, with the Regio Esercito exuding confidence. Now, it is up for [+ king +] to sign the decree if that course is to be followed. ?]
 
 @rome_menu
 
