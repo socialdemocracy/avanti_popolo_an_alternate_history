@@ -139,12 +139,12 @@ The king for some reason has decided to abdicate, claiming that the country clea
 @mobilise_no_government
 view-if: psi_in_government = 0
 
-- @rome_rg_mobilise: Mobilise the Red Guard to stop [+ pnf_leader +]!
-- @rome_adp_mobilise: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
+- @rome_rg_mobilise_no_government: Mobilise the Red Guard to stop [+ pnf_leader +]!
+- @rome_adp_mobilise_no_government: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
 - @rome_done: We have done all we can.
 - @doom_why_select_this: There is nothing we can do.
 
-@rome_rg_mobilise
+@rome_rg_mobilise_no_government
 max-visits: 1
 subtitle: Our forces will begin to March on Rome as well, [? if participating = 1 : in support of the government. ?][? if participating = 0: potentially escalating the situation to a civil war. ?][? if rg_banned = 1 : The Red Guard is banned, and will be weakened. ?]
 choose-if: communist_dissent < 50 or maximalist_dissent < 50 or reformist_dissent < 50 or labour_dissent < 50
@@ -154,7 +154,7 @@ go-to: rome_menu if participating == 1 or maximalist_participating == 1; civil_w
 
 The Red Guard mobilises on our order, beginning the March to Rome to confront [+ pnf_leader +].
 
-@rome_adp_mobilise
+@rome_adp_mobilise_no_government
 max-visits: 1
 subtitle: Our forces will begin to March on Rome as well, [? if participating = 1 : in support of the government. ?][? if not_participating = 1: the bourgeois may see this as a threat as well, however. ?]
 choose-if: communist_dissent < 50 or maximalist_dissent < 50 or reformist_dissent < 50 or labour_dissent < 50
