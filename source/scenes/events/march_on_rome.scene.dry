@@ -54,7 +54,7 @@ go-to: rome_menu
 @facta_plan
 face-image: img/facta_prime_minister.jpeg
 subtitle: Can it be done?
-view-if: prime_minister = "Facta" and psi_in_government = 0
+view-if: prime_minister == "Facta" and psi_in_government == 0
 
 Prime Minister Luigi Facta has desperately tried to save his government and has given his plan to [+ king +]. Reportedly, the plan involves declaring a state of siege and then sending the Regio Esercito and Caribinieri to stop the Fasci and the March On Rome. The Regio Esercito has already exuded confidence, and if the plan is adopted, it is likely the "bluff" [+ pnf_leader +]'s forces are carrying out will be crushed.
 
