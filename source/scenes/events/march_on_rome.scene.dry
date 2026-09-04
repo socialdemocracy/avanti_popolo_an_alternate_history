@@ -28,42 +28,8 @@ It is now clear that those suspicious movements were preparations for a March On
 
 @rome_menu
 
-- @revolution_or_reform_march: Firstly, many of our Communist members are saying this would be a perfect time to launch a revolution.
-- @facta_plan: Prime Minister Luigi Facta has presented his plan to [+ king +], and now it is up to him.
 - @mobilise_government: We should use our position in government to mobilise all forces agaisnt the <span style="color: [+ pnf_colour +];">fascists</span>!
 - @mobilise_no_government: Mobilize our anti-<span style="color: [+ pnf_colour +];">fascist</span> forces!
-- @doom_why_select_this: There is nothing we can do.
-
-@revolution_or_reform_march
-subtitle: Is it really?
-view-if: maximalist_participating = 1 and psi_in_government
-
-We are at  a crossroads, as the compromise made back in the XVI congress has come back to meet us again. The Communist faction has begun to advocate that we start our own March On Rome to stop the <span style="color: [+ pnf_colour +];">fascists</span> and get rid of the bourgeoisie once and for all. Meanwhile, the Reformist faction argues that we should continue our position in government and interact with our democracy, claiming that we are no better than the <span style="color: [+ pnf_colour +];">fascists</span> if we become so opportunistic to use this.
-
-- @cv_fight: Use this as an opportunity; launch the revolution!
-- @cv_def: We should use this as an opportunity to get rid of the <span style="color: [+ pnf_colour +];">fascists</span> and [+ pnf_leader +] while in government!
-
-@cv_fight 
-go-to: civil_war
-
-@cv_def
-go-to: rome_menu
-
-
-@facta_plan
-face-image: img/facta_prime_minister.jpeg
-subtitle: Can it be done?
-view-if: prime_minister == "Facta" and psi_in_government == 0
-
-Prime Minister Luigi Facta has desperately tried to save his government and has given his plan to [+ king +]. Reportedly, the plan involves declaring a state of siege and then sending the Regio Esercito and Caribinieri to stop the Fasci and the March On Rome. The Regio Esercito has already exuded confidence, and if the plan is adopted, it is likely the "bluff" [+ pnf_leader +]'s forces are carrying out will be crushed.
-
-
-@mobilise_no_government
-view-if: psi_in_government = 0
-
-- @rome_rg_mobilise_no_government: Mobilise the Red Guard to stop [+ pnf_leader +]!
-- @rome_adp_mobilise_no_government: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
-- @rome_done: We have done all we can.
 - @doom_why_select_this: There is nothing we can do.
 
 @rome_rg_mobilise_no_government
@@ -89,11 +55,17 @@ Our allied Arditi Del Popolo mobilizes to intercept the Fasci.
 
 
 @mobilise_government
+view-if: psi_in_government = 0
+
+- @rome_rg_mobilise_no_government: Mobilise the Red Guard to stop [+ pnf_leader +]!
+- @rome_adp_mobilise_no_government: Mobilise the Arditi Del Popolo to stop [+ pnf_leader +]!
+
+@mobilise_government
 view-if: psi_in_government = 1
 
 - @rome_army_mobilise: Mobilise the Army to stop [+ pnf_leader +]!
 - @rome_police_mobilise: Mobilise the Carabinieri to stop [+ pnf_leader +]!
-- @rome_rg_mobilise: Mobilise the Red Guards to stop [+ pnf_leader +]!
+- @rome_rg_mobilise: Mobilise the Red Guard to stop [+ pnf_leader +]!
 - @rome_adp_mobilise: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
 - @rome_done: We have done all we can.
 - @doom_why_select_this: There is nothing we can do.
