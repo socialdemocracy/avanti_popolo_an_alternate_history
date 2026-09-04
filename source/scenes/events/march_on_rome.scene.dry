@@ -1,6 +1,6 @@
 title: Suspicious Movements?
 subtitle: [+ pnf_leader +] must definitely be planning something.
-view-if: (year == 1922 and month == 10) or (fasci_coup_progress >= 10 and year == 1922 and month <= 10) and (fdc_banned == 0 or ard_banned == 0 or abl_banned == 0) or (fdc_strength + ard_strength + abl_strength) > 100) and pnf_in_government = 0 and not national_congress_seen and not pnf_banned
+view-if: ((year == 1922 and month == 10) or (fasci_coup_progress >= 10 and year == 1922 and month <= 10)) and (fdc_banned == 0 or ard_banned == 0 or abl_banned == 0) or (fdc_strength + ard_strength + abl_strength) > 100) and pnf_in_government = 0 and not national_congress_seen and not pnf_banned
 max-visits: 1
 priority: -1
 tags: event
