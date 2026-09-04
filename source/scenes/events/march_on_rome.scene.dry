@@ -220,7 +220,7 @@ We send out the order to mobilise the Caribinieri, but it will require [+ king +
 - @rome_police_king: Request [+ king +] formally mobilise the army.
 - @rome_police_bypass: [+ king +] be damned, mobilise the Caribinieri already!
 
-@rome_army_king
+@rome_police_king
 subtitle: This will result in full mobilisation of the Caribinieri.
 choose-if: king_relation > 59
 unavailable-subtitle: [? if king_relation < 60: Our relations with [+ king +] are not high enough, despite our efforts. ?]
@@ -229,7 +229,7 @@ go-to: rome_menu
 
 [+ king +] authorises the order, and the entirely of the Caribinieri is mobilised.
 
-@rome_army_bypass
+@rome_police_bypass
 subtitle: Bypassing [+ king +] will make many loyalists of him not mobilise at all.
 on-arrival: police_king_bypassed = 1; police_king_successful = 0
 go-to: rome_menu
