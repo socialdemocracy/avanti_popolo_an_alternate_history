@@ -1,4 +1,38 @@
+title: Suspicious Movements?
+subtitle: [+ pnf_leader +] must definitely be planning something.
+view-if: ((year == 1922 and month == 10) or (fasci_coup_progress >= 10 and year == 1922 and month <= 10)) and ((fdc_banned == 0 or ard_banned == 0 or abl_banned == 0) or (fdc_strength + ard_strength + abl_strength) > 100) and pnf_in_government = 0 and not national_congress_seen and not pnf_banned
+max-visits: 1
+priority: -1
+tags: event
+new-page: true
+face-image: img/squadristi.webp
 
+= Suspicious Movements
+
+Over the previous days, we have noticed strange movements from the Fasci, <span class="wide_tooltip-wrap">Squadrismo<span class="wide_tooltip-tip">Thugs mainly from the Fasci and PNF.</span></span>, and other right-wing organizations which support [+ pnf_leader +]  as a influx of troops have amassed in 5 small towns near Central <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span>, supposedly due to them being some sort of rallying points for some type of plot, with some also assemblying in Perugia claiming it was the headquarters of their <span style="color: [+ pnf_colour +];">fascist</span> revolution.
+
+More concerningly, armories have been raided and weapons have mysteriously dissapeared from the stockpiles of weapons the Regio Esercito has, suggesting [+ pnf_leader +] is plotting something, and with the time left we have, we should start to try to be prepared for a possible move from the Fasc-
+
+- @oh_no_democracy_death
+
+@oh_no_democracy_death
+title: The <span style="color: [+ pnf_colour +];">fascists</span> are beginning a march on Rome!
+subtitle: To the barricades!
+on-arrival: pnf_leader = "Balbo" if pnf_leader == "Grand Council"
+face-image: img/MarchOnRome.jpg
+go-to: rome_menu
+ 
+It is now clear that those suspicious movements were preparations for a March On Rome, as [+ pnf_leader +] has demanded the resignation of the current government and appointment to the position of prime minister. However, most in our party believe this is a bluff and that [+ pnf_leader +]'s forces are too weak to win a battle agaisnt the Regio Esercito, Either way, the <span class="wide_tooltip-wrap">Squadrismo<span class="wide_tooltip-tip">Thugs mainly from the Fasci and PNF.</span></span> and Fasci are prepared to enter into the capital in strategic positions, and most agree that something must be done to stop them.
+
+[? if prime_minister = "Facta" and psi_in_government = 0 : Prime Minister Facta has drafted a plan for the defence of  <span style="color: #008C45;">**It**</span><span style="color: #E5E4E2;">**a**</span><span style="color: #CD212A;">**ly**</span> to preserve his government for [+ king +] to sign, with the Regio Esercito exuding confidence. Now, it is up for [+ king +] to sign the decree if that course is to be followed. ?]
+
+@rome_menu
+
+- @revolution_or_reform_march: Firstly, many of our Communist members are saying this would be a perfect time to launch a revolution.
+- @facta_plan: Prime Minister Luigi Facta has presented his plan to [+ king +], and now it is up to him.
+- @mobilise_government: We should use our position in government to mobilise all forces agaisnt the <span style="color: [+ pnf_colour +];">fascists</span>!
+- @mobilise_no_government: Mobilize our anti-<span style="color: [+ pnf_colour +];">fascist</span> forces!
+- @doom_why_select_this: There is nothing we can do.
 
 @rome_rg_mobilise
 max-visits: 1
