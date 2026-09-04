@@ -15,6 +15,10 @@ const colourList = [{
         style: "color: #90EE90; font-weight: bold;"
    },
     {
+        word: "ADN",
+        style: "color: #78b3e3; font-weight: bold;"
+   },
+    {
         word: "Si",
         style: "color: #74cf74; font-weight: bold;"
    },
@@ -385,6 +389,10 @@ const tooltipList = [{
     {
     searchString: "PRI",
     explanationText: "<img src=img/pribetter.webp>  Partito Republicano Italiano </br></br> Italian Republican Party"
+    },
+    {
+    searchString: "ADN",
+    explanationText: "<img src=img/pribetter.webp>  Alleanza Democratica Nazionale </br></br> National Democratic Alliance"
     },
     {
     searchString: "Si",
