@@ -5,39 +5,9 @@
 @mobilise_government
 view-if: psi_in_government = 1
 
-- @rome_police_mobilise: Mobilise the Carabinieri to stop [+ pnf_leader +]!
 - @rome_rg_mobilise: Mobilise the Red Guard to stop [+ pnf_leader +]!
 - @rome_adp_mobilise: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
 
-@rome_police_mobilise
-max-visits: 1
-subtitle: The Carabinieri themselves seem to be willing to cooperate, now we have to convince [+ king +]...
-view-if: psi_in_government
-on-arrival: police_convinced = 1; rome_police_visited = 1
-go-to: rome_police_checks
-
-We send out the order to mobilise the Carabinieri, but it will require [+ king +]'s authorisation.
-
-@rome_police_checks
-
-- @rome_police_king: Request [+ king +] formally order the Carabinieri to crackdown.
-- @rome_police_bypass: [+ king +] be damned, send the orders out to the Carabinieri already!
-
-@rome_police_king
-subtitle: This will result in full mobilisation of the Carabinieri.
-choose-if: king_relation > 59
-unavailable-subtitle: [? if king_relation < 60: Our relations with [+ king +] are not high enough. ?]
-on-arrival: police_king_successful = 1; police_king_bypassed = 0
-go-to: rome_menu
-
-[+ king + ] authorises the order, and the entirely of the Carabinieri is mobilised.
-
-@rome_police_bypass
-subtitle: Bypassing [+ king +] will make many loyalists of him not mobilise at all.
-on-arrival: police_king_bypassed = 1; police_king_successful = 0
-go-to: rome_menu
-
-[+ king +] refuses to authorise the order, but a number of our loyal forces within the Carabinieri mobilise regardless.
 
 @rome_rg_mobilise
 max-visits: 1
