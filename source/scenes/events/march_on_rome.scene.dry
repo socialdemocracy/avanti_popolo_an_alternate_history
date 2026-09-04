@@ -308,7 +308,7 @@ console.log('Enemy strength:', Q.rome_enemy_power)
 !}
 go-to: total_defeat_accede if (rome_total_defeat = 1 and king_relation < 60); total_defeat_refuse if (rome_total_defeat = 1 and king_relation > 59); rome_long_war if rome_civil_war = 1; rome_victory if rome_victory = 1
 
-@rome_nothing
+@doom_why_select_this
 subtitle: We must prepare for the worst.
 view-if: rome_army_visited = 0 and rome_police_visited = 0 and rome_rg_visited = 0
 on-arrival: mussolini_unopposed = 1
