@@ -170,7 +170,8 @@ Our allied Arditi Del Popolo mobilizes to intercept the Fasci.
 view-if: psi_in_government = 1
 
 - @rome_army_mobilise: Mobilise the Army to stop [+ pnf_leader +]!
-- @rome_rg_mobilise: Mobilise the Red Guards to stop [+ pnf_leader +]!
+- @rome_police_mobilise: Mobilise the Caribinieri to stop [+ pnf_leader +]
+- @rome_rg_mobilise: Mobilise the Red Guard to stop [+ pnf_leader +]!
 - @rome_adp_mobilise: Mobilise the Arditi del Popolo to stop [+ pnf_leader +]!
 - @rome_done: We have done all we can.
 - @doom_why_select_this: There is nothing we can do.
@@ -204,6 +205,36 @@ on-arrival: army_king_bypassed = 1; army_king_successful = 0
 go-to: rome_menu
 
 [+ king +] refuses to authorise the order, but a number of our loyal forces within the Regio Esercito mobilise regardless.
+
+@rome_police_mobilise
+max-visits: 1
+subtitle: The Caribinieri themselves seem to be willing to cooperate, now we have to convince [+ king +]...
+view-if: psi_in_government
+on-arrival: police_convinced = 1; rome_police_visited = 1
+go-to: rome_police_checks
+
+We send out the order to mobilise the Caribinieri, but it will require [+ king +]'s authorisation.
+
+@rome_police_checks
+
+- @rome_police_king: Request [+ king +] formally mobilise the army.
+- @rome_police_bypass: [+ king +] be damned, mobilise the Caribinieri already!
+
+@rome_army_king
+subtitle: This will result in full mobilisation of the Caribinieri.
+choose-if: king_relation > 59
+unavailable-subtitle: [? if king_relation < 60: Our relations with [+ king +] are not high enough, despite our efforts. ?]
+on-arrival: police_king_successful = 1; police_king_bypassed = 0
+go-to: rome_menu
+
+[+ king +] authorises the order, and the entirely of the Caribinieri is mobilised.
+
+@rome_army_bypass
+subtitle: Bypassing [+ king +] will make many loyalists of him not mobilise at all.
+on-arrival: police_king_bypassed = 1; police_king_successful = 0
+go-to: rome_menu
+
+[+ king +] refuses to authorise the order, but a number of our loyal forces within the Caribinieri mobilise regardless.
 
 @rome_rg_mobilise
 max-visits: 1
