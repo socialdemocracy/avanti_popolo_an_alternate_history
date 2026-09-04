@@ -75,7 +75,7 @@ Outright, [+ king +] has denied the decree. History shall judge [+ king +] for h
 
 @king_accept
 subtitle: Surprising.
-view-if: king_relation >= 74 and ul_relation >= 71 and fasci_urgency >= 6
+view-if: king_relation >= 74 and ul_relation >= 71 and fasci_urgency >= 4
 on-arrival: army_convinced = 1; army_king_successful = 1; police_convinced = 1; police_king_successful = 1
 
 Surprisingly, [+ king +] has accepted Facta's plan to crush the Fasci and [+ pnf_leader +]'s forces. The Regio Esercito, Carabinieri, among others, have begun to be mobilized as they begin to protect Rome and fighting starts.. Now, we have to choose if we are mobilizing the Red Guard [? if arditi_cooperation = 1: and Arditi Del Popolo ?] or not.
@@ -85,7 +85,7 @@ Surprisingly, [+ king +] has accepted Facta's plan to crush the Fasci and [+ pnf
 
 @king_threaten
 subtitle: What is going on?
-view-if: king_relation < 73 and ul_relation >= 50 and fasci_urgency >= 4
+view-if: king_relation < 73 and ul_relation >= 61 and fasci_urgency >= 2
 
 [+ king +] has threatened Facta with his abdication if he is to put the state of siege into effect. Facta, being a devoted <span style="color: [+ i_colour +];">monarchist</span> although somewhat liberal, is worried about the repercussions of [+ king +]'s abdication and he will have to make a  decision, quickly, now, to stop the <span style="color: [+ pnf_colour +];">fascist</span> hordes, or doom our country to <span style="color: [+ pnf_colour +];">fascist</span> rule..
 
@@ -154,6 +154,17 @@ go-to: rome_menu if participating == 1 or maximalist_participating == 1; civil_w
 
 The Red Guard mobilises on our order, beginning the March to Rome to confront [+ pnf_leader +].
 
+- @death_democracy_civil_war: It is civil war.
+- @rome_menu_special_no_government: Lets see..
+
+@death_democracy_civil_war
+go-to: civil_war
+view-if: not_participating == 1
+
+@rome_menu_special_no_government
+view-if: participating == 1 or maximalist_participating == 1
+go-to: rome_menu
+
 @rome_adp_mobilise_no_government
 max-visits: 1
 subtitle: Our forces will begin to March on Rome as well, [? if participating = 1 : in support of the government. ?][? if not_participating = 1: the bourgeois may see this as a threat as well, however. ?]
@@ -161,10 +172,10 @@ choose-if: communist_dissent < 50 or maximalist_dissent < 50 or reformist_dissen
 view-if: arditi_cooperation = 1
 unavailable-subtitle: [? if (communist_dissent >= 50 and maximalist_dissent >= 50 and reformist_dissent >= 50 and labour_dissent >= 50) : The party is too disunited to act. ?]
 on-arrival: rome_adp_visited = 1
-go-to: rome_menu
 
 Our allied Arditi Del Popolo mobilizes to intercept the Fasci.
 
+- @rome_menu: Lets see..
 
 @mobilise_government
 view-if: psi_in_government = 1
@@ -242,7 +253,7 @@ subtitle: Our forces will begin to March on Rome as well, [? if participating = 
 choose-if: communist_dissent < 50 or maximalist_dissent < 50 or reformist_dissent < 50 or labour_dissent < 50
 unavailable-subtitle: [? if (communist_dissent > 50 and maximalist_dissent > 50 and reformist_dissent > 50 and labour_dissent > 50) : The party is too disunited to act. ?]
 on-arrival: rome_rg_visited = 1
-go-to: rome_menu if participating == 1 or maximalist_participating == 1; civil_war if not_participating == 1
+go-to: mobilise_government if participating == 1 or maximalist_participating == 1; civil_war if not_participating == 1
 
 The Red Guard mobilises on our order, beginning the March to Rome to confront [+ pnf_leader +].
 
