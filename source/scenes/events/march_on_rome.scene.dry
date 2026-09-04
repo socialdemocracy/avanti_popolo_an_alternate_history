@@ -54,7 +54,7 @@ go-to: rome_menu
 Our allied Arditi Del Popolo mobilizes to intercept the Fasci.
 
 
-@mobilise_government
+@mobilise_no_government
 view-if: psi_in_government = 0
 
 - @rome_rg_mobilise_no_government: Mobilise the Red Guard to stop [+ pnf_leader +]!
