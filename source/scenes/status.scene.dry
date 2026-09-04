@@ -292,27 +292,6 @@ Foreign Minister: [? if foreign_minister_party == "PSI": <span style="color: [+ 
 
 Agriculture Minister: [? if agriculture_minister_party == "PSI": <span style="color: [+ psi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "LDR": <span style="color: [+ ldr_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSRI": <span style="color: [+ psri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "UL": <span style="color: [+ ul_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCd'I": <span style="color: [+ pcdi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PSU": <span style="color: [+ psu_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLL": <span style="color: [+ pll_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PRI": <span style="color: [+ pri_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "DS": <span style="color: [+ ds_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PDSI": <span style="color: [+ pdsi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PPI": <span style="color: [+ ppi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLDI": <span style="color: [+ pldi_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PLI": <span style="color: [+ pli_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "CC": <span style="color: [+ cc_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PCS": <span style="color: [+ pcs_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "FdC": <span style="color: [+ pnf_colour +];">[+ agriculture_minister +]</span>?][? if agriculture_minister_party == "PNF": <span style="color: [+ pnf_colour +];">[+ agriculture_minister +]</span>?] ([? if agriculture_minister_party == "PSI":<span style="color: [+ psi_colour +];">**[+ psi_name +]**</span>?][? if agriculture_minister_party == "LDR":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if agriculture_minister_party == "PSRI":<span style="color: [+ psri_colour +];">**PSRI**</span>?][? if agriculture_minister_party == "UL":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if agriculture_minister_party == "PCd'I":<span style="color: [+ pcdi_colour +];">**PCd'I**</span>?][? if agriculture_minister_party == "PSU":<span style="color: [+ psu_colour +];">**PSU**</span>?][? if agriculture_minister_party == "PLL":<span style="color: [+ pll_colour +];">**PLL**</span>?][? if agriculture_minister_party == "PRI":<span style="color: [+ pri_colour +];">**PRI**</span>?][? if agriculture_minister_party == "DS":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if agriculture_minister_party == "PDSI":<span style="color: [+ ds_colour +];">**[+ ds_name +]**</span>?][? if agriculture_minister_party == "PPI":<span style="color: [+ ppi_colour +];">**PPI**</span>?][? if agriculture_minister_party == "PLDI":<span style="color: [+ ldr_colour +];">**[+ ldr_name +]**</span>?][? if agriculture_minister_party == "PLI":<span style="color: [+ pli_colour +];">**[+ pli_name +]**</span>?][? if agriculture_minister_party == "PLI":<span style="color: [+ ul_colour +];">**[+ ul_name +]**</span>?][? if agriculture_minister_party == "PCS":<span style="color: [+ pcs_colour +];">**PCS**</span>?][? if agriculture_minister_party == "FdC":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?][? if agriculture_minister_party == "PNF":<span style="color: [+ pnf_colour +];">**[+ pnf_name +]**</span>?])
 
-
-@emergency
-on-arrival: {!
-if (Q.unemployed) {
-    Q.unemployed_2 = Q.unemployed.toFixed(1);
-}
-if (Q.inflation) {
-    Q.inflation_2 = Q.inflation.toFixed(1);
-}
-Q.economic_growth_2 = '0';
-if (Q.economic_growth) {
-    Q.economic_growth_2 = Q.economic_growth.toFixed(1);
-}
-Q.republican_sentiment_disp = Math.floor(Q.republican_sentiment);
-!}
-
-= Emergency Status
-
-<div style="text-align: center;">[+ month : month +] [+ year +][? if rubicon:, Week [+ week +]?]</div>
-<div style="text-align: center;">test: wow</div>
-
 @paramilitaries
 on-arrival: {!
 if (Q.sov_rg_strength) {
@@ -393,9 +372,9 @@ Streetfighting: [+ violent_prevalence : violence +]
 
 [? if communist_terror: <span style="color: [+ communist_colour +];">**NRG**</span> Attack Likelihood : [+ communist_bomb_display : warnings +] ?]
 
-[? if republican_terror : <span style="color: #240606;">**Anti-Communist Brigades**</span> ?]
+[? if republican_terror : <span style="color: #78b3e3;">**Alleanza Democratica Nazionale**</span> ?]
 
-[? if republican_terror: <span style="color: #240606;">**ACB**</span> Attack Likelihood : [+ republican_bomb_display : warnings +] ?]
+[? if republican_terror: <span style="color: #78b3e3;">**ADN**</span> Attack Likelihood : [+ republican_bomb_display : warnings +] ?]
 
 [? if fascist_terror : <span style="color: [+ pnf_colour +];">**Fasci**</span> ?]
 
