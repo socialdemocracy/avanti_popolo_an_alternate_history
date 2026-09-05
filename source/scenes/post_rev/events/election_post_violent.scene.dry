@@ -174,7 +174,6 @@ if (window && d3) {
 }
 !}
 on-departure: next_election_year = next_election_year + 1; n_elections += 1; next_election_time = time + 24; week_actions += 1
-go-to: decisions
 
 = First <span style="color: #BF0000">**Congress of Soviets**</span>
 
